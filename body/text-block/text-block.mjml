@@ -1,0 +1,11 @@
+<mjml>
+  <mj-body>
+    <mj-section background-color="#ffffff" padding="0 40px 40px 40px">
+      <mj-column padding="0">
+        <mj-text font-family="Arial, sans-serif" color="#555555" padding="0" font-size="16px" line-height="22px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

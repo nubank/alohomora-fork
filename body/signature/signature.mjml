@@ -1,0 +1,14 @@
+<mjml>
+  <mj-body>
+    <mj-section background-color="#ffffff" padding="0 40px 40px 40px">
+      <mj-column padding="0">
+        <mj-text font-family="Arial, sans-serif" color="#555555" padding="0" font-size="16px" line-height="22px">
+          Busque o que é seu!
+        </mj-text>
+        <mj-text font-weight="bold" font-family="Arial, sans-serif" padding="0" font-size="16px" line-height="22px" color="#B00000">
+          Easynvest
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
