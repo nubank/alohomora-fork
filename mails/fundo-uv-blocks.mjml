@@ -1,0 +1,93 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      body{
+        background: #fff;
+      }
+      a, td, div, p {
+        font-family: 'Poppins', Arial, sans-serif !important;
+      }
+      table {
+        border-collapse: separate !important;
+      }
+      @media (min-width: 480px) {
+      	.uv-first-block {
+      		border-right: 4px solid #6F1167 !important;
+     		}
+        .uv-first-block td {
+          border-radius: 6px 0px 0px 6px !important;
+        }
+      	.uv-second-block td {
+      		border-top: none !important;
+      	}
+      	.uv-padding {
+      		padding: 16px 0px 172px 0px !important;
+      	}
+        .left-align div {
+          text-align: left !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper border-radius="6px" padding="40px 20px 10px 20px">
+      <mj-section padding="0px" border-radius="6px" background-color="#31105B" text-align="left">
+        <mj-column padding="20px" width="58%" background-color="#F5F5F5" border="1px solid #D8D8D8" css-class="uv-first-block" border-radius="6px 6px 0px 0px" vertical-align="middle">
+          <mj-text color="#31105B" font-weight="600" font-size="18px" line-height="24px" align="center" padding="0px 0px 16px 0px" css-class="left-align">
+            Nu Ultravioleta Ações
+          </mj-text>
+          <mj-text font-size="16px" line-height="26px" color="#322828" padding="0px" align="center" css-class="left-align">
+            <span style="color:#6F1167;font-weight:600;font-size:14px;">Valor mínimo:</span><br/>
+            a partir de <strong>R$ 100,00</strong>
+          </mj-text>
+          <mj-divider border-color="#C4C4C4" border-width="1px" padding="16px 0px" />
+          <mj-text font-size="16px" line-height="26px" color="#322828" padding="0px" align="center" css-class="left-align">
+            <span style="color:#6F1167;font-weight:600;font-size:14px;">Rentabilidade:</span> <strong>+55,8%</strong> desde seu início em abril/20 acima do índice Ibovespa, que valorizou <strong>+55,0%</strong> no mesmo período.
+          </mj-text>
+          <mj-divider border-color="#C4C4C4" border-width="1px" padding="16px 0px" />
+          <mj-text font-size="16px" line-height="26px" color="#322828" padding="0px" align="center" css-class="left-align">
+            <span style="color:#6F1167;font-weight:600;font-size:14px;">Resgate:</span>  <strong>D+26</strong>
+          </mj-text>
+        </mj-column>
+        <mj-column padding="24px" width="40%" background-color="#31105B" vertical-align="middle" border-radius="0px 0px 6px 6px" border-top="4px solid #6F1167" css-class="uv-second-block">
+          <mj-text padding="0px" color="#FFFFFF" font-size="14px" line-height="20px" align="center">
+            <span style="font-size:16px;line-height:24px;font-weight:bold;">DNA Nubank</span><br/> sem cobrança de taxa de administração! 
+          </mj-text>
+          <mj-button padding="16px 0px 0px 0px" border-radius="20px" color="#31105B" font-size="12px" line-height="16px" background-color="#FFFFFF" href="#" font-weight="600">
+            Quero investir agora
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-wrapper border-radius="6px" padding="10px 20px 40px 20px">
+      <mj-section padding="0px" border-radius="6px" background-color="#31105B" text-align="left">
+        <mj-column padding="20px" width="58%" background-color="#F5F5F5" border="1px solid #D8D8D8" css-class="uv-first-block" border-radius="6px 6px 0px 0px" vertical-align="middle">
+          <mj-text color="#31105B" font-weight="600" font-size="18px" line-height="24px" align="center" padding="0px 0px 16px 0px" css-class="left-align">
+            Nu Ultravioleta Multimercado
+          </mj-text>
+          <mj-text font-size="16px" line-height="26px" color="#322828" padding="0px" align="center" css-class="left-align">
+            <span style="color:#6F1167;font-weight:600;font-size:14px;">Valor mínimo:</span><br/>
+            a partir de <strong>R$ 100,00</strong>
+          </mj-text>
+          <mj-divider border-color="#C4C4C4" border-width="1px" padding="16px 0px" />
+          <mj-text font-size="16px" line-height="26px" color="#322828" padding="0px" align="center" css-class="left-align">
+            <span style="color:#6F1167;font-weight:600;font-size:14px;">Rentabilidade:</span> cerca de <strong>266% do CDI</strong> (ou 6,5%) desde o seu início, em junho/20.
+          </mj-text>
+          <mj-divider border-color="#C4C4C4" border-width="1px" padding="16px 0px" />
+          <mj-text font-size="16px" line-height="26px" color="#322828" padding="0px" align="center" css-class="left-align">
+            <span style="color:#6F1167;font-weight:600;font-size:14px;">Resgate:</span>  <strong>D+25</strong>
+          </mj-text>
+        </mj-column>
+        <mj-column padding="24px" width="40%" background-color="#31105B" vertical-align="middle" border-radius="0px 0px 6px 6px" border-top="4px solid #6F1167" css-class="uv-second-block">
+          <mj-text padding="0px" color="#FFFFFF" font-size="14px" line-height="20px" align="center">
+            <span style="font-size:16px;line-height:24px;font-weight:bold;">DNA Nubank</span><br/> sem cobrança de taxa de administração! 
+          </mj-text>
+          <mj-button padding="16px 0px 0px 0px" border-radius="20px" color="#31105B" font-size="12px" line-height="16px" background-color="#FFFFFF" href="#" font-weight="600">
+            Quero investir agora
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

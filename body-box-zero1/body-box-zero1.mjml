@@ -1,0 +1,28 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @media screen and (min-width: 480px) {
+        .left-align div {
+          text-align: left !important;
+        }
+        .no-padding {
+          padding: 0px !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="24px" background-color="#555555" text-align="left">
+      <mj-column padding="0px" vertical-align="middle" width="75%">
+        <mj-text css-class="left-align no-padding" align="center" padding="0px 0px 28px 0px" color="#FFFFFF" font-size="20px" font-weight="700" line-height="28px">
+          Aqui é <span style="background-color:#BD0FEA;padding:0px 4px;">ZERO</span> burocracia, <span style="background-color:#BD0FEA;padding:0px 4px;">ZERO</span> economês e <span style="background-color:#BD0FEA;padding:0px 4px;">ZERO</span> corretagem!
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0px" vertical-align="middle" width="25%">
+        <mj-button align="center" color="#FFFFFF" border-radius="20px" background-color="#BD0FEA" font-size="14px" line-height="18px" font-weight="700" width="124px" height="36px" href="#" padding="0px">
+          Confira
+        </mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,27 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="40px" background-color="#FFFFFF">
+      <mj-column padding="0px">
+        <mj-text font-size="24px" line-height="30px" color="#BD0FEA" font-weight="700" align="center" padding="0px 0px 30px 0px">Comece a investir hoje mesmo!</mj-text>
+        <mj-text font-size="16px" line-height="22px" color="#322828" align="center" padding="0px 0px 25px 0px">
+          Cadastro grátis, rápido, confiável e 100% on-line;
+        </mj-text>
+        <mj-text font-size="16px" line-height="22px" color="#322828" align="center" padding="0px 0px 25px 0px">
+          Plataforma de investimentos mais fácil que existe;
+        </mj-text>
+        <mj-text font-size="16px" line-height="22px" color="#322828" align="center" padding="0px 0px 25px 0px">
+          Como fazer a 1ª transferência para começar a investir;
+        </mj-text>
+        <mj-text font-size="16px" line-height="22px" color="#322828" align="center" padding="0px 0px 25px 0px">
+          É hora de fazer seu $ render: conheça mais sobre investimentos.
+        </mj-text>
+        <mj-text font-size="16px" line-height="22px" color="#322828" align="center" padding="0px 0px 25px 0px" font-weight="700">
+          Uma vida financeira melhor está te esperando.
+        </mj-text>
+        <mj-button color="#fff" border-radius="30px" width="226px" height="46px" font-weight="700" font-size="16px" line-height="24px" background-color="#4C0677" align="center" padding="0px" href="#">
+          Lorem ipsum dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

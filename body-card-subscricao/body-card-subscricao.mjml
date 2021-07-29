@@ -1,0 +1,38 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      td, a, href {
+        font-family: Arial, sans-serif !important;
+      }
+      table {
+        border-collapse: separate !important;
+        overflow: hidden;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="22px 0" background-color="#FFFFFF" border-radius="6px" border="1px solid #D8D8D8">
+      <mj-column padding="0px" border-left="4px solid #BD0FEA">
+        <mj-text>Nome do ativo</mj-text>
+        <mj-text>
+          Valor da subscrição: R$ 6,93<br/>
+          Pago por ação subscrita 
+        </mj-text>
+        <mj-text>
+          Preço atual de mercado: R$ xx,xx<br/>
+          Consultado em xx/xx/xx às 00h
+        </mj-text>
+        <mj-divider />
+        <mj-text>Cronograma</mj-text>
+        <mj-text>
+          XX/XX/XXXX<br/>
+          Início do período de solicitação 
+        </mj-text>
+        <mj-text>
+          XX/XX/XXXX<br/>
+          Fim do período de solicitações até às XXh
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

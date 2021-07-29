@@ -1,0 +1,11 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="0px 40px 20px 40px" background-color="#FFFFFF">
+      <mj-column padding="0px">
+        <mj-text padding="0px" line-height="24px" color="#4C0677" font-weight="bold" font-size="24px">
+          Rapidinho e GRÁTIS!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

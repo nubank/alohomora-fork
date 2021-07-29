@@ -1,0 +1,32 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      td, div, a { font-family: Arial, sans-serif !important; }
+      @media screen and (min-width: 480px) {
+        .left-align div {
+          text-align: left !important;
+        }
+        .no-padding {
+          padding: 0px !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="26px" background-color="#EFEFEF" text-align="left">
+      <mj-column padding="0px" vertical-align="bottom" width="75%">
+        <mj-text padding="0px 0px 16px 0px" css-class="left-align" color="#BD0FEA" font-size="24px" font-weight="700" align="center" line-height="30px">
+          Ei, não se esqueça!
+        </mj-text>
+        <mj-text css-class="left-align no-padding" align="center" padding="0px 0px 28px 0px" color="#2C2C2C" font-size="20px" font-weight="700" line-height="24px">
+          Aqui tem <span style="padding:2px 4px;background-color:#4C0677;color:#FFFFFF;">CORRETAGEM ZERO</span> para investimentos na Bolsa pelo app e site!
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0px 0px 10px 0px" vertical-align="bottom" width="25%" css-class="no-padding">
+        <mj-button align="center" color="#FFFFFF" border-radius="20px" background-color="#4C0677" font-size="14px" line-height="18px" font-weight="700" width="128px" height="36px" href="#" padding="0px">
+          Confira
+        </mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

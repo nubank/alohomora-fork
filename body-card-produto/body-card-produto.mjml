@@ -1,0 +1,34 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @media screen and (min-width: 480px) {
+        .left-align div {
+          text-align: left !important;
+        }
+        .button-no-padding td {
+          padding: 0px !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="24px" background-color="#FFFFFF" text-align="left" border-radius="3px">
+      <mj-column padding="0px" vertical-align="middle" width="75%">
+        <mj-text css-class="left-align" align="center" padding="0px 0px 8px 0px" font-size="20px" font-weight="700" line-height="28px" color="#4C0677">
+          CDB que rende 10% a.a.
+        </mj-text>
+        <mj-text css-class="left-align" align="center" padding="0px 0px 8px 0px" font-size="16px" line-height="22px" font-weight="700" color="#322828">
+          Banco Maxima
+        </mj-text>
+        <mj-text css-class="left-align" align="center" padding="0px" font-size="14px" line-height="18px" color="#322828">
+          Com prazo de 6 meses
+        </mj-text>
+      </mj-column>
+      <mj-column padding="18px 0px 0px 0px" vertical-align="middle" width="25%" css-class="button-no-padding">
+        <mj-button align="center" color="#FFFFFF" border-radius="20px" background-color="#4C0677" font-size="14px" line-height="18px" font-weight="700" width="124px" height="36px" href="#" padding="0px">
+          Confira
+        </mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

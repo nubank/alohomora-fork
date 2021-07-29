@@ -1,0 +1,101 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      td, a, div, p { font-family: Arial, sans-serif !important; }
+      @media only screen and (min-width: 480px) {
+      	.combo-image {
+      		padding: 0px 0px 0px 16px !important;
+      	}
+        .left-align div {
+          text-align: left !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#322828" padding="8px 20px">
+      <mj-column padding="0">
+        <mj-text font-family="Arial, sans-serif" align="center" color="#FFFFFF" padding="0" font-size="11px" line-height="16px">
+          Investimentos recomendados para o seu perfil de investidor.<br/>
+          Para visualizar este e-mail como página da web, <a href="${form(campaign.name,{'usedb',true})}" style="color:#FFFFFF;text-decoration:none;">acesse aqui</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header_carteiras.png" background-color="#1B9BAD" padding="0px">
+      <mj-column padding="0px 24px">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/Logo1.png" width="127px" align="left" padding="28px 0px 0px 0px" />
+        <mj-text padding="32px 0px 0px 0px" font-size="32px" line-height="40px" color="#FFFFFF" font-weight="600">Novidade</mj-text>
+        <mj-text padding="24px 0px 0px 0px" font-size="16px" line-height="24px" color="#FFFFFF">
+          <span style="font-weight:600;">TOKEN_|alias="CONTATOS.NOME",style="capitalize"|,</span> descomplicamos o jeito de investir na carteira recomendada. Confira como a nova experiência ficou fácil!
+        </mj-text>
+        <mj-button font-size="16px" background-color="#87027b" color="#FFFFFF" border-radius="30px" text-align="center" padding="24px 0px 40px 0px" height="45px" font-weight="600" align="left">Quero investir do jeito novo</mj-button>
+      </mj-column>
+    </mj-section>
+    
+    <mj-wrapper padding="0px 24px 32px 24px">
+      <mj-section padding="0px">
+        <mj-column padding="32px 0px">
+          <mj-text align="center" css-class="left-align" color="#322828" font-size="16px" line-height="24px" color="#322828" padding="0px">
+            Estamos aqui para simplificar a sua vida no mundo dos investimentos.A boa notícia é que, a partir desse mês, você poderá investir em todos os produtos recomendados <span style="font-weight: 600;">de uma só vez, em um só clique!</span>
+      		</mj-text>
+          <mj-text padding="40px 0px" color="#6F1167" font-size="24px" line-height="30px" font-weight="700" align="center">Veja como no passo a passo</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+      	<mj-column padding="0px" vertical-align="middle" width="45%">
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#dc2784;font-weight:bold;color:#FFFFFF;padding:2px 8px">1.</span>&nbsp;Acesse o app ou site do Easynvest by Nubank.</mj-text>
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#dc2784;font-weight:bold;color:#FFFFFF;padding:2px 8px">2.</span>&nbsp;Vá no combo “Busca mais rentabilidade?” e clique.</mj-text>
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#dc2784;font-weight:bold;color:#FFFFFF;padding:2px 8px">3.</span>&nbsp;A lista de investimentos recomendados abrirá pra você.
+</mj-text>
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#dc2784;font-weight:bold;color:#FFFFFF;padding:2px 8px">4.</span>&nbsp;Pronto! É só clicar no botão "Investir agora".</mj-text>
+        </mj-column>
+        <mj-column padding="0px" vertical-align="middle" width="55%">
+        	<mj-image src="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/compra_1click_mockup_black.gif" padding="36px 0px 0px 0px" width="190px" align="center" css-class="combo-image" />
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+      	<mj-column padding="0px">
+        	<mj-button padding="40px 0px" color="#fff" border-radius="40px"  height="48px" font-weight="600" font-size="16px" line-height="24px" background-color="#87027b" align="center" href="#">
+          Quero investir do jeito novo
+        </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+    <mj-section padding="0px" background-color="#f5f5f5">
+    	<mj-column padding="40px 24px">
+        <mj-text font-size="20px" line-height="24px" font-weight="600" color="#87027B" padding="0px 0px 24px 0px">Resultado da carteira: quanto já rendeu?</mj-text>
+        <mj-text color="#322828" font-size="16px" line-height="24px" padding="0px">
+        	No mês de junho, a carteira rendeu X,XX%.Desde maio de 2020, a carteira rendeu X,XX% <span style="font-weight:600;">(XXX% do CDI)</span>. O objetivo da carteira é entregar um retorno acima do CDI.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="0px">
+    	<mj-column padding="10px 0px">
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="0px" background-color="#4E0250">
+    	<mj-column padding="40px 24px">
+        <mj-text font-size="20px" line-height="24px" font-weight="600" color="#F07EBB" padding="0px 0px 24px 0px">Quer diversificar a partir de R$ 300?</mj-text>
+        <mj-text color="#FFFFFF" font-size="16px" line-height="24px" padding="0px">
+          Também temos essa opção! Basta clicar ao lado para investir nas recomendações dos nossos especialistas a partir de R$ 300 (trezentos reais).
+        </mj-text>
+        <mj-button padding="30px 0px 0px 0px" color="#87027B" border-radius="40px"  height="48px" font-weight="600" font-size="16px" line-height="24px" background-color="#FFFFFF" align="center" href="#">
+          Quero investir
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section padding="24px">
+      <mj-column padding="0px">
+        <mj-text padding="0px" color="#322828" font-size="16px" line-height="24px" align="center" css-class="left-align">
+          Busque o que é seu!<br/>
+          <span style="font-weight:600;">Easynvest</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

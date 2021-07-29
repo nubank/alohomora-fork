@@ -1,0 +1,12 @@
+<mjml>
+  <mj-body>
+    <mj-section background-color="#EFEFEF" padding="8px 20px">
+      <mj-column padding="0">
+        <mj-text font-family="Arial, sans-serif" align="center" color="#322828" padding="0" font-size="11px" line-height="16px">
+          ${DynamicVariable.snippet}<br/>
+          Para visualizar este e-mail como página da web, acesse aqui
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

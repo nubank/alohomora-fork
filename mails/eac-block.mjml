@@ -1,0 +1,45 @@
+<mjml>
+  <mj-head>
+  	<mj-style>
+      @media screen and (min-width: 480px) {
+      	.eac-legado__image {
+      		padding: 0px !important;
+      	}
+      	.eac-legado__image img {
+      		width: 70px !important;
+      	}
+      	.left-align div {
+      		text-align: left !important;
+      	}
+      	.eac-legado__hide {
+      		display: none !important;
+      	}
+      	.eac-legado__show {
+      		display: inline-block !important;
+      	}
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper padding="0px" border="1px solid #D8D8D8" border-radius="5px">
+    	<mj-section padding="24px">
+      	<mj-column padding="0px" vertical-align="middle" width="96px">
+        	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/logo_icone.png" width="50px" padding="0px 0px 18px 0px" css-class="eac-legado__image" align="left" />
+        </mj-column>
+        <mj-column padding="0px" vertical-align="middle" width="80%">
+          <mj-text padding="0px" font-size="14px" line-height="22px" color="#322828" font-weight="300">
+            <span class="eac-legado__show" style="font-weight:700;display:none;">Banco: 140 (SC Easynvest)&nbsp;</span><br/>
+            <span style="font-weight:500;">Agência:</span> 0001<br/>
+            <span style="font-weight:500;">Conta corrente:</span> 7513723-0<br/>
+            <span style="font-weight:500;">Favorecido:</span> Mesma titularidade (ou seja, seu nome e CPF)
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="5px">
+				<mj-column background-color="#F7F7EB" border-radius="0px 0px 5px 5px" padding="0px">
+          <mj-text padding="16px" align="center" font-size="14px" line-height="22px" color="#322828" font-weight="300" css-class="left-align"><span class="eac-legado__hide" style="font-weight:500;">ATENÇÃO<br/></span><span class="eac-legado__show" style="font-weight:500;display:none;">ATENÇÃO:&nbsp;</span>Dependendo do seu banco, você poderá precisar digitar o <span style="font-weight:500;">código ISPB da Easynvest: 62169875.</span></mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

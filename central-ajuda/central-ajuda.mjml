@@ -1,0 +1,40 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @media only screen and (min-width: 480px) {
+        .center-align div {
+          text-align: left !important;
+        }
+      	.img-column {
+      		width: 10% !important;
+      		max-width: 10% !important;
+      		vertical-align: middle !important;
+      	}
+      	.img-column td {
+      		padding: 0 !important;
+      	}
+      	.text-column {
+      		width: 85% !important;
+      		max-width: 85% !important;
+      		vertical-align: middle !important;
+      		padding-left: 16px !important;
+      	}
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#FFFFFF" padding="40px 24px">
+      <mj-column width="100%" padding="0 0 20px 0" css-class="img-column">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/question-icon.png" padding="0" align="center" width="46px" height="46px" />
+      </mj-column>
+      <mj-column width="100%" css-class="text-column">
+        <mj-text padding="0" color="#322828" font-size="20px" line-height="24px" font-weight="500" padding-bottom="4px" align="center" css-class="center-align">
+          Ainda com dúvidas?
+        </mj-text>
+        <mj-text padding="0" color="#322828" align="center" font-size="16px" line-height="24px" font-weight="300" css-class="center-align">
+          <mj-link href="#" style="text-decoration:underline;cursor:pointer;">Clique aqui</mj-link> e acesse nossa central de ajuda.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

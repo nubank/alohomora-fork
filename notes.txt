@@ -1,0 +1,9 @@
+<root>
+  <header_adhoc_photo></header_adhoc_photo>
+  <body_video_thumb variant="purple">
+    <cta url="#" large="large">Clique aqui</cta>
+  </body_video_thumb>
+  <body_box_zero1></body_box_zero1>
+  <body_box_zero3></body_box_zero3>
+  <body_attention></body_attention>
+</root>

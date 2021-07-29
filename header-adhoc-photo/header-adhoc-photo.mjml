@@ -1,0 +1,52 @@
+<mjml>
+  <mj-head>
+  	<mj-style>
+      .header-img img {
+      	object-fit: cover !important;
+      }
+      
+    	@media screen and (min-width:480px) {
+      	.header-img img {
+      		height: 348px !important;
+      	}
+      	.header-section div {
+      		background-image: url("https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-rect.png") !important;
+      	}
+        .left-align div {
+          text-align: left !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="0" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" background-size="cover" css-class="header-section">
+      <mj-column padding="0">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/logo-nu-invest-white.png"
+          alt="NuInvest Logo"
+          align="center"
+          width="219px"
+          height="85px"
+          padding="0"
+        />
+      </mj-column>
+    </mj-section>
+    <mj-wrapper padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-rect.png" background-repeat="no-repeat">
+      <mj-section padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-bg-2.png" background-size="cover">
+        <mj-column padding="0px">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-photo-example.png"
+            alt="${image.@alt[0]!'Imagem no header do e-mail'}"
+            align="center"
+            padding="0px 40px"
+            height="188px"
+            css-class="header-img"
+          />
+        </mj-column>
+    	</mj-section>
+      <mj-section padding="0px" background-color="transparent">
+        <mj-column padding="0px 20px">
+          <mj-text font-size="32px" color="#4C0677" line-height="38px" align="center" padding="26px" font-weight="bold" css-class="left-align">${content!"Título do e-mail geral"}</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

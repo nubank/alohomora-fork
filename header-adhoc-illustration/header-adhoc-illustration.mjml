@@ -1,0 +1,45 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @media screen and (min-width:480px) {
+      .header-adhoc-text {
+      width: 73% !important;
+      max-width: 73% !important;
+      }
+
+      .header-adhoc-text div {
+      text-align: left !important;
+      padding: 0 150px 0 0 !important;
+      }
+
+      .header-adhoc-illustration td {
+      padding: 0 !important;
+      }
+
+      .header-adhoc-illustration img {
+      padding: 20px 0 !important;
+      }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="0" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" background-size="cover">
+      <mj-column padding="0">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/logo-nu-invest-white.png" alt="NuInvest Logo" align="center" width="219px" height="85px" padding="0" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 20px" background-color="transparent">
+      <mj-column padding="0" width="100%" css-class="header-adhoc-text" vertical-align="middle">
+        <mj-text font-size="32px" color="#555555" line-height="38px" align="center" padding="26px 0" font-family="Arial, sans-serif" font-weight="bold">Titulo do <span style="color:#BD0FEA">e-mail geral/ Adhocs um pouco maior</span>
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0" width="26%" css-class="header-adhoc-illustration" vertical-align="middle">
+        <mj-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Circle_Silver_Solid.svg/1024px-Circle_Silver_Solid.svg.png" padding="0 0 30px 0" />
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" background-size="cover">
+      <mj-column padding="2px 0">
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,11 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="20px" background-color="#FFFFFF">
+      <mj-column padding="10px 10px" background-color="#EFEFEF" border-radius="6px" width="400px">
+        <mj-text font-size="16px" line-height="22px" color="#4C0677" font-weight="600" align="center">
+          Mais > Depósitos e retiradas
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

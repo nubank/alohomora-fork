@@ -1,0 +1,7 @@
+<#macro ctaMacro index>
+  <#assign doc = parsexml(DynamicVariable.vars)>
+  <#assign ctalist = doc.root.body_cta>
+  <#assign cta = ctalist[index]>
+
+  <#include "cms://contentlibrary/components/body-cta.htm">
+</#macro>

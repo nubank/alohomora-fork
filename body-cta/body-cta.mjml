@@ -1,0 +1,46 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="0" css-class="button-lg">
+      <mj-column padding="0 20px">
+        <mj-button padding="0" color="#FFFFFF" border-radius="30px" width="226px" height="46px" font-weight="700" font-size="16px" line-height="24px" background-color="#4C0677" align="center" padding-bottom="40px" href="#">
+          Lorem ipsum dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" css-class="button-lg">
+      <mj-column padding="0 20px">
+        <mj-button padding="0" color="#FFFFFF" border-radius="30px" width="226px" height="46px" font-weight="700" font-size="16px" line-height="24px" background-color="#BD0FEA" align="center" padding-bottom="40px" href="#">
+          Lorem ipsum dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" css-class="button-lg">
+      <mj-column padding="0 20px">
+        <mj-button padding="0" color="#4C0677" border-radius="30px" width="226px" height="46px" font-weight="700" font-size="16px" line-height="24px" background-color="#FFFFFF" align="center" padding-bottom="40px" href="#">
+          Lorem ipsum dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" css-class="button-sm">
+      <mj-column padding="0 20px">
+        <mj-button padding="0" color="#FFFFFF" border-radius="30px" width="140px" height="36px" font-weight="700" font-size="14px" background-color="#4C0677" align="center" padding-bottom="40px" href="#">
+          Lorem dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" css-class="button-sm">
+      <mj-column padding="0 20px">
+        <mj-button padding="0" color="#FFFFFF" border-radius="30px" width="140px" height="36px" font-weight="700" font-size="14px" background-color="#BD0FEA" align="center" padding-bottom="40px" href="#">
+          Lorem dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" css-class="button-sm">
+      <mj-column padding="0 20px">
+        <mj-button padding="0" color="#4C0677" border-radius="30px" width="140px" height="36px" font-weight="700" font-size="14px" background-color="#FFFFFF" align="center" padding-bottom="40px" href="#">
+          Lorem dolor
+        </mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

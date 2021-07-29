@@ -1,0 +1,23 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="32px 24px" background-color="#EFEFEF" border-radius="6px">
+    	<mj-section padding="0px">
+        <mj-column padding="0px">
+        	<mj-text align="center" font-size="20px" line-height="24px" color="#4C0677" font-weight="bold" padding="0px">Responsável pela recomendação</mj-text>
+          <mj-text align="center" color="#322828" font-size="16px" line-height="24px" padding="18px 0px 26px 0px" css-class="specialist-signature__text">Conheça quem é o analista certificado:</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+        <mj-group>
+					<mj-column padding="0px 18px 0px 0px" vertical-align="middle" width="36%" css-class="specialist-signature__first-column">
+            <mj-image src="https://uifaces.co/our-content/donated/xZ4wg2Xj.jpg" border-radius="6px" border="2px solid #4E0250" width="71px" height="71px" align="right" padding="0" />
+          </mj-column>
+          <mj-column padding="0px" vertical-align="middle" width="64%" css-class="specialist-signature__second-column">
+          	<mj-text font-size="18px" line-height="24px" color="#4E0250" padding="0px" font-weight="bold">José Falcão Castro</mj-text>
+            <mj-text font-size="14px" line-height="24px" padding="0px" color="#322828">CFP® CNPI - P</mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

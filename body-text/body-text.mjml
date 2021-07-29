@@ -1,0 +1,13 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+      <mj-section padding="0px" background-color="#FFFFFF">
+        <mj-column padding="0px">
+          <mj-text color="#555555" font-size="16px" line-height="22px" padding="0px 40px 40px 40px">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

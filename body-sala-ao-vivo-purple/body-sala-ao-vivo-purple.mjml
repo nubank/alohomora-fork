@@ -1,0 +1,72 @@
+<mjml>
+  <mj-head>
+  	<mj-style>
+      @media screen and (min-width: 480px) {
+      	.sala-vivo__title {
+      		padding: 40px 0px 0px 24px !important;
+      	}
+      	.sala-vivo__waves {
+      		padding: 16px 0px 0px 0px !important;
+      	}
+      	.sala-vivo__section-texto {
+      		padding: 0px 24px !important;
+      	}
+      	.sala-vivo__first-column {
+      		width: 40px !important;
+          max-width: 40px !important;
+      	}
+      	.sala-vivo__second-column {
+      		width: 30% !important;
+          max-width: 30% !important;
+      	}
+      	.sala-vivo__third-column {
+      		width: 60% !important;
+          max-width: 60% !important;
+      	}
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper
+    	background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png"
+       padding="0px"
+    >
+      <mj-section padding="0px">
+        <mj-group width="100%">
+          <mj-column width="56%" padding="0px">
+            <mj-text color="#fff" font-size="24px" line-height="30px" font-weight="bold" padding="32px 0px 0px 24px" css-class="sala-vivo__title">Sala ao vivo</mj-text>
+          </mj-column>
+          <mj-column width="44%" padding="0px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/waves-pink.png" padding="24px 0px 0px 0px" align="right" css-class="sala-vivo__waves" />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <mj-section padding="0px">
+        <mj-column padding="0px">
+          <mj-text color="#fff" font-size="16px" line-height="24px" padding="24px" css-class="sala-vivo__section-texto">
+            <span style="font-weight:bold;">Segunda a sexta das 9h às 18h</span><br/>
+            Acompanhe as análises do mercado em tempo real.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section padding="0px 24px">
+        <mj-group width="100%">
+        	<mj-column width="34%" vertical-align="middle" css-class="sala-vivo__first-column">
+          	<mj-image
+src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bell-icon-sala-vivo.png" width="40px"  padding="0px" align="right" />
+          </mj-column>
+          <mj-column width="55%" vertical-align="middle" css-class="sala-vivo__second-column" padding="0px 0px 0px 16px">
+            <mj-text padding="0" color="#fff" font-size="16px" line-height="24px" font-weight="bold">Não se esqueça de ativar o sininho!</mj-text>
+          </mj-column>
+          <mj-column padding="0px" width="100%" vertical-align="middle" css-class="sala-vivo__third-column">
+            <mj-button padding="0px 0px 32px 0px" color="#4C0677" border-radius="30px" width="200px" height="50px" font-weight="700" font-size="16px" line-height="24px" background-color="#FFFFFF" align="center" padding-top="30px" href="#">
+            Inscreva-se
+            </mj-button>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

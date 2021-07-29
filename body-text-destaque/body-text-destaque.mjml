@@ -1,0 +1,11 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="0px 20px 40px 20px" background-color="#FFFFFF">
+      <mj-column padding="0px">
+        <mj-text font-size="24px" line-height="30px" color="#4C0677" align="center" font-weight="bold" padding="0px">
+          A partir de <span style="color:#BD0FEA">R$ 35</span> já dá <br/>pra começar a investir!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

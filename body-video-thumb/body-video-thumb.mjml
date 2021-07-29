@@ -1,0 +1,17 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="40px 20px" background-color="#FFFFFF">
+      <mj-section>
+        <mj-column padding="0">
+          <mj-text padding="0" align="center" font-size="24px" line-height="30px" color="#4C0677" font-weight="700">
+            ${TITLE}
+          </mj-text>
+          <mj-text padding="30px 0" align="center" color="#555555" font-size="16px" line-height="22px">
+            ${CONTENT}
+          </mj-text>
+          <mj-image src="${THUMB}" border-radius="20px" align="center" fluid-on-mobile="true" padding="0" css-class="video-thumb" />
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

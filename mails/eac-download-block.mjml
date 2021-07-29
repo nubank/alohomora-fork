@@ -1,0 +1,23 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="0px">
+    	<mj-section padding="0px"> 
+        <mj-column background-color="#E6268C" width="50%" vertical-align="middle">
+        	<mj-text align="center" color="#FFFFFF" font-size="14px" line-height="21px" font-weight="600" padding="0px" vertical-align="middle">Temos vivência no<br/>mundo dos<br/>investimentos<br/><span style="font-size:32px;line-height:48px;font-weight:700;">desde 1968</span></mj-text>
+        </mj-column>
+        <mj-column background-color="#87027B" width="50%" vertical-align="middle">
+          <mj-text align="center" color="#FFFFFF" font-size="14px" line-height="21px" font-weight="600" padding="0px" vertical-align="middle"><span style="font-size:32px;line-height:48px;font-weight:700;">+1 milhão</span><br/>de contas abertas</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px"> 
+        <mj-column background-color="#FFBB00" width="50%" vertical-align="middle">
+        	<mj-text align="center" color="#FFFFFF" font-size="14px" line-height="21px" font-weight="600" padding="0px">
+          <span style="font-size:32px;line-height:48px;font-weight:700;">+20 bilhões</span><br/>de reais em custódia</mj-text>
+        </mj-column>
+        <mj-column background-color="#3CCBDA" width="50%" vertical-align="middle">
+        	<mj-text align="center" color="#FFFFFF" font-size="14px" line-height="21px" font-weight="600" padding="0px"><span style="font-size:32px;line-height:48px;font-weight:700;">+400 opções</span><br/>de produtos financeiros e<br/> Fundos exclusivos do<br/> Nubank.</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

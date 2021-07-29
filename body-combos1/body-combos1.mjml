@@ -1,0 +1,47 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      @media only screen and (min-width: 480px) {
+      	.combo-image {
+      		padding: 0px 0px 0px 16px !important;
+      	}
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper padding="40px 26px" background-color="#F5F5F5" border-radius="6px">
+      <mj-section padding="0px 0px 32px 0px">
+        <mj-column padding="0px">
+          <mj-text padding="0px" color="#4C0677" font-size="24px" line-height="30px" font-weight="700" css-class="left-align" align="center">Compre com um clique só</mj-text>
+          <mj-text padding="27px 0px" css-class="left-align" align="center" color="#FFFFFF" font-size="16px">
+            <span style="background-color:#627900;padding:5px 8px;border-radius:3px;">Exclusivo no App</span>
+          </mj-text>
+          <mj-text padding="0px" color="#322828" font-size="16px" line-height="24px">
+            Ao entrar no nosso aplicativo, você encontrará recomendações de acordo com o seu perfil de investidor para facilitar a sua vida na hora de escolher um investimento. Quer ver?
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+      	<mj-column padding="0px" vertical-align="middle" width="45%">
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#BD0FEA;font-weight:bold;color:#FFFFFF;padding:2px 4px">1.</span>&nbsp;Faça seu login no app da Easynvest.</mj-text>
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#BD0FEA;font-weight:bold;color:#FFFFFF;padding:2px 4px">2.</span>&nbsp;Vá em “Investir” e já dê de cara com a novidade do combo.</mj-text>
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#BD0FEA;font-weight:bold;color:#FFFFFF;padding:2px 4px">3.</span>&nbsp;Agora é só clicar em “Quero investir”.
+</mj-text>
+          <mj-text padding="0px 0px 20px 0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#BD0FEA;font-weight:bold;color:#FFFFFF;padding:2px 4px">4.</span>&nbsp;Preencha o valor do quanto você gostaria de investir.</mj-text>
+          <mj-text padding="0px" color="#322828" font-size="16px" line-height="24px"><span style="background-color:#BD0FEA;font-weight:bold;color:#FFFFFF;padding:2px 4px">5.</span>&nbsp;Pronto! A lista de investimentos recomendados para o seu perfil vai aparecer com todos os detalhes.
+</mj-text>
+        </mj-column>
+        <mj-column padding="0px" vertical-align="middle" width="55%">
+        	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/mockup-combo.png" padding="36px 0px 0px 0px" width="190px" align="center" css-class="combo-image" />
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+      	<mj-column padding="0px">
+        	<mj-button padding="45px 0px 0px 0px" color="#fff" border-radius="30px" width="226px" height="46px" font-weight="700" font-size="16px" line-height="24px" background-color="#4C0677" align="center" href="#">
+          Lorem ipsum dolor
+        </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

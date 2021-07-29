@@ -1,0 +1,37 @@
+<mjml>
+  <mj-head>
+		<mj-style>
+      @media screen and (min-width: 480px) {
+      	.block-text-illus__wrapper {
+      		padding: 0px 40px 40px 40px !important;
+      	}
+      	.block-text-illus__image {
+      		padding: 0px 0px 0px 32px !important;
+      	}
+      	.block-text-illus__image img {
+      		width: 100px !important;
+      	}
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="red">
+    <mj-wrapper padding="0px 24px 40px 24px" background-color="#FFFFFF" css-class="block-text-illus__wrapper">
+      <mj-section padding="0px">
+        <mj-column padding="0px">
+					<mj-text color="#4C0677" font-size="20px" line-height="24px" font-weight="700" padding="0px 0px 20px 0px">Como funciona uma corretora?</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px" text-align="left" direction="rtl">
+        <mj-column padding="0px" width="30%">
+        	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/illus-text-placeholder.png" padding="0px 0px 32px 0px" css-class="block-text-illus__image" width="100px" />
+        </mj-column>
+        <mj-column padding="0px" width="70%">
+        	<mj-text padding="0px" color="#322828" font-size="16px" line-height="24px">
+          	Uma Corretora de Valores funciona como uma “prateleira” do mercado financeiro. Nela, você encontra uma infinidade de opções para investir, de acordo com o seu perfil, objetivo e preferências.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+  </mj-body>
+</mjml>

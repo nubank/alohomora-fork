@@ -1,0 +1,48 @@
+<#assign components = parsejson(DynamicVariable.components)>
+
+<#assign acc = "">
+
+<#list 1..10 as idx>
+  <#attempt>
+    <#assign item = DynamicVariable["var" + idx_index]>
+    <#assign acc = acc + item>
+  <#recover>
+    <#assign acc = acc + "">
+  </#attempt>
+</#list>
+
+<#global final = "<root>" + acc + "</root>">
+<#global doc = parsexml(final)>
+
+<#macro cta_macro index>
+  <#local ctalist = doc.root.body_cta>
+  <#local cta = ctalist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-cta.htm">
+</#macro>
+
+<#macro title_macro index>
+  <#local titlelist = doc.root.body_title>
+  <#local title = titlelist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-title.htm">
+</#macro>
+
+<#macro text_macro index>
+  <#local textlist = doc.root.body_text>
+  <#local text = textlist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-text.htm">
+</#macro>
+
+<#list components as component>
+  <#if component["id"] == "body-cta">
+    <@cta_macro index=component["index"] />
+  <#elseif component["id"] == "body-title">
+    <@title_macro index=component["index"] />
+  <#elseif component["id"] == "body-text">
+    <@text_macro index=component["index"] />
+  <#else>
+    <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
+  </#if>
+</#list>

@@ -1,0 +1,14 @@
+<mjml>
+  <mj-body>
+    <mj-section background-color="#FFFFFF" padding="0">
+      <mj-column padding="0">
+        <mj-table padding="40px" css-class="table-padding">
+          <tr style="font-size:16px;line-height:22px;height:60px;">
+            <td style="background:#4C0677;font-weight:700;color:#FFFFFF;padding-left:20px;border:1px solid #D8D8D8;">${ROW.FIRST}</td>
+            <td style="border:1px solid #D8D8D8;color:#555555;text-align:center;width:35%;">${ROW.SECOND}</td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
