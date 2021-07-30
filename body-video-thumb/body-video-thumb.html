@@ -1,5 +1,4 @@
 <div>
-  <#assign doc = parsexml(DynamicVariable.vars)>
   <#assign videothumb = doc.root.body_video_thumb>
   <#attempt>
     <#if videothumb.@variant == "gray" || videothumb.@variant == "grey">
