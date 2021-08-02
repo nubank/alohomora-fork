@@ -1,5 +1,7 @@
+<#-- Puxa os componentes da variável components, para depois fazer um loop nelas, puxando os componentes um a um (por isso a ordem importa) -->
 <#assign components = parsejson(DynamicVariable.components)>
 
+<#-- Como o campo de DynamicVariable no Responsys só suporta até cerca de 1900 caracteres, temos que dividir em chunks/pedaços de 1900 máx. cada. A partir desta linha, ele puxa cada um desses pedaços como string (texto) e depois junta eles, para então parsear em XML e pegarmos os dados) -->
 <#assign acc = "">
 
 <#list 1..10 as idx>
@@ -11,9 +13,11 @@
   </#attempt>
 </#list>
 
+<#-- Aqui é aonde ele pega todo esses pedaços juntos, adiciona a tag <root> que é a tag pai de todos, e parseia pra XML (pro Rsys e os componentes entenderem os dados) -->
 <#global final = "<root>" + acc + "</root>">
 <#global doc = parsexml(final)>
 
+<#-- Essas macros são formas de incluir os vários componentes que podem aparecer repetidos mais de uma vez no mesmo e-mail --> 
 <#macro cta_macro index>
   <#local ctalist = doc.root.body_cta>
   <#local cta = ctalist[index?number]>
@@ -35,6 +39,7 @@
   <#include "cms://contentlibrary/components/body-text.htm">
 </#macro>
 
+<#-- Aqui listamos os componentes que pegamos lá na primeira linha, um a um, e importamos da pasta de components do Rsys. Se for componente que pode ser repetido, ele chama a respectiva macro (ver acima) e lá ela cuida da importação correta -->
 <#list components as component>
   <#if component["id"] == "body-cta">
     <@cta_macro index=component["index"] />

@@ -21,7 +21,7 @@
                                 style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
                                 <#list text?children as node>
                                   <#if node?node_type == "element">
-                                    <span style=${node.@style}>${node}</span>
+                                    <span style=${node.@style[0]!""}>${node}</span>
                                   <#else>
                                     ${node}
                                   </#if>

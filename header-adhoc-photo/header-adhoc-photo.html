@@ -133,7 +133,14 @@
                                           style="font-size:0px;padding:24px 0px;word-break:break-word;">
                                           <div
                                             style="font-size:32px;font-weight:bold;line-height:38px;text-align:center;color:#4C0677;">
-                                            ${header.content[0]!"Título do e-mail geral"}</div>
+                                            <#list header.content?children as node>
+                                              <#if node?node_type == "element">
+                                                <span style=${node.@style[0]!""}>${node}</span>
+                                              <#else>
+                                                ${node}
+                                              </#if>
+                                            </#list>
+                                          </div>
                                         </td>
                                       </tr>
                                     </tbody>

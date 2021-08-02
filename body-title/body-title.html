@@ -22,7 +22,7 @@
                                   style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
                                   <#list title?children as node>
                                     <#if node?node_type == "element">
-                                      <span style=${node.@style}>${node}</span>
+                                      <span style=${node.@style[0]!""}>${node}</span>
                                     <#else>
                                       ${node}
                                     </#if>
@@ -33,7 +33,7 @@
                                   style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
                                   <#list title?children as node>
                                     <#if node?node_type == "element">
-                                      <span style=${node.@style}>${node}</span>
+                                      <span style=${node.@style[0]!""}>${node}</span>
                                     <#else>
                                       ${node}
                                     </#if>
