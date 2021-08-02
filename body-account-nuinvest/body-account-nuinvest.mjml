@@ -1,0 +1,40 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="24px 40px" background-color="#FFFFFF" border-radius="3px">
+    	<mj-section padding="0px">
+        <mj-column padding="0px">
+					<mj-text padding="0px 0px 11px 0px" font-size="14px" line-height="18px" font-weight="700" color="#322828">Banco: 140 (SC Easynvest)</mj-text>
+        </mj-column>
+    	</mj-section>
+      <mj-section padding="0px" text-align="left">
+      	<mj-group width="100%">
+        	<mj-column padding="0px 8px 0px 0px" width="35%">
+          	<mj-text padding="0px" color="#322828" font-size="14px" line-height="18px"><span style="color:#2F0549;font-weight:700">Agência:</span> 0000</mj-text>
+          </mj-column>
+          <mj-column padding="0px" width="50%">
+          	<mj-text padding="0px" color="#322828" font-size="14px" line-height="18px"><span style="color:#2F0549;font-weight:700">Conta corrente:</span> 0000000-0</mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      <mj-section padding="10px 0px 0px 0px">
+        <mj-column padding="0px">
+          <mj-text padding="0px" color="#322828" font-size="14px" line-height="18px">
+            <span style="color:#2F0549;font-weight:700">Favorecido:</span> mesma titularidade (ou seja, seu nome e CPF)
+          </mj-text>
+          <mj-divider padding="20px 0px" border-width="1px" border-color="#D8D8D8" />
+          <mj-text padding="0px" color="#322828" font-size="14px" line-height="18px">
+            <span style="color:#2F0549;font-weight:700">ATENÇÃO:</span> Dependendo do seu banco, você poderá precisar digitar o <span style="font-weight:700">código ISPB da Easynvest: 62169875.</span>
+          </mj-text>
+          <mj-divider padding="20px 0px" border-width="1px" border-color="#D8D8D8" />
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px" background-color="#EFEFEF" border-radius="5px">
+        <mj-column padding="0px" width="65%">
+          <mj-text padding="14px" align="center" color="#322828" font-size="14px" line-height="18px">
+            A instituição que aparecerá será a Easynvest. Não se preocupe: você estará transferindo o seu dinheiro normalmente para o <span style="color:#2F0549;font-weight:700">Nu invest</span>.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+	</mj-body>
+</mjml>
