@@ -1,7 +1,7 @@
-<div>
-  <#assign card = doc.root.body_card_produto>
+<div style="padding:0px 40px 40px 40px">
+  <#include "cms://contentlibrary/components/helpers/parser.htm">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-  <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;border-radius:3px;max-width:600px;">
+  <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;border-radius:3px;max-width:600px;border:1px solid #D8D8D8">
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
       style="background:#FFFFFF;background-color:#FFFFFF;width:100%;border-radius:3px;">
       <tbody>
@@ -18,21 +18,22 @@
                         <tbody>
                           <tr>
                             <td align="center" class="left-align"
-                              style="font-size:0px;padding:0px 0px 8px 0px;word-break:break-word;">
+                              style="font-size:0px;padding:0px;word-break:break-word;">
                               <div
                                 style="font-size:20px;font-weight:700;line-height:28px;text-align:center;color:#4C0677;">
-                                ${card.title[0]!"Título do card"}</div>
+                                <#list card.title?children as node>
+                                  <@parse_content node=node />
+                                </#list>
+                              </div>
                             </td>
                           </tr>
                           <tr>
-                            <td align="center" class="left-align" style="font-size:0px;padding:0px;word-break:break-word;">
-                              <#list card.content?children as node>
-                                <#if node?node_type == "element">
-                                  <span style=${node.@style}>${node}</span>
-                                <#else>
-                                  ${node}
-                                </#if>
-                              </#list>
+                            <td align="center" class="left-align" style="padding:0px;word-break:break-word;">
+                              <#if card.content[0]??> <div style="padding-top:8px"> <#else> <div> </#if>
+                                <#list card.content?children as node>
+                                  <@parse_content node=node />
+                                </#list>
+                              </div>
                             </td>
                           </tr>
                         </tbody>
@@ -58,9 +59,9 @@
                                 style="border-collapse:separate;width:124px;line-height:100%;">
                                 <tr>
                                   <td align="center" bgcolor="#4C0677" role="presentation"
-                                    style="border:none;border-radius:20px;cursor:auto;height:36px;mso-padding-alt:10px 25px;background:#4C0677;"
+                                    style="border:none;border-radius:20px;cursor:auto;height:36px;mso-padding-alt:10px 15px;background:#4C0677;"
                                     valign="middle"><a href='${card.cta.@url[0]!"#"}'
-                                      style="display:inline-block;width:74px;background:#4C0677;color:#FFFFFF;font-size:14px;font-weight:700;line-height:18px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:20px;"
+                                      style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;font-weight:700;line-height:18px;margin:0;text-decoration:none;text-transform:none;padding:10px 15px;mso-padding-alt:0px;border-radius:20px;"
                                       target="_blank">${card.cta[0]!"Confira"}</a></td>
                                 </tr>
                               </table>

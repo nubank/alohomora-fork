@@ -1,0 +1,840 @@
+<#macro cta_wrapper link size variant content>
+  <#if link = "cta-blog-nu-invest-tudo-sobre">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/nu-invest-tudo-sobre/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/nu-invest-tudo-sobre/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/nu-invest-tudo-sobre/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/nu-invest-tudo-sobre/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/nu-invest-tudo-sobre/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/nu-invest-tudo-sobre/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-precadastro">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/autenticacao/pre-cadastro"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/autenticacao/pre-cadastro"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.easynvest.com.br/autenticacao/pre-cadastro"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/autenticacao/pre-cadastro"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/autenticacao/pre-cadastro"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/autenticacao/pre-cadastro"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "investnews-fundos-news">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://investnews.com.br/financas/fundos-captam-r-206-bilhoes-no-1o-semestre-renda-fixa-e-multimercados-lideram/#o-que-esperar-para-segundo-semestre"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://investnews.com.br/financas/fundos-captam-r-206-bilhoes-no-1o-semestre-renda-fixa-e-multimercados-lideram/#o-que-esperar-para-segundo-semestre"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://investnews.com.br/financas/fundos-captam-r-206-bilhoes-no-1o-semestre-renda-fixa-e-multimercados-lideram/#o-que-esperar-para-segundo-semestre"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://investnews.com.br/financas/fundos-captam-r-206-bilhoes-no-1o-semestre-renda-fixa-e-multimercados-lideram/#o-que-esperar-para-segundo-semestre"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://investnews.com.br/financas/fundos-captam-r-206-bilhoes-no-1o-semestre-renda-fixa-e-multimercados-lideram/#o-que-esperar-para-segundo-semestre"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://investnews.com.br/financas/fundos-captam-r-206-bilhoes-no-1o-semestre-renda-fixa-e-multimercados-lideram/#o-que-esperar-para-segundo-semestre"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-conhecer-mais-fundos">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/investir"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/investir"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.nuinvest.com.br/investir"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/investir"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/investir"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/investir"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  
+  <#elseif link = "cta-suit-fazer-teste">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/autenticacao?redirect_url=https://www.easynvest.com.br/configuracoes/perfil/perfil-investidor&utm_source=responsys&utm_medium=email&utm_campaign=teste-macro-engagement-&utm_term=clientes-teste&utm_content=crm_email_estatico_1x1_cta-suitability_fazer-teste"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/autenticacao?redirect_url=https://www.easynvest.com.br/configuracoes/perfil/perfil-investidor&utm_source=responsys&utm_medium=email&utm_campaign=teste-macro-engagement-&utm_term=clientes-teste&utm_content=crm_email_estatico_1x1_cta-suitability_fazer-teste"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.easynvest.com.br/autenticacao?redirect_url=https://www.easynvest.com.br/configuracoes/perfil/perfil-investidor&utm_source=responsys&utm_medium=email&utm_campaign=teste-macro-engagement-&utm_term=clientes-teste&utm_content=crm_email_estatico_1x1_cta-suitability_fazer-teste"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/autenticacao?redirect_url=https://www.easynvest.com.br/configuracoes/perfil/perfil-investidor&utm_source=responsys&utm_medium=email&utm_campaign=teste-macro-engagement-&utm_term=clientes-teste&utm_content=crm_email_estatico_1x1_cta-suitability_fazer-teste"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/autenticacao?redirect_url=https://www.easynvest.com.br/configuracoes/perfil/perfil-investidor&utm_source=responsys&utm_medium=email&utm_campaign=teste-macro-engagement-&utm_term=clientes-teste&utm_content=crm_email_estatico_1x1_cta-suitability_fazer-teste"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/autenticacao?redirect_url=https://www.easynvest.com.br/configuracoes/perfil/perfil-investidor&utm_source=responsys&utm_medium=email&utm_campaign=teste-macro-engagement-&utm_term=clientes-teste&utm_content=crm_email_estatico_1x1_cta-suitability_fazer-teste"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-blog-fundos-o-que-sao">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/fundos-de-investimento-o-que-sao/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/fundos-de-investimento-o-que-sao/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/fundos-de-investimento-o-que-sao/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/fundos-de-investimento-o-que-sao/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/fundos-de-investimento-o-que-sao/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/fundos-de-investimento-o-que-sao/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-fundos">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="${PET.LINK_COMU?skip}"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="${PET.LINK_COMU?skip}"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="${PET.LINK_COMU?skip}"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="${PET.LINK_COMU?skip}"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="${PET.LINK_COMU?skip}"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="${PET.LINK_COMU?skip}"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-taxas-e-precos">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/taxas-e-precos"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/taxas-e-precos"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.nuinvest.com.br/taxas-e-precos"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/taxas-e-precos"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/taxas-e-precos"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/taxas-e-precos"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-lp-comecar-investir">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/comecar-a-investir"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/comecar-a-investir"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.nuinvest.com.br/comecar-a-investir"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/comecar-a-investir"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/comecar-a-investir"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/comecar-a-investir"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-completar-cadastro">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/cadastro/dados-pessoais/apelido"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/cadastro/dados-pessoais/apelido"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.easynvest.com.br/cadastro/dados-pessoais/apelido"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/cadastro/dados-pessoais/apelido"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/cadastro/dados-pessoais/apelido"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/cadastro/dados-pessoais/apelido"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "bloco-blog-3-erros">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/investir-na-bolsa-3-erros-para-evitar/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/investir-na-bolsa-3-erros-para-evitar/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/investir-na-bolsa-3-erros-para-evitar/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investir-na-bolsa-3-erros-para-evitar/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investir-na-bolsa-3-erros-para-evitar/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investir-na-bolsa-3-erros-para-evitar/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "bloco-blog-como-comecar">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/investimento-o-que-e-como-comecar/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/investimento-o-que-e-como-comecar/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/investimento-o-que-e-como-comecar/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investimento-o-que-e-como-comecar/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investimento-o-que-e-como-comecar/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investimento-o-que-e-como-comecar/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "bloco-blog-clube-investimento">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/clube-de-investimento/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/clube-de-investimento/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/clube-de-investimento/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/clube-de-investimento/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/clube-de-investimento/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/clube-de-investimento/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "bloco-blog-renda-variavel">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/investimentos-em-renda-variavel-o-que-sao/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/investimentos-em-renda-variavel-o-que-sao/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/investimentos-em-renda-variavel-o-que-sao/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investimentos-em-renda-variavel-o-que-sao/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investimentos-em-renda-variavel-o-que-sao/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/investimentos-em-renda-variavel-o-que-sao/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "bloco-blog-reserva-emergencia">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/reserva-de-emergencia-como-criar-a-sua/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://blog.nubank.com.br/reserva-de-emergencia-como-criar-a-sua/"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://blog.nubank.com.br/reserva-de-emergencia-como-criar-a-sua/"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/reserva-de-emergencia-como-criar-a-sua/"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/reserva-de-emergencia-como-criar-a-sua/"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://blog.nubank.com.br/reserva-de-emergencia-como-criar-a-sua/"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "responder-agora-stvm">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://easynvest.typeform.com/to/B0e3X8hI?public_id="
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://easynvest.typeform.com/to/B0e3X8hI?public_id="
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://easynvest.typeform.com/to/B0e3X8hI?public_id="
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/B0e3X8hI?public_id="
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/B0e3X8hI?public_id="
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/B0e3X8hI?public_id="
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-investir">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/investir"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.easynvest.com.br/investir"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.easynvest.com.br/investir"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/investir"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/investir"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.easynvest.com.br/investir"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-investimento">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/investimentos"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/investimentos"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.nuinvest.com.br/investimentos"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/investimentos"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/investimentos"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/investimentos"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link = "cta-perfil-investidor">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/configuracoes/perfil/perfil-investidor"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://www.nuinvest.com.br/configuracoes/perfil/perfil-investidor"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://www.nuinvest.com.br/configuracoes/perfil/perfil-investidor"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/configuracoes/perfil/perfil-investidor"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/configuracoes/perfil/perfil-investidor"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://www.nuinvest.com.br/configuracoes/perfil/perfil-investidor"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  </#if>
+</#macro>

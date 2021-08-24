@@ -1,9 +1,33 @@
+<#assign footer = doc.root.footer>
+
+<#if (footer.@type[0]?isnull) || !(footer.@type[0]??)>
+  <#assign type = "default">
+<#else>
+  <#assign type = footer.@type[0]>
+</#if>
+
+<#if (footer.@disclaimer[0]?isnull) || !(footer.@disclaimer[0]??)>
+  <#assign disclaimer = "default">
+<#else>
+  <#assign disclaimer = footer.@disclaimer[0]>
+</#if>
+
+<#if (footer.@optout[0]?isnull) || !(footer.@optout[0]??)>
+  <#assign optout = "${form('central-de-preferencias','CUSTOMER_ID_')}">
+<#else>
+  <#if footer.@optout[0] == "contatos-lps">
+    <#assign optout = "${form('form_unsub_contatos_lps','EMAIL_ADDRESS_')}">
+  <#else>
+    <#assign optout = "${form('central-de-preferencias','CUSTOMER_ID_')}">
+  </#if>
+</#if>
+
 <!--[if mso | IE]>
 </td></tr></table>
 <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:552px;" width="552"><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
 <![endif]-->
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -20,7 +44,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                       <tr>
                         <td align="center" style="font-size:0px;padding:0 0 16px;word-break:break-word;">
                           <div
-                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:500;line-height:24px;text-align:center;color:#6F1167;">
+                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:500;line-height:24px;text-align:center;color:#4C0677;">
                             Siga nossas redes sociais: </div>
                         </td>
                       </tr>
@@ -36,9 +60,9 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                                     <tbody>
                                       <tr>
                                         <td style="font-size:0;height:49px;vertical-align:middle;width:49px;"><a
-                                            href="https://www.facebook.com/easynvest" target="_blank"><img
+                                            href="https://www.facebook.com/nubank/" target="_blank"><img
                                               height="49"
-                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/facebook_icon.png"
+                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/fb-new-icon.png"
                                               style="border-radius:3px;display:block;" width="49" /></a>
                                         </td>
                                       </tr>
@@ -58,9 +82,9 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                                     <tbody>
                                       <tr>
                                         <td style="font-size:0;height:49px;vertical-align:middle;width:49px;"><a
-                                            href="https://www.youtube.com/easynvest" target="_blank"><img
+                                            href="https://www.youtube.com/nu_invest" target="_blank"><img
                                               height="49"
-                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/youtube_icon.png"
+                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/yt-new-icon.png"
                                               style="border-radius:3px;display:block;" width="49" /></a>
                                         </td>
                                       </tr>
@@ -80,9 +104,9 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                                     <tbody>
                                       <tr>
                                         <td style="font-size:0;height:49px;vertical-align:middle;width:49px;"><a
-                                            href="https://www.instagram.com/easynvest" target="_blank"><img
+                                            href="https://www.instagram.com/nu_invest" target="_blank"><img
                                               height="49"
-                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/instagram_icon.png"
+                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/insta-new-icon.png"
                                               style="border-radius:3px;display:block;" width="49" /></a>
                                         </td>
                                       </tr>
@@ -102,8 +126,8 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                                     <tbody>
                                       <tr>
                                         <td style="font-size:0;height:49px;vertical-align:middle;width:49px;"><a
-                                            href="https://twitter.com/easynvest" target="_blank"><img height="49"
-                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/twitter_icon.png"
+                                            href="https://twitter.com/nu_invest" target="_blank"><img height="49"
+                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/twitter-new-icon.png"
                                               style="border-radius:3px;display:block;" width="49" /></a>
                                         </td>
                                       </tr>
@@ -123,9 +147,9 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                                     <tbody>
                                       <tr>
                                         <td style="font-size:0;height:49px;vertical-align:middle;width:49px;"><a
-                                            href="https://www.linkedin.com/company/easynvest" target="_blank"><img
+                                            href="https://www.linkedin.com/company/nubank/" target="_blank"><img
                                               height="49"
-                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/linkedin_icon.png"
+                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/linkedin-new-icon.png"
                                               style="border-radius:3px;display:block;" width="49" /></a>
                                         </td>
                                       </tr>
@@ -150,7 +174,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
 </table>
 </div>
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -167,7 +191,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                       <tr>
                         <td align="center" style="font-size:0px;padding:0 0 16px;word-break:break-word;">
                           <div
-                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:500;line-height:24px;text-align:center;color:#6F1167;">
+                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:500;line-height:24px;text-align:center;color:#4C0677;">
                             Baixe agora! &Eacute; totalmente gratuito. </div>
                         </td>
                       </tr>
@@ -184,7 +208,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
 </table>
 </div>
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -262,7 +286,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
 </table>
 </div>
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -279,7 +303,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                       <tr>
                         <td align="center" style="font-size:0px;padding:10px 0;word-break:break-word;">
                           <div
-                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:500;line-height:24px;text-align:center;color:#6F1167;">
+                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:700;line-height:24px;text-align:center;color:#4C0677;">
                             Precisa de ajuda? </div>
                         </td>
                       </tr>
@@ -287,7 +311,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                         <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
                           <div
                             style="font-family:Arial, sans-serif;font-size:14px;font-weight:300;line-height:24px;text-align:center;color:#322828;">
-                            <a href="#" style="color:#322828;text-decoration:none">easynvest@easynvest.com.br</a>
+                            <a href="#" style="color:#322828;text-decoration:none">easynvest@nuinvest.com.br</a>
                           </div>
                         </td>
                       </tr>
@@ -323,7 +347,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                       <tr>
                         <td align="center" style="font-size:0px;padding:10px 0;word-break:break-word;">
                           <div
-                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:500;line-height:24px;text-align:center;color:#6F1167;">
+                            style="font-family:Arial, sans-serif;font-size:14px;font-weight:700;line-height:24px;text-align:center;color:#4C0677;">
                             Ouvidoria </div>
                         </td>
                       </tr>
@@ -331,7 +355,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                         <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
                           <div
                             style="font-family:Arial, sans-serif;font-size:14px;font-weight:300;line-height:24px;text-align:center;color:#322828;">
-                            <a href="#" style="color:#322828;text-decoration:none">ouvidoria@easynvest.com.br</a>
+                            <a href="#" style="color:#322828;text-decoration:none">ouvidoria@nuinvest.com.br</a>
                           </div>
                         </td>
                       </tr>
@@ -362,7 +386,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
 </table>
 </div>
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -380,49 +404,8 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
                         <td align="justify" style="font-size:0px;padding:0px 20px;word-break:break-word;">
                           <div
                             style="font-family:Arial, sans-serif;font-size:11px;font-weight:300;line-height:16px;text-align:justify;color:#9B9B9B;">
-                            A Easynvest - Título Corretora de Valores SA, inscrita no Cadastro Nacional da Pessoa
-                            Jurídica do Ministério da Economia sob o nº 62.169.875/0001-79 (“Easynvest” ou
-                            “Instituição Financeira”), instituição financeira devidamente autorizada a funcionar
-                            pelo Banco Central do Brasil, informa, nos termos do artigo 14-A, § 6º do Regulamento
-                            Anexo à Resolução nº 1.655, de 26 de outubro de 1989, conforme alterada (“Resolução nº
-                            1.655”), que os recursos de seus clientes são mantidos em conta(s) de registro,
-                            utilizada(s) exclusivamente pela Easynvest para registro de operações de cada cliente
-                            (“Contas de Registro”), na forma do referido artigo 14-A da Resolução nº 1.655. A
-                            Easynvest informa, também, que as Contas de Registro não se confundem com as contas de
-                            pagamento, estas definidas pelo artigo 6º, inciso IV da Lei nº 12.865, de 9 de outubro
-                            de 2013, conforme alterada (“Lei nº 12.865/13”), como contas de registro detidas em nome
-                            de usuário final de serviços de pagamento utilizadas para a execução de transações de
-                            pagamento. Salienta-se, ainda, que os recursos mantidos nas Contas de Registro não
-                            possuem regime jurídico equivalente ao dos recursos mantidos em contas de pagamento, nos
-                            termos previstos no artigo 12 da Lei nº 12.865/13. Sendo assim, os recursos dos clientes
-                            da Easynvest não constituem patrimônio separado ao da Instituição Financeira. Este
-                            material foi preparado pela Easynvest – Título Corretora de Valores SA (“Easynvest”),
-                            tem caráter meramente informativo e não deve ser entendido como análise, solicitação de
-                            compra, oferta ou recomendação por parte dos destinatários. As informações aqui
-                            apresentadas não pretendem conter todos os fatos relevantes que um investidor deve
-                            considerar e, dessa forma, representam apenas uma visão limitada do mercado. A Easynvest
-                            não se responsabiliza por danos oriundos de erros, omissões ou alterações nos fatores de
-                            mercado nem pelo uso das informações aqui contidas. Leia o Prospecto, o Formulário de
-                            Informações Complementares, a Lâmina de Informações Essenciais e o Regulamento antes de
-                            investir. A rentabilidade passada não representa garantia de rentabilidade futura. A
-                            rentabilidade divulgada não é líquida de impostos. Para a avaliação da performance de um
-                            fundo de investimento, é recomendável a análise de, no mínimo, 12 (doze) meses ou, caso
-                            o fundo de investimento tenha menos de 12 (doze) meses, análise de período desde a data
-                            de início de seu funcionamento até o último dia do mês anterior à composição desse
-                            material informativo. O efetivo investimento está condicionado à: (i) adequação do
-                            Produto ao perfil do Investidor e à atualização cadastral; ou (ii) à declaração expressa
-                            do Cliente de que está ciente da inadequação de seu perfil ao produto apresentado e dos
-                            riscos do investimento em tal produto. Os Fundos de Investimento não contam com a
-                            garantia do Administrador, do Gestor, de qualquer mecanismo de seguro ou Fundo
-                            Garantidor de Créditos – FGC. Para mais informações, acesse o site do FGC:
-                            www.fgc.org.br. Esta Instituição é aderente ao Código ANBIMA de Regulação e Melhores
-                            Práticas para Distribuição de Produtos de Investimento e código para fundos de
-                            investimento. Descrição do tipo ANBIMA disponível no formulário de informações
-                            complementares. As informações presentes neste material são baseadas em simulações e os
-                            resultados reais poderão ser significativamente diferentes. É vedada a cópia,
-                            distribuição ou reprodução total ou parcial deste material sem a prévia e expressa
-                            concordância da Easynvest. Central do Investidor Tel.: (11) 3841-4515 –
-                            easynvest@easynvest.com.br - Ouvidoria Easynvest 0800 727 7784. </div>
+                            <#include "cms://contentlibrary/components/disclaimers/footer-" + disclaimer + ".htm">
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -438,7 +421,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
 </table>
 </div>
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -512,7 +495,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
 </table>
 </div>
 <div
-style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
+style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
   style="background-color:rgb(255,255,255);width:100%;background-position:initial initial;background-repeat:initial initial;">
   <tbody>
@@ -696,19 +679,21 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:552px;backgro
   </tbody>
 </table>
 </div>
-<div
-style="background-color:rgb(50,40,40);margin:0px auto;max-width:552px;background-position:initial initial;background-repeat:initial initial;">
-<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-  style="background-color:rgb(50,40,40);width:100%;background-position:initial initial;background-repeat:initial initial;">
-  <tbody>
-    <tr>
-      <td style="direction:ltr;font-size:0px;padding:16px 0;text-align:center;">
-        <div
-          style="font-family:Poppins,Helvetica,Arial;font-size:12px;font-weight:300;line-height:16px;text-align:center;color:#FFFFFF;">
-          <a href="${form('central-de-preferencias','CUSTOMER_ID_')}"
-            style="color:#ffffff;text-decoration:none">N&atilde;o desejo receber esse tipo de e-mail</a></div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<#if type == "default">
+  <div
+  style="background-color:rgb(50,40,40);margin:0px auto;max-width:600px;background-position:initial initial;background-repeat:initial initial;">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="background-color:rgb(50,40,40);width:100%;background-position:initial initial;background-repeat:initial initial;">
+    <tbody>
+      <tr>
+        <td style="direction:ltr;font-size:0px;padding:16px 0;text-align:center;">
+          <div
+            style="font-family:Poppins,Helvetica,Arial;font-size:12px;font-weight:300;line-height:16px;text-align:center;color:#FFFFFF;">
+            <a href='${optout}'
+              style="color:#ffffff;text-decoration:none">N&atilde;o desejo receber esse tipo de e-mail</a></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</#if>

@@ -1,4 +1,4 @@
-<div>
+<div style="padding:20px 40px 40px 40px">
   <#assign account = doc.root.body_account_nuinvest>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="
@@ -6,6 +6,7 @@
       background-color: #ffffff;
       margin: 0px auto;
       border-radius: 3px;
+      border: 1px solid #E4E4E4;
       max-width: 600px;
     ">
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="
@@ -19,12 +20,12 @@
           <td style="
               direction: ltr;
               font-size: 0px;
-              padding: 24px 40px;
+              padding: 24px;
               text-align: center;
               vertical-align: top;
             ">
             <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin: 0px auto; max-width: 520px">
+            <div style="margin: 0px auto; max-width:600px">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%">
                 <tbody>
                   <tr>
@@ -56,15 +57,13 @@
                                         word-break: break-word;
                                       ">
                                       <div style="
-                                          font-family: Ubuntu, Helvetica,
-                                            Arial, sans-serif;
                                           font-size: 14px;
                                           font-weight: 700;
                                           line-height: 18px;
                                           text-align: left;
                                           color: #322828;
                                         ">
-                                        ${account.bank[0]!"Banco: 140 (SC Easynvest)"}
+                                        Banco: ${account.bank[0]!"140 (SC Easynvest)"}
                                       </div>
                                     </td>
                                   </tr>
@@ -81,7 +80,7 @@
               </table>
             </div>
             <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin: 0px auto; max-width: 520px">
+            <div style="margin: 0px auto; max-width:600px">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%">
                 <tbody>
                   <tr>
@@ -133,7 +132,7 @@
                                           <span style="
                                               color: #2f0549;
                                               font-weight: 700;
-                                            ">Agência:</span>
+                                            ">Agência:<br class="hide-on-desktop" />&nbsp;</span>
                                           ${account.agency[0]!"0000"}
                                         </div>
                                       </td>
@@ -165,7 +164,6 @@
                                           word-break: break-word;
                                         ">
                                         <div style="
-                                            
                                             font-size: 14px;
                                             line-height: 18px;
                                             text-align: left;
@@ -174,7 +172,7 @@
                                           <span style="
                                               color: #2f0549;
                                               font-weight: 700;
-                                            ">Conta corrente:</span>
+                                            ">Conta corrente:<br class="hide-on-desktop" />&nbsp;</span>
                                           ${account.account[0]!"0000000-0"}
                                         </div>
                                       </td>
@@ -194,7 +192,7 @@
               </table>
             </div>
             <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin: 0px auto; max-width: 520px">
+            <div style="margin: 0px auto; max-width:600px">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%">
                 <tbody>
                   <tr>
@@ -226,8 +224,6 @@
                                         word-break: break-word;
                                       ">
                                       <div style="
-                                          font-family: Ubuntu, Helvetica,
-                                            Arial, sans-serif;
                                           font-size: 14px;
                                           line-height: 18px;
                                           text-align: left;
@@ -290,8 +286,6 @@
                                         word-break: break-word;
                                       ">
                                       <div style="
-                                          font-family: Ubuntu, Helvetica,
-                                            Arial, sans-serif;
                                           font-size: 14px;
                                           line-height: 18px;
                                           text-align: left;
@@ -367,7 +361,7 @@
                 background-color: #efefef;
                 margin: 0px auto;
                 border-radius: 5px;
-                max-width: 520px;
+                max-width: 600px;
               ">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="
                   background: #efefef;
@@ -405,8 +399,6 @@
                                         word-break: break-word;
                                       ">
                                       <div style="
-                                          font-family: Ubuntu, Helvetica,
-                                            Arial, sans-serif;
                                           font-size: 14px;
                                           line-height: 18px;
                                           text-align: center;

@@ -1,0 +1,47 @@
+<#macro parse_content node>
+  <#if (node.@style[0]?isnull) || !(node.@style[0]??)>
+    <#local styles = "">
+  <#else>
+    <#local styles = node.@style[0]>
+  </#if>
+
+  <#if node?node_type == "element">
+    <#if node?node_name == "span">
+      <span style="${styles}">${node}</span>
+    <#elseif node?node_name == "br">
+      <br />
+    <#elseif node?node_name == "a">
+      <a href="${node.@href}" style="${styles}" target="_blank">${node}</a>
+    <#elseif node?node_name == "b">
+      <b>${node}</b>
+    <#elseif node?node_name == "i">
+      <i>${node}</i>
+    <#elseif node?node_name == "em">
+      <em>${node}</em>
+    <#elseif node?node_name == "li">
+      <li style="${styles}">${node}</li>
+    <#elseif node?node_name == "strong">
+      <strong>${node}</strong>
+    <#elseif node?node_name == "div">
+      <div style="${styles}">${node}</div>
+    <#elseif node?node_name == "p">
+      <p style="${styles}">${node}</p>
+    <#elseif node?node_name == "h1">
+      <h1 style="${styles}">${node}</h1>
+    <#elseif node?node_name == "h2">
+      <h2 style="${styles}">${node}</h2>
+    <#elseif node?node_name == "h3">
+      <h3 style="${styles}">${node}</h3>
+    <#elseif node?node_name == "h4">
+      <h4 style="${styles}">${node}</h4>
+    <#elseif node?node_name == "h5">
+      <h5 style="${styles}">${node}</h5>
+    <#elseif node?node_name == "h6">
+      <h6 style="${styles}">${node}</h6>
+    <#elseif node?node_name == "img">
+      <img src="${node.@src}" style="${styles}" />
+    </#if>
+  <#else>
+    ${node}
+  </#if>
+</#macro>

@@ -32,6 +32,27 @@
   <#include "cms://contentlibrary/components/body-title.htm">
 </#macro>
 
+<#macro attention_macro index>
+  <#local attentionlist = doc.root.body_attention>
+  <#local attention = attentionlist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-attention.htm">
+</#macro>
+
+<#macro stepsmall_macro index>
+  <#local stepsmalllist = doc.root.body_step_small>
+  <#local stepsmall = stepsmalllist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-step-small.htm">
+</#macro>
+
+<#macro cardproduto_macro index>
+  <#local cardprodutolist = doc.root.body_card_produto>
+  <#local card = cardprodutolist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-card-produto.htm">
+</#macro>
+
 <#macro text_macro index>
   <#local textlist = doc.root.body_text>
   <#local text = textlist[index?number]>
@@ -47,6 +68,12 @@
     <@title_macro index=component["index"] />
   <#elseif component["id"] == "body-text">
     <@text_macro index=component["index"] />
+  <#elseif component["id"] == "body-attention">
+    <@attention_macro index=component["index"] />
+  <#elseif component["id"] == "body-step-small">
+    <@stepsmall_macro index=component["index"] />
+  <#elseif component["id"] == "body-card-produto">
+    <@cardproduto_macro index=component["index"] />
   <#else>
     <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
   </#if>

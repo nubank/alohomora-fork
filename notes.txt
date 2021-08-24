@@ -1,9 +1,31 @@
-<root>
-  <header_adhoc_photo></header_adhoc_photo>
-  <body_video_thumb variant="purple">
-    <cta url="#" large="large">Clique aqui</cta>
-  </body_video_thumb>
-  <body_box_zero1></body_box_zero1>
-  <body_box_zero3></body_box_zero3>
-  <body_attention></body_attention>
-</root>
+${form('central-de-preferencias','CUSTOMER_ID_')}
+
+
+<header_snippet>Vamos arrumar isso agora?</header_snippet>
+<header>
+  <content><span style="font-size:16px; font-weight:400;">Erro na transferência</span><br/>O número da conta que você informou está errado!</content>
+</header>
+<body_title_text>Vimos que você tentou fazer uma transferência de dinheiro para a sua conta na Easynvest, só que o valor foi devolvido.</body_title_text>
+<body_text><span style="font-weight:600;">Identificamos que o número da conta informada estava divergente.</span>
+</body_text>
+<body_title subtitle="true">Confira abaixo os dados corretos para que você consiga transferir o dinheiro e começar a investir:</body_title>
+<body_account_nuinvest>
+  <bank>140 (SC Easynvest)</bank>
+  <agency>0000</agency>
+  <account>0000000-0</account>
+</body_account_nuinvest>
+<body_attention index="0">
+  <title>Fique de olho</title>
+  <content>Os recursos deverão sempre ser enviados de qualquer conta bancária de sua titularidade, ou seja, com seu CPF, para sua conta no Nu invest. O depósito deve ser feito por meio de TED, de sua conta corrente ou poupança, para sua conta Nu invest.<br /><br /><span style="font-weight:600; color:#2F0549;">Importante: não utilize a modalidade de transferência para Instituição Financeira.</span></content>
+  <cta>Clique aqui</cta>
+</body_attention>
+<body_attention index="1">
+  <title>Lembre-se</title>
+  <content>Não aceitamos depósitos em dinheiro, cheque ou transferências em nome de terceiros. Caso sua conta no banco de origem seja conta, você deverá optar pela modalidade <span style="font-weight:600;">TED para terceiros/outras titularidades</span>, uma vez que, em sua conta do Nu invest, você é o único titular.</content>
+  <cta>Clique aqui</cta>
+</body_attention>
+<body_signature>
+  <first>Busque o que é seu!</first>
+  <second>Nu invest</second>
+</body_signature>
+<footer>undefined</footer>

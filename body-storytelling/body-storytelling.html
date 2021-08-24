@@ -1,7 +1,9 @@
-<div style="padding: 40px 24px">
+<div style="padding: 40px">
+  <#include "cms://contentlibrary/components/helpers/parser.htm">
+
   <#assign story = doc.root.body_storytelling>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-  <div style="margin: 0px auto; max-width: 552px">
+  <div style="margin: 0px auto; max-width:550px">
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%">
       <tbody>
         <tr>
@@ -12,7 +14,7 @@
               text-align: center;
             ">
             <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="552px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin: 0px auto; max-width: 552px">
+            <div style="margin: 0px auto; max-width:550px">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%"
                 background-image="">
                 <tbody>
@@ -40,7 +42,7 @@
                           <tbody>
                             <tr>
                               <td
-                                background='${story.block[0].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-1.png"}'
+                                background='${(story.block[0].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-1.png"}'
                                 bgcolor="#E6268C" width="100%" height="200" valign="middle" vertical-align="middle"
                                 align="center" style="
                                   font-size: 0px;
@@ -50,7 +52,7 @@
                                 ">
                                 <!--[if gte mso 9]>
                                     <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:275px;height:200px;">
-                                      <v:fill type="tile" src='${story.block[0].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-1.png"}' color="#820AD1" />
+                                      <v:fill type="tile" src='${(story.block[0].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-1.png"}' color="#820AD1" />
                                       <v:textbox inset="0,0,0,0">
                                     <![endif]-->
                                 <div>
@@ -64,11 +66,7 @@
                                       color: #FFFFFF;
                                     ">
                                       <#list story.block[0]?children as node>
-                                        <#if node?node_type == "element">
-                                          <span style=${node.@style[0]!""}>${node}</span>
-                                        <#else>
-                                          ${node}
-                                        </#if>
+                                        <@parse_content node=node />
                                       </#list>
                                     </div>
                                   <#recover>
@@ -107,7 +105,7 @@
                           <tbody>
                             <tr>
                               <td
-                                background='${story.block[1].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-2.png"}'
+                                background='${(story.block[1].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-2.png"}'
                                 bgcolor="#87027B" width="100%" height="200" valign="middle" vertical-align="middle"
                                 align="center" style="
                                   font-size: 0px;
@@ -117,7 +115,7 @@
                                 ">
                                 <!--[if gte mso 9]>
                                     <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:275px;height:200px;">
-                                      <v:fill type="tile" src='${story.block[1].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-2.png"}' color="#2F0549" />
+                                      <v:fill type="tile" src='${(story.block[1].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-2.png"}' color="#2F0549" />
                                       <v:textbox inset="0,0,0,0">
                                     <![endif]-->
                                 <div>
@@ -131,11 +129,7 @@
                                       color: #FFFFFF;
                                     ">
                                       <#list story.block[1]?children as node>
-                                        <#if node?node_type == "element">
-                                          <span style=${node.@style[0]!""}>${node}</span>
-                                        <#else>
-                                          ${node}
-                                        </#if>
+                                        <@parse_content node=node />
                                       </#list>
                                     </div>
                                   <#recover>
@@ -167,7 +161,7 @@
               </table>
             </div>
             <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="552px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552px" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin: 0px auto; max-width: 552px">
+            <div style="margin: 0px auto; max-width:550px">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%">
                 <tbody>
                   <tr>
@@ -191,7 +185,7 @@
                           <tbody>
                             <tr>
                               <td
-                                background='${story.block[2].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-3.png"}'
+                                background='${(story.block[2].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-3.png"}'
                                 bgcolor="#FFBB00" width="100%" height="200" valign="middle" vertical-align="middle"
                                 align="center" style="
                                   font-size: 0px;
@@ -201,7 +195,7 @@
                                 ">
                                 <!--[if gte mso 9]>
                                     <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:275px;height:200px;">
-                                      <v:fill type="tile" src='${story.block[2].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-3.png"}' color="#4C0677" />
+                                      <v:fill type="tile" src='${(story.block[2].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-3.png"}' color="#4C0677" />
                                       <v:textbox inset="0,0,0,0">
                                     <![endif]-->
                                 <div>
@@ -214,12 +208,8 @@
                                       text-align: center;
                                       color: #FFFFFF;
                                     ">
-                                      <#list block[2]?children as node>
-                                        <#if node?node_type == "element">
-                                          <span style=${node.@style[0]!""}>${node}</span>
-                                        <#else>
-                                          ${node}
-                                        </#if>
+                                      <#list story.block[2]?children as node>
+                                        <@parse_content node=node />
                                       </#list>
                                     </div>
                                   <#recover>
@@ -258,7 +248,7 @@
                           <tbody>
                             <tr>
                               <td
-                                background='${story.block[3].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-4.png"}'
+                                background='${(story.block[3].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-4.png"}'
                                 bgcolor="#3CCBDA" width="100%" height="200" valign="middle" vertical-align="middle"
                                 align="center" style="
                                   font-size: 0px;
@@ -268,7 +258,7 @@
                                 ">
                                 <!--[if gte mso 9]>
                                     <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:275px;height:200px;">
-                                      <v:fill type="tile" src='${story.block[3].@background[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-4.png"}' color="#BD0FEA" />
+                                      <v:fill type="tile" src='${(story.block[3].@background[0])!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/story-grid-4.png"}' color="#BD0FEA" />
                                       <v:textbox inset="0,0,0,0">
                                     <![endif]-->
                                 <div>
@@ -281,12 +271,8 @@
                                       text-align: center;
                                       color: #FFFFFF;
                                     ">
-                                      <#list block[3]?children as node>
-                                        <#if node?node_type == "element">
-                                          <span style=${node.@style[0]!""}>${node}</span>
-                                        <#else>
-                                          ${node}
-                                        </#if>
+                                      <#list story.block[3]?children as node>
+                                        <@parse_content node=node />
                                       </#list>
                                     </div>
                                   <#recover>

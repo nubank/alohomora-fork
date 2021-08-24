@@ -1,0 +1,11 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="0px">
+      <mj-column padding="11px 40px">
+        <mj-divider padding="0px 0px 15px 0px" border-color="#D8D8D8" border-width="1px" />
+				<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/material-tecnico-icon.png" width="45px" height="45px" align="left" padding="0px" />
+        <mj-divider padding="15px 0px 0px 0px" border-color="#D8D8D8" border-width="1px" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,4 +1,6 @@
 <div>
+  <#include "cms://contentlibrary/components/helpers/parser.htm">
+
   <#assign element = doc.root.body_text_left_illustration>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="block-text-illus__wrapper-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;">
@@ -9,7 +11,7 @@
           <td class="block-text-illus__wrapper" style="direction:ltr;font-size:0px;padding:0px 24px 40px 24px;text-align:center;">
             <#if element.title[0]??>
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-              <div style="margin:0px auto;max-width:552px;">
+              <div style="margin:0px auto;max-width:600px;">
                 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
                   style="width:100%;">
                   <tbody>
@@ -29,11 +31,9 @@
                                           style="font-size:0px;padding:0px 0px 20px 0px;word-break:break-word;">
                                           <div
                                             style="font-size:20px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;">
-                                            <#if element.title?isnull>
-                                              Como funciona uma corretora?
-                                            <#else>
-                                              ${element.title[0]}
-                                            </#if>
+                                            <#list element.title?children as node>
+                                              <@parse_content node=node />
+                                            </#list>
                                            </div>
                                         </td>
                                       </tr>
@@ -52,7 +52,7 @@
               </div>
             </#if>
             <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin:0px auto;max-width:552px;">
+            <div style="margin:0px auto;max-width:600px;">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
                 style="width:100%;">
                 <tbody>
@@ -103,8 +103,9 @@
                                       <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
                                         <div
                                           style="font-size:16px;line-height:24px;text-align:left;color:#322828;">
-                                          ${element.content[0]!"Uma Corretora de Valores funciona como uma “prateleira” do mercado financeiro. Nela, você encontra uma infinidade de opções para investir, de
-                                          acordo com o seu perfil, objetivo e preferências."}</div>
+                                          <#list element.content?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
                                       </td>
                                     </tr>
                                   </tbody>

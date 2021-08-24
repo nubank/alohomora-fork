@@ -55,12 +55,6 @@ a[x-apple-data-detectors] {
   width: 100% !important;
 }
 @media only screen and (min-width: 480px) {
-  .body-text-padding {
-    padding: 0px 40px 40px 40px !important;
-  }
-  .body-title-padding {
-    padding: 0px 40px 20px 40px !important;
-  }
   .no-padding {
     padding: 0px !important;
   }

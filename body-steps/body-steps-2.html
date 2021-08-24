@@ -1,0 +1,171 @@
+<div>
+  <#assign steps = doc.root.body_steps> 
+
+  <#if (steps.@style[0]?isnull) || !(steps.@style[0]??)>
+    <#assign incomingStyles = "">
+  <#else>
+    <#assign incomingStyles = steps.@style[0]>
+  </#if>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="margin:0px auto;max-width:600px;padding:40px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td align="center" style='${"direction:ltr;font-size:0px;padding:0px;text-align:center;" + incomingStyles}'>
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:600px;" ><![endif]-->
+            <div class="mj-outlook-group-fix"
+              style="font-size:0;line-height:0;text-align:left;display:inline-block;width:auto;direction:ltr;">
+              <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:middle;width:32px;" ><![endif]-->
+              <div class="mj-column-px-32 mj-outlook-group-fix steps-checkbox-column"
+                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:32px;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="background-color:#FFFFFF;vertical-align:top;padding:0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="right" style="font-size:0px;padding:0px;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                  style="border-collapse:collapse;border-spacing:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="width:32px;">
+                                        <#if steps.@step[0] == "1">
+                                          <img height="auto"
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-1.png"
+                                            style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                            width="32">
+                                        <#elseif steps.@step[0] == "2">
+                                          <img height="auto"
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-2.png"
+                                            style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                            width="32">
+                                        <#elseif steps.@step[0] == "3">
+                                          <img height="auto"
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-3.png"
+                                            style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                            width="32">
+                                        <#elseif steps.@step[0] == "4">
+                                          <img height="auto"
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-4.png"
+                                            style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                            width="32">
+                                        </#if>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td><td style="vertical-align:middle;width:250px;" ><![endif]-->
+              <div class="mj-outlook-group-fix steps-text-column"
+                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:156px;max-width:156px;padding-left:12px;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="background-color:#FFFFFF;vertical-align:middle;padding:0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:0px 0px 22px 0px;word-break:break-word;">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td height="32px" style="vertical-align:middle;height:32px;"><![endif]-->
+                                <div
+                                  style="font-size:14px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;height:32px;display:table;overflow:hidden;">
+                                    <div style="display:table-cell;vertical-align: middle;">
+                                      Pré-cadastro
+                                    </div>
+                                  </div>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td height="32px" style="vertical-align:middle;height:32px;"><![endif]-->
+                                <div
+                                  style="font-size:14px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;height:32px;display:table;overflow:hidden;">
+                                    <div style="display:table-cell;vertical-align: middle;">
+                                      Complete seu cadastro
+                                    </div>
+                                  </div>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:16px 0px;word-break:break-word;" class="steps-descubra-text">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td height="32px" style="vertical-align:middle;height:32x;"><![endif]-->
+                                <#if steps.@step[0] != "1">
+                                  <div
+                                    style="font-size:14px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;height:32px;display:table;overflow:hidden;">
+                                    <div style="display:table-cell;vertical-align: middle;">
+                                      Descubra seu Perfil de Investidor
+                                    </div>
+                                  </div>
+                                <#else>
+                                  <div
+                                    style="font-size:14px;font-weight:400;line-height:24px;text-align:left;color:#696969;height:32px;display:table;overflow:hidden;">
+                                    <div style="display:table-cell;vertical-align: middle;">
+                                      Descubra seu Perfil de Investidor
+                                    </div>
+                                  </div>
+                                </#if>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:0px 0px 10px 0px;word-break:break-word;" class="steps-faca-text">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td height="32px" style="vertical-align:middle;height:32px;"><![endif]-->
+                                <#if (steps.@step[0] == "1") || (steps.@step[0] == "2")>
+                                  <div
+                                    style="font-size:14px;font-weight:400;line-height:24px;text-align:left;color:#696969;height:32px;display:table;overflow:hidden;">
+                                    <div style="display:table-cell;vertical-align: middle;">
+                                      Faça sua transferência
+                                    </div>
+                                  </div>
+                                <#else>
+                                  <div
+                                    style="font-size:14px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;height:32px;display:table;overflow:hidden;">
+                                    <div style="display:table-cell;vertical-align: middle;">
+                                      Faça sua transferência
+                                    </div>
+                                  </div>
+                                </#if>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td height="32px" style="vertical-align:middle;height:32px;"><![endif]-->
+                                <div
+                                  style="font-size:14px;font-weight:400;line-height:24px;text-align:left;color:#696969;height:32px;display:table;overflow:hidden;">
+                                  <div style="display:table-cell;vertical-align: middle;">
+                                    Realize o 1° investimento
+                                  </div>
+                                </div>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>

@@ -1,78 +1,30 @@
 <mjml>
   <mj-head>
   	<mj-style>
-    	@media screen and (min-width: 480px) {
-      	.steps-checkbox-column {
-      		width: 32px !important;
-      		max-width: 32px !important;
-      	}
+      .steps-checkbox-column {
+        width: 32px !important;
+        max-width: 32px !important;
+      }
+      .steps-text-column {
+        width: 250px !important;
+        max-width: 250px !important;
       }
     </mj-style>
   </mj-head>
   <mj-body>
-    <mj-wrapper padding="40px 24px" background-color="aqua">
-      <mj-section padding="0px">
-        <mj-group>
-          <mj-column padding="0px" vertical-align="middle" width="10%" css-class="steps-checkbox-column">
-            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-checked.png" padding="0px" align="left" width="32px" />
-          </mj-column>
-          <mj-column padding="0px 0px 0px 12px" vertical-align="middle" width="85%">
-            <mj-text padding="0px" color="#4C0677" font-weight="500" font-size="14px" line-height="24px">Pré-cadastro</mj-text>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section padding="0 16px" background-color="transparent" text-align="left">
-        <mj-column padding="12px 0" border-left="1px solid #C4C4C4"></mj-column>
-      </mj-section>
-      <mj-section padding="0px">
-        <mj-group>
-          <mj-column padding="0px" vertical-align="middle" width="10%" css-class="steps-checkbox-column">
-            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-checked.png" padding="0px" align="left" width="32px" />
-          </mj-column>
-          <mj-column padding="0px 0px 0px 12px" vertical-align="middle" width="85%">
-            <mj-text padding="0px" color="#4C0677" font-weight="500" font-size="14px" line-height="24px">Complete seu cadastro</mj-text>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section padding="0 16px" background-color="transparent" text-align="left">
-        <mj-column padding="12px 0" border-left="1px solid #C4C4C4"></mj-column>
-      </mj-section>
-      <mj-section padding="0px">
-        <mj-group>
-          <mj-column padding="0px" vertical-align="middle" width="10%" css-class="steps-checkbox-column">
-            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-checked.png" padding="0px" align="left" width="32px" />
-          </mj-column>
-          <mj-column padding="0px 0px 0px 12px" vertical-align="middle" width="85%">
-            <mj-text padding="0px" color="#4C0677" font-weight="500" font-size="14px" line-height="24px">Descubra seu Perfil de Investidor</mj-text>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section padding="0 16px" background-color="transparent" text-align="left">
-        <mj-column padding="12px 0" border-left="1px solid #C4C4C4"></mj-column>
-      </mj-section>
-      <mj-section padding="0px">
-        <mj-group>
-          <mj-column padding="0px" vertical-align="middle" width="10%" css-class="steps-checkbox-column">
-            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-checked.png" padding="0px" align="left" width="32px" />
-          </mj-column>
-          <mj-column padding="0px 0px 0px 12px" vertical-align="middle" width="85%">
-            <mj-text padding="0px" color="#4C0677" font-weight="500" font-size="14px" line-height="24px">Faça sua 1ª transferência</mj-text>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-      <mj-section padding="0 16px" background-color="transparent" text-align="left">
-        <mj-column padding="12px 0" border-left="1px solid #C4C4C4"></mj-column>
-      </mj-section>
-      <mj-section padding="0px">
-        <mj-group>
-          <mj-column padding="0px" vertical-align="middle" width="10%" css-class="steps-checkbox-column">
-            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-checked.png" padding="0px" align="left" width="32px" />
-          </mj-column>
-          <mj-column padding="0px 0px 0px 12px" vertical-align="middle" width="85%">
-            <mj-text padding="0px" color="#4C0677" font-weight="500" font-size="14px" line-height="24px">Realize o 1° investimento</mj-text>
-          </mj-column>
-        </mj-group>
-      </mj-section>
-    </mj-wrapper>
+    <mj-section padding="0px">
+      <mj-group width="100%">
+      	<mj-column width="32px" padding="0px" background-color="red" css-class="steps-checkbox-column">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/step-1.png" width="32px" padding="0px" align="right" />
+        </mj-column>
+        <mj-column width="250px" padding="0px" background-color="orangered" css-class="steps-text-column">
+          <mj-text padding="4px 0px 0px 20px" color="#4C0677" font-size="14px" line-height="24px" font-weight="700" height="54px">Pré-cadastro</mj-text>
+          <mj-text padding="0px 0px 0px 20px" color="#4C0677" font-size="14px" line-height="24px" font-weight="700" height="54px">Complete seu cadastro</mj-text>
+          <mj-text padding="0px 0px 0px 20px" color="#4C0677" font-size="14px" line-height="24px" font-weight="700" height="56px">Descubra seu Perfil de Investidor</mj-text>
+          <mj-text padding="0px 0px 0px 20px" color="#4C0677" font-size="14px" line-height="24px" font-weight="700" height="54px">Faça sua transferência</mj-text>
+          <mj-text padding="0px 0px 0px 20px" color="#4C0677" font-size="14px" line-height="24px" font-weight="700" height="54px">Realize o 1° investimento</mj-text>
+        </mj-column>
+      </mj-group>
+    </mj-section>
   </mj-body>
 </mjml>
