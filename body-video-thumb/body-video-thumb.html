@@ -1,7 +1,42 @@
 <div>
+  <#include "cms://contentlibrary/components/helpers/parser.htm">
+  <#include "cms://contentlibrary/components/helpers/videothumb-macro.htm">
+
   <#assign videothumb = doc.root.body_video_thumb>
+
+  <#if (videothumb.@url[0]?isnull) || !(videothumb.@url[0]??)>
+    <#assign url = "cta-blog-nu-invest-tudo-sobre">
+  <#else>
+    <#assign url = videothumb.@url[0]>
+  </#if>
+
+  <#if (videothumb.@variant[0]?isnull) || !(videothumb.@variant[0]??)>
+    <#assign _variant = "default">
+  <#else>
+    <#assign _variant = videothumb.@variant[0]>
+  </#if>
+
+  <#if (videothumb.cta[0]?isnull) || !(videothumb.cta[0]??)>
+    <#assign _cta = "Clique aqui">
+  <#else>
+    <#assign _cta = videothumb.cta[0]>
+  </#if>
+
+  <#if (videothumb.thumb[0]?isnull) || !(videothumb.thumb[0]??)>
+    <#assign _thumb = "https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/videoplaceholder_default.png">
+  <#else>
+    <#assign _thumb = videothumb.thumb[0]>
+  </#if>
+
+
+  <#if (videothumb.@style[0]?isnull) || !(videothumb.@style[0]??)>
+    <#assign incomingStyles = "">
+  <#else>
+    <#assign incomingStyles = videothumb.@style[0]>
+  </#if>
+
   <#attempt>
-    <#if videothumb.@variant == "gray" || videothumb.@variant == "grey">
+    <#if _variant == "gray" || _variant == "grey">
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="
           background: #efefef;
@@ -13,12 +48,12 @@
         style="background: #efefef; background-color: #efefef; width: 100%">
         <tbody>
           <tr>
-            <td style="
+            <td style='${"
                   direction: ltr;
                   font-size: 0px;
                   padding: 40px;
                   text-align: center;
-                ">
+              " + incomingStyles}'>
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
               <div style="margin: 0px auto; max-width: 560px">
                 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
@@ -59,7 +94,9 @@
                                                 text-align: center;
                                                 color: #4c0677;
                                               ">
-                                            ${videothumb.title[0]!"Título"}
+                                            <#list videothumb.title?children as node>
+                                              <@parse_content node=node />
+                                            </#list>
                                           </div>
                                         </td>
                                       </tr>
@@ -75,7 +112,9 @@
                                                 text-align: center;
                                                 color: #555555;
                                               ">
-                                            ${videothumb.content[0]!"Conteúdo do vídeo"}
+                                            <#list videothumb.content?children as node>
+                                              <@parse_content node=node />
+                                            </#list>
                                           </div>
                                         </td>
                                       </tr>
@@ -92,32 +131,10 @@
                                             <tbody>
                                               <tr>
                                                 <td style="width: 560px" class="mj-full-width-mobile">
-                                                  <#attempt>
-                                                    <img height="auto" src="${videothumb.thumb}" style="
-                                                      border: 0;
-                                                      border-radius: 20px;
-                                                      display: block;
-                                                      outline: none;
-                                                      text-decoration: none;
-                                                      height: auto;
-                                                      width: 100%;
-                                                      font-size: 13px;
-                                                    " width="560" />
-                                                  <#recover>
-                                                    <img height="auto" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/videoplaceholder_default.png" style="
-                                                        border: 0;
-                                                        border-radius: 20px;
-                                                        display: block;
-                                                        outline: none;
-                                                        text-decoration: none;
-                                                        height: auto;
-                                                        width: 100%;
-                                                        font-size: 13px;
-                                                      " width="560" />
-                                                  </#attempt>
+                                                  <@videothumb_thumb link=url thumb=_thumb />
                                                 </td>
                                               </tr>
-                                              <#if videothumb.@hascta[0]??>
+                                              <#if videothumb.cta[0]??>
                                                 <tr>
                                                   <td align="center" vertical-align="middle"
                                                     style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
@@ -126,9 +143,9 @@
                                                       <tr>
                                                         <td align="center" bgcolor="#4C0677" role="presentation"
                                                           style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
-                                                          valign="middle"><a href="${videothumb.cta.@url[0]!'#'}"
-                                                            style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;"
-                                                            target="_blank">${videothumb.cta[0]!"Clique aqui"}</a></td>
+                                                          valign="middle">
+                                                          <@videothumb_cta link=url variant=_variant content=_cta /> 
+                                                        </td>
                                                       </tr>
                                                     </table>
                                                   </td>
@@ -158,7 +175,7 @@
       </table>
     </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
-    <#elseif videothumb.@variant == "purple">
+    <#elseif _variant == "purple">
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="
           background: #4c0677;
@@ -170,12 +187,12 @@
         style="background: #4c0677; background-color: #4c0677; width: 100%">
         <tbody>
           <tr>
-            <td style="
+            <td style='${"
                   direction: ltr;
                   font-size: 0px;
                   padding: 40px;
                   text-align: center;
-                ">
+              " + incomingStyles}'>
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
               <div style="margin: 0px auto; max-width: 560px">
                 <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
@@ -216,7 +233,9 @@
                                                 text-align: center;
                                                 color: #FFFFFF;
                                               ">
-                                            ${videothumb.title[0]!"Título"}
+                                            <#list videothumb.title?children as node>
+                                              <@parse_content node=node />
+                                            </#list>
                                           </div>
                                         </td>
                                       </tr>
@@ -232,7 +251,9 @@
                                                 text-align: center;
                                                 color: #FFFFFF;
                                               ">
-                                            ${videothumb.content[0]!"Conteúdo do vídeo"}
+                                            <#list videothumb.content?children as node>
+                                              <@parse_content node=node />
+                                            </#list>
                                           </div>
                                         </td>
                                       </tr>
@@ -249,32 +270,10 @@
                                             <tbody>
                                               <tr>
                                                 <td style="width: 560px" class="mj-full-width-mobile">
-                                                  <#attempt>
-                                                    <img height="auto" src="${videothumb.thumb}" style="
-                                                      border: 0;
-                                                      border-radius: 20px;
-                                                      display: block;
-                                                      outline: none;
-                                                      text-decoration: none;
-                                                      height: auto;
-                                                      width: 100%;
-                                                      font-size: 13px;
-                                                    " width="560" />
-                                                  <#recover>
-                                                    <img height="auto" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/videoplaceholder_purple.png" style="
-                                                        border: 0;
-                                                        border-radius: 20px;
-                                                        display: block;
-                                                        outline: none;
-                                                        text-decoration: none;
-                                                        height: auto;
-                                                        width: 100%;
-                                                        font-size: 13px;
-                                                      " width="560" />
-                                                  </#attempt>
+                                                  <@videothumb_thumb link=url thumb=_thumb />
                                                 </td>
                                               </tr>
-                                              <#if videothumb.@hascta[0]??>
+                                              <#if videothumb.cta[0]??>
                                                 <tr>
                                                   <td align="center" vertical-align="middle"
                                                     style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
@@ -283,9 +282,9 @@
                                                       <tr>
                                                         <td align="center" bgcolor="#FFFFFF" role="presentation"
                                                           style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#FFFFFF;"
-                                                          valign="middle"><a href="${videothumb.cta.@url[0]!'#'}"
-                                                            style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;"
-                                                            target="_blank">${videothumb.cta[0]!"Clique aqui"}</a></td>
+                                                          valign="middle">
+                                                          <@videothumb_cta link=url variant=_variant content=localCta /> 
+                                                        </td>
                                                       </tr>
                                                     </table>
                                                   </td>
@@ -329,12 +328,12 @@
     style="background: #FFFFFF; background-color: #FFFFFF; width: 100%">
     <tbody>
       <tr>
-        <td style="
+        <td style='${"
               direction: ltr;
               font-size: 0px;
               padding: 40px;
               text-align: center;
-            ">
+          " + incomingStyles}'>
           <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
           <div style="margin: 0px auto; max-width: 560px">
             <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
@@ -375,7 +374,9 @@
                                             text-align: center;
                                             color: #4c0677;
                                           ">
-                                        ${videothumb.title[0]!"Título"}
+                                        <#list videothumb.title?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
                                       </div>
                                     </td>
                                   </tr>
@@ -391,7 +392,9 @@
                                             text-align: center;
                                             color: #555555;
                                           ">
-                                        ${videothumb.content[0]!"Conteúdo do vídeo"}
+                                        <#list videothumb.content?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
                                       </div>
                                     </td>
                                   </tr>
@@ -408,32 +411,10 @@
                                         <tbody>
                                           <tr>
                                             <td style="width: 560px" class="mj-full-width-mobile">
-                                              <#attempt>
-                                                <img height="auto" src="${videothumb.thumb}" style="
-                                                  border: 0;
-                                                  border-radius: 20px;
-                                                  display: block;
-                                                  outline: none;
-                                                  text-decoration: none;
-                                                  height: auto;
-                                                  width: 100%;
-                                                  font-size: 13px;
-                                                " width="560" />
-                                              <#recover>
-                                                <img height="auto" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/videoplaceholder_default.png" style="
-                                                    border: 0;
-                                                    border-radius: 20px;
-                                                    display: block;
-                                                    outline: none;
-                                                    text-decoration: none;
-                                                    height: auto;
-                                                    width: 100%;
-                                                    font-size: 13px;
-                                                  " width="560" />
-                                              </#attempt>
+                                              <@videothumb_thumb link=url thumb=_thumb />
                                             </td>
                                           </tr>
-                                          <#if videothumb.@hascta[0]??>
+                                          <#if videothumb.cta[0]??>
                                             <tr>
                                               <td align="center" vertical-align="middle"
                                                 style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
@@ -442,9 +423,9 @@
                                                   <tr>
                                                     <td align="center" bgcolor="#4C0677" role="presentation"
                                                       style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
-                                                      valign="middle"><a href="${videothumb.cta.@url[0]!'#'}"
-                                                        style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;"
-                                                        target="_blank">${videothumb.cta[0]!"Clique aqui"}</a></td>
+                                                      valign="middle">
+                                                      <@videothumb_cta link=url variant=_variant content=localCta />  
+                                                    </td>
                                                   </tr>
                                                 </table>
                                               </td>

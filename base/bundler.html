@@ -25,6 +25,13 @@
   <#include "cms://contentlibrary/components/body-cta.htm">
 </#macro>
 
+<#macro cta_macro2 index>
+  <#local ctalist = doc.root.body_cta>
+  <#local cta = ctalist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-cta-2.htm">
+</#macro>
+
 <#macro title_macro index>
   <#local titlelist = doc.root.body_title>
   <#local title = titlelist[index?number]>
@@ -64,6 +71,8 @@
 <#list components as component>
   <#if component["id"] == "body-cta">
     <@cta_macro index=component["index"] />
+  <#elseif component["id"] == "body-cta-2">
+    <@cta_macro2 index=component["index"] />
   <#elseif component["id"] == "body-title">
     <@title_macro index=component["index"] />
   <#elseif component["id"] == "body-text">
