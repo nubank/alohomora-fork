@@ -1,0 +1,21 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="40px 32px" background-color="#2F0549">
+      <mj-section padding="0px">
+        <mj-column padding="0px 40px 0px 0px" width="70%" vertical-align="bottom">
+          <mj-text padding="0px 0px 20px 0px" font-size="20px" line-height="24px" color="#FFFFFF" font-weight="700">
+            Nós, Mulheres Investidoras
+          </mj-text>
+          <mj-text padding="0px" font-size="14px" line-height="18px" color="#FFFFFF">
+            Movimento de mulheres para falar sobre dinheiro, investimentos e liberdade financeira.
+          </mj-text>
+        </mj-column>
+        <mj-column padding="0px" vertical-align="bottom" width="30%">
+          <mj-button align="center" color="#2F0549" border-radius="20px" background-color="#FFFFFF" font-size="14px" line-height="18px" font-weight="700" width="124px" height="36px" href="#" padding="0px">
+            Confira
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

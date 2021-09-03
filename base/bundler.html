@@ -46,6 +46,13 @@
   <#include "cms://contentlibrary/components/body-attention.htm">
 </#macro>
 
+<#macro bloco_marcas_macro index>
+  <#local marcaslist = doc.root.body_bloco_marcas>
+  <#local marcas = marcaslist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-bloco-marcas.htm">
+</#macro>
+
 <#macro stepsmall_macro index>
   <#local stepsmalllist = doc.root.body_step_small>
   <#local stepsmall = stepsmalllist[index?number]>
@@ -73,6 +80,8 @@
     <@cta_macro index=component["index"] />
   <#elseif component["id"] == "body-cta-2">
     <@cta_macro2 index=component["index"] />
+  <#elseif component["id"] == "body-bloco-marcas">
+    <@bloco_marcas_macro index=component["index"] />
   <#elseif component["id"] == "body-title">
     <@title_macro index=component["index"] />
   <#elseif component["id"] == "body-text">

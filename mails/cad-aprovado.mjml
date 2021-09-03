@@ -1,0 +1,215 @@
+<mjml>
+  <mj-head>
+  	<mj-style>
+      div, p, td, span {
+      	font-family: Arial, sans-serif !important;
+      }
+      .header-img img {
+      	object-fit:cover;
+      }
+      .mj-column-px-48 {
+      	width: 48px !important;
+      	max-width: 48px !important;
+      }
+    	@media screen and (min-width:480px) {
+      	.header-img img {
+      		height: 348px !important;
+      	}
+      	.header-section div {
+      		background-image: url("https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-rect.png") !important;
+      	}
+        .padding-desktop {
+      		padding: 36px !important;
+      		max-width: 520px !important;
+      	}
+      	.blog-text-desktop {
+      		padding: 24px 40px 30px 40px !important;
+      	}
+        .left-align div {
+      	text-align: left !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-section background-color="#EFEFEF" padding="8px 20px">
+      <mj-column padding="0">
+        <mj-text align="center" color="#322828" padding="0" font-size="11px" line-height="16px">
+          O mundo dos investimentos é seu!<br/>
+          Para visualizar este e-mail como página da web, acesse <a href="#" style="color:#322828;text-decoration:none;">aqui</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" background-size="cover" css-class="header-section">
+      <mj-column padding="0">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/Logo_Purple.png"
+          alt="NuInvest Logo"
+          align="left"
+          width="219px"
+          padding="31px 31px 31px 40px"
+        />
+      </mj-column>
+    </mj-section>
+    
+    <mj-wrapper padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-rect.png" background-repeat="no-repeat">
+      <mj-section padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-bg-2.png" background-size="cover">
+        <mj-column padding="0px">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/cad_aprovado_img.png"
+            align="center"
+            padding="0px 40px"
+            height="170px"
+            css-class="header-img"
+          />
+        </mj-column>
+    	</mj-section>
+      <mj-section padding="0px" background-color="transparent">
+        <mj-column padding="0px 40px">
+          <mj-text font-size="32px" color="#4C0677" line-height="38px" padding="24px 0px 0px 0px" font-weight="bold" css-class="left-align">Cadastro Aprovado</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+    <mj-section
+      background-color="transparent"
+      padding="60px 40px 40px 40px"
+      css-class="body-title-text"
+    >
+      <mj-column padding="0">
+        <mj-text
+          color="#2F0549"
+          font-size="24px"
+          font-weight="bold"
+          line-height="30px"
+          padding="0px 0px 18px 0px"
+          css-class="body-title-text__title"
+        >
+          Oi #Name, tudo bem?
+        </mj-text>
+        <mj-text
+          color="#555555"
+          font-size="16px"
+          line-height="22px"
+          padding="0"
+        >
+          <b>Temos uma notícia pra você:</b> seu cadastro Nu invest foi aprovado com sucesso.<br/><br/>
+          Estaremos aqui para te ajudar em todo o caminho, tudo de forma fácil e sem burocracia, que é a cara do Nubank. E para começar, que tal conhecer um pouco mais sobre o mundo dos investimentos pelo <b>nosso blog</b>?<br/><br/>
+Assim você já fica por dentro sobre como diversificar investimentos, tudo que é preciso saber sobre Ações, além de um guia completo sobre como investir na Bolsa.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-wrapper padding="0px 40px 50px 40px">
+      <mj-section padding="0px">
+        <mj-column padding="0px">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/cad_aprovado_blog.png" border-radius="30px 30px 0px 0px" padding="0px" href="#" />
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+        <mj-column padding="0px" width="100%" background-color="#4C0677" border-radius="0px 0px 30px 30px">
+          <mj-text font-size="20px" color="#FFFFFF" line-height="24px" font-weight="700" padding="15px 12px 24px 21px" css-class="blog-text-desktop">
+            <span style="font-size:14px;font-weight:400;line-height:18px;">INVESTIMENTOS<br/></span>
+            Tudo o que você precisa saber antes de começar a investir
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+    <mj-section padding="0px 40px 60px 40px" background-color="#FFFFFF">
+      <mj-column padding="0px">
+        <mj-text padding="0px 0px 20px 0px" line-height="24px" color="#9C63C0" font-weight="bold" font-size="20px">
+          E tem mais!
+        </mj-text>
+        <mj-text padding="0px" line-height="22px" color="#514F4F" font-size="16px">
+          <b>Ah, fique atento ao seu e-mail,</b> compartilharemos várias novidades por aqui.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-wrapper padding="40px 24px" background-color="#F5F5F5">
+      <mj-section padding="0px">
+        <mj-column padding="0px">
+          <mj-text color="#000000" padding="0px 0px 24px 0px" font-size="20px" line-height="28px" font-weight="700">
+            Abraços,<br/>
+            Equipe Nu invest
+          </mj-text>
+          <mj-text color="#000000" padding="0px 0px 30px 0px" font-size="14px" line-height="20px">
+            Tem alguma dúvida? Entre em contato conosco pelo nuinvest@nuinvest.com.br ou telefone  11 3841-4515 em dias úteis das 9h às 18h
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="0px" text-align="left">
+      	<mj-group width="100%">
+        	<mj-column width="48px" padding="0px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-fb.png" padding="0px" width="48px" href="https://www.facebook.com/nubank/" />
+          </mj-column>
+          <mj-column width="48px" padding="0px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-ytb.png" padding="0px" width="48px" href="https://www.youtube.com/nu_invest" />
+          </mj-column>
+          <mj-column width="48px" padding="0px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-tt.png" padding="0px" width="48px" href="https://twitter.com/nu_invest" />
+          </mj-column>
+          <mj-column width="48px" padding="0px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-insta.png" padding="0px" width="48px" href="https://www.instagram.com/nu_invest" />
+          </mj-column>
+          <mj-column width="48px" padding="0px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-linkedin.png" padding="0px" width="48px" href="https://www.linkedin.com/company/nubank/" />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <mj-section padding="32px 0px">
+        <mj-column padding="0px">
+          <mj-text color="#000000" padding="0px" font-size="11px" line-height="16px" align="justify">
+            A Easynvest - Título Corretora de Valores SA, inscrita no CNPJ/ME sob nº 62.169.875/0001-79 (“Nu invest”), instituição financeira autorizada a funcionar pelo Banco Central do Brasil, informa que os recursos de clientes são mantidos em suas contas de registro que são utilizadas exclusivamente pelo Nu invest para registro das operações de cada cliente, como previsto no artigo 14-A do Regulamento Anexo à Resolução CMN nº 1.655. As contas de registro não se confundem com as contas de pagamento, que estão definidas pelos artigos 6º, inciso IV, e 12 da Lei nº 12.865/2013, e os recursos mantidos nas contas de registro não possuem regime jurídico equivalente ao dos recursos mantidos em contas de pagamento, nos termos previstos no artigo 12 da Lei nº 12.865/2013. Toda transmissão de ordem por meio digital está sujeita a interrupções ou atrasos, podendo impedir ou prejudicar o envio de ordens ou a recepção de informações atualizadas. Confira demais informações no site da Comissão de Valores Mobiliários (CVM) clicando aqui.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section padding="40px 0px 30px 0px">
+        <mj-group width="100%">
+          <mj-column padding="0px" vertical-align="middle" width="55%" padding-right="24px">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-td.png" padding="0px" width="150px" href="https://www.tesourodireto.com.br/" align="right" />
+          </mj-column>
+          <mj-column padding="0px" vertical-align="middle" width="45%">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-cvm.png" padding="0px" width="130px" href="http://www.cvm.gov.br/" align="left" />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      
+      <mj-section>
+        <mj-group width="60%">
+        	<mj-column padding="0px" vertical-align="middle">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-op.png" padding="0px" width="85px" href="https://www.anbima.com.br/pt_br/autorregular/codigos/ofertas-publicas/ofertas-publicas.htm?_ga=2.256327304.2050080357.1594070256-589002571.1587663723" />
+          </mj-column>
+          <mj-column padding="0px" vertical-align="middle">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-dist.png" padding="0px" width="85px" href="https://www.anbima.com.br/pt_br/autorregular/codigos/distribuicao-de-produtos-de-investimento.htm?_ga=2.256327304.2050080357.1594070256-589002571.1587663723" />
+          </mj-column>
+          <mj-column padding="0px" vertical-align="middle">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-auto.png" padding="0px" width="85px" href="https://www.anbima.com.br/pt_br/pagina-inicial.htm?_ga=2.190798760.2050080357.1594070256-589002571.1587663723" />
+          </mj-column>
+        </mj-group>
+      	<mj-group width="40%">
+          <mj-column padding="0px" vertical-align="middle">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-b3.png" padding="0px" width="54px" href="http://www.b3.com.br/pt_br/b3/qualificacao-e-governanca/certificacoes/certifica/?_ga=2.232067740.2050080357.1594070256-589002571.1587663723" />
+          </mj-column>
+          <mj-column padding="0px" vertical-align="middle">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-b3eb.png" padding="0px" width="40px" href="http://www.b3.com.br/pt_br/b3/qualificacao-e-governanca/certificacoes/selos-pqo/selos-de-qualificacao.htm#panel1a" />
+          </mj-column>
+          <mj-column padding="0px" vertical-align="middle">
+            <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nu-footer-selo-b3retail.png" padding="0px" width="40px" href="http://www.b3.com.br/pt_br/b3/qualificacao-e-governanca/certificacoes/selos-pqo/selos-de-qualificacao.htm#panel2a" />
+          </mj-column>
+        </mj-group>
+      </mj-section>
+
+      <mj-section padding="40px 0px 0px 0px">
+        <mj-column padding="0px">
+          <mj-text color="#808080" padding="0px" font-size="12px" line-height="18px">
+            Nu Pagamentos S.A. 18.236.120/0001-58<br/>
+Rua Capote Valente, 39 - 05409-000 - São Paulo - SP
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
