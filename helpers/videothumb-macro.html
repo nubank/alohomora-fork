@@ -229,6 +229,26 @@
         ${content}
       </a>
     </#if>
+  <#elseif link = "cta-onboarding-primeiro">
+    <#if variant != purple>
+      <a href="https://easynvest.typeform.com/to/wPh598rE?public_id=easy-marketing-crm" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://easynvest.typeform.com/to/wPh598rE?public_id=easy-marketing-crm" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
+  <#elseif link = "cta-onboarding-efetivados">
+    <#if variant != purple>
+      <a href="https://easynvest.typeform.com/to/dx5Fk3L1?public_id=0e035c0e08f03211acf31df9a172764195dfddd566de35a295b815aaad13d935" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://easynvest.typeform.com/to/dx5Fk3L1?public_id=0e035c0e08f03211acf31df9a172764195dfddd566de35a295b815aaad13d935" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
   </#if>
 </#macro>
 
@@ -323,6 +343,14 @@
     </a>
   <#elseif link = "cta-ebook-nuinvest">
     <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/E_book_Seu_dinheiro,_seu_jeito_Nu_invest.pdf" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link = "cta-onboarding-primeiro">
+    <a href="https://easynvest.typeform.com/to/wPh598rE?public_id=easy-marketing-crm" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link = "cta-onboarding-efetivados">
+    <a href="https://easynvest.typeform.com/to/dx5Fk3L1?public_id=0e035c0e08f03211acf31df9a172764195dfddd566de35a295b815aaad13d935" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   </#if>
