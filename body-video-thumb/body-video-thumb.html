@@ -35,425 +35,413 @@
     <#assign incomingStyles = videothumb.@style[0]>
   </#if>
 
-  <#attempt>
-    <#if _variant == "gray" || _variant == "grey">
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="
-          background: #efefef;
-          background-color: #efefef;
-          margin: 0px auto;
-          max-width: 600px;
-        ">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-        style="background: #efefef; background-color: #efefef; width: 100%">
-        <tbody>
-          <tr>
-            <td style='${"
-                  direction: ltr;
-                  font-size: 0px;
-                  padding: 40px;
-                  text-align: center;
-              " + incomingStyles}'>
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-              <div style="margin: 0px auto; max-width: 560px">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                  style="width: 100%">
-                  <tbody>
-                    <tr>
-                      <td style="
-                            direction: ltr;
-                            font-size: 0px;
-                            padding: 0;
-                            text-align: center;
-                          ">
-                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
-                        <div class="mj-column-per-100 mj-outlook-group-fix" style="
-                              font-size: 0px;
-                              text-align: left;
-                              direction: ltr;
-                              display: inline-block;
-                              vertical-align: top;
-                              width: 100%;
-                            ">
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                            <tbody>
-                              <tr>
-                                <td style="vertical-align: top; padding: 0">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                                    <tbody>
-                                      <tr>
-                                        <td align="center" style="
-                                              font-size: 0px;
-                                              padding: 0;
-                                              word-break: break-word;
-                                            ">
-                                          <div style="
-                                                font-size: 24px;
-                                                font-weight: 700;
-                                                line-height: 30px;
-                                                text-align: center;
-                                                color: #4c0677;
-                                              ">
-                                            <#list videothumb.title?children as node>
-                                              <@parse_content node=node />
-                                            </#list>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" style="
-                                              font-size: 0px;
-                                              padding: 30px 0;
-                                              word-break: break-word;
-                                            ">
-                                          <div style="
-                                                font-size: 16px;
-                                                line-height: 22px;
-                                                text-align: center;
-                                                color: #555555;
-                                              ">
-                                            <#list videothumb.content?children as node>
-                                              <@parse_content node=node />
-                                            </#list>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" class="video-thumb" style="
-                                              font-size: 0px;
-                                              padding: 0;
-                                              word-break: break-word;
-                                            ">
-                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
-                                                border-collapse: collapse;
-                                                border-spacing: 0px;
-                                              " class="mj-full-width-mobile">
-                                            <tbody>
-                                              <tr>
-                                                <td style="width: 560px" class="mj-full-width-mobile">
-                                                  <@videothumb_thumb link=url thumb=_thumb />
-                                                </td>
-                                              </tr>
-                                              <#if videothumb.cta[0]??>
-                                                <tr>
-                                                  <td align="center" vertical-align="middle"
-                                                    style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                                      style="border-collapse:separate;width:226px;line-height:100%;">
-                                                      <tr>
-                                                        <td align="center" bgcolor="#4C0677" role="presentation"
-                                                          style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
-                                                          valign="middle">
-                                                          <@videothumb_cta link=url variant=_variant content=_cta /> 
-                                                        </td>
-                                                      </tr>
-                                                    </table>
-                                                  </td>
-                                                </tr>
-                                              </#if>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <!--[if mso | IE]></td></tr></table><![endif]-->
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!--[if mso | IE]></td></tr></table><![endif]-->
-    <#elseif _variant == "purple">
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="
-          background: #4c0677;
-          background-color: #4c0677;
-          margin: 0px auto;
-          max-width: 600px;
-        ">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-        style="background: #4c0677; background-color: #4c0677; width: 100%">
-        <tbody>
-          <tr>
-            <td style='${"
-                  direction: ltr;
-                  font-size: 0px;
-                  padding: 40px;
-                  text-align: center;
-              " + incomingStyles}'>
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-              <div style="margin: 0px auto; max-width: 560px">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                  style="width: 100%">
-                  <tbody>
-                    <tr>
-                      <td style="
-                            direction: ltr;
-                            font-size: 0px;
-                            padding: 0;
-                            text-align: center;
-                          ">
-                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
-                        <div class="mj-column-per-100 mj-outlook-group-fix" style="
-                              font-size: 0px;
-                              text-align: left;
-                              direction: ltr;
-                              display: inline-block;
-                              vertical-align: top;
-                              width: 100%;
-                            ">
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                            <tbody>
-                              <tr>
-                                <td style="vertical-align: top; padding: 0">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                                    <tbody>
-                                      <tr>
-                                        <td align="center" style="
-                                              font-size: 0px;
-                                              padding: 0;
-                                              word-break: break-word;
-                                            ">
-                                          <div style="
-                                                font-size: 24px;
-                                                font-weight: 700;
-                                                line-height: 30px;
-                                                text-align: center;
-                                                color: #FFFFFF;
-                                              ">
-                                            <#list videothumb.title?children as node>
-                                              <@parse_content node=node />
-                                            </#list>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" style="
-                                              font-size: 0px;
-                                              padding: 30px 0;
-                                              word-break: break-word;
-                                            ">
-                                          <div style="
-                                                font-size: 16px;
-                                                line-height: 22px;
-                                                text-align: center;
-                                                color: #FFFFFF;
-                                              ">
-                                            <#list videothumb.content?children as node>
-                                              <@parse_content node=node />
-                                            </#list>
-                                          </div>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td align="center" class="video-thumb" style="
-                                              font-size: 0px;
-                                              padding: 0;
-                                              word-break: break-word;
-                                            ">
-                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
-                                                border-collapse: collapse;
-                                                border-spacing: 0px;
-                                              " class="mj-full-width-mobile">
-                                            <tbody>
-                                              <tr>
-                                                <td style="width: 560px" class="mj-full-width-mobile">
-                                                  <@videothumb_thumb link=url thumb=_thumb />
-                                                </td>
-                                              </tr>
-                                              <#if videothumb.cta[0]??>
-                                                <tr>
-                                                  <td align="center" vertical-align="middle"
-                                                    style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
-                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                                      style="border-collapse:separate;width:226px;line-height:100%;">
-                                                      <tr>
-                                                        <td align="center" bgcolor="#FFFFFF" role="presentation"
-                                                          style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#FFFFFF;"
-                                                          valign="middle">
-                                                          <@videothumb_cta link=url variant=_variant content=localCta /> 
-                                                        </td>
-                                                      </tr>
-                                                    </table>
-                                                  </td>
-                                                </tr>
-                                              </#if>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <!--[if mso | IE]></td></tr></table><![endif]-->
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <!--[if mso | IE]></td></tr></table><!
-      [endif]-->
-    </#if>
-  <#recover>
-      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-      <div style="
-      background: #FFFFFF;
-      background-color: #FFFFFF;
-      margin: 0px auto;
-      max-width: 600px;
-    ">
+  <#if _variant == "gray" || _variant == "grey">
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="
+        background: #efefef;
+        background-color: #efefef;
+        margin: 0px auto;
+        max-width: 600px;
+      ">
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-    style="background: #FFFFFF; background-color: #FFFFFF; width: 100%">
-    <tbody>
-      <tr>
-        <td style='${"
-              direction: ltr;
-              font-size: 0px;
-              padding: 40px;
-              text-align: center;
-          " + incomingStyles}'>
-          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-          <div style="margin: 0px auto; max-width: 560px">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-              style="width: 100%">
-              <tbody>
-                <tr>
-                  <td style="
-                        direction: ltr;
-                        font-size: 0px;
-                        padding: 0;
-                        text-align: center;
-                      ">
-                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
-                    <div class="mj-column-per-100 mj-outlook-group-fix" style="
-                          font-size: 0px;
-                          text-align: left;
+      style="background: #efefef; background-color: #efefef; width: 100%">
+      <tbody>
+        <tr>
+          <td style='${"
+                direction: ltr;
+                font-size: 0px;
+                padding: 40px;
+                text-align: center;
+            " + incomingStyles}'>
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin: 0px auto; max-width: 560px">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td style="
                           direction: ltr;
-                          display: inline-block;
-                          vertical-align: top;
-                          width: 100%;
+                          font-size: 0px;
+                          padding: 0;
+                          text-align: center;
                         ">
-                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tbody>
-                          <tr>
-                            <td style="vertical-align: top; padding: 0">
-                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                                <tbody>
-                                  <tr>
-                                    <td align="center" style="
-                                          font-size: 0px;
-                                          padding: 0;
-                                          word-break: break-word;
-                                        ">
-                                      <div style="
-                                            font-size: 24px;
-                                            font-weight: 700;
-                                            line-height: 30px;
-                                            text-align: center;
-                                            color: #4c0677;
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+                      <div class="mj-column-per-100 mj-outlook-group-fix" style="
+                            font-size: 0px;
+                            text-align: left;
+                            direction: ltr;
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 100%;
+                          ">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align: top; padding: 0">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" style="
+                                            font-size: 0px;
+                                            padding: 0;
+                                            word-break: break-word;
                                           ">
-                                        <#list videothumb.title?children as node>
-                                          <@parse_content node=node />
-                                        </#list>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td align="center" style="
-                                          font-size: 0px;
-                                          padding: 30px 0;
-                                          word-break: break-word;
-                                        ">
-                                      <div style="
-                                            font-size: 16px;
-                                            line-height: 22px;
-                                            text-align: center;
-                                            color: #555555;
+                                        <div style="
+                                              font-size: 24px;
+                                              font-weight: 700;
+                                              line-height: 30px;
+                                              color: #4c0677;
+                                            ">
+                                          <#list videothumb.title?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="
+                                            font-size: 0px;
+                                            padding: 30px 0;
+                                            word-break: break-word;
                                           ">
-                                        <#list videothumb.content?children as node>
-                                          <@parse_content node=node />
-                                        </#list>
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td align="center" class="video-thumb" style="
-                                          font-size: 0px;
-                                          padding: 0;
-                                          word-break: break-word;
-                                        ">
-                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
-                                            border-collapse: collapse;
-                                            border-spacing: 0px;
-                                          " class="mj-full-width-mobile">
-                                        <tbody>
-                                          <tr>
-                                            <td style="width: 560px" class="mj-full-width-mobile">
-                                              <@videothumb_thumb link=url thumb=_thumb />
-                                            </td>
-                                          </tr>
-                                          <#if videothumb.cta[0]??>
+                                        <div style="
+                                              font-size: 16px;
+                                              line-height: 22px;
+                                              color: #555555;
+                                            ">
+                                          <#list videothumb.content?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="
+                                            font-size: 0px;
+                                            padding: 0;
+                                            word-break: break-word;
+                                          ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
+                                              border-collapse: collapse;
+                                              border-spacing: 0px;
+                                            " class="mj-full-width-mobile">
+                                          <tbody>
                                             <tr>
-                                              <td align="center" vertical-align="middle"
-                                                style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
-                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                                  style="border-collapse:separate;width:226px;line-height:100%;">
-                                                  <tr>
-                                                    <td align="center" bgcolor="#4C0677" role="presentation"
-                                                      style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
-                                                      valign="middle">
-                                                      <@videothumb_cta link=url variant=_variant content=localCta />  
-                                                    </td>
-                                                  </tr>
-                                                </table>
+                                              <td style="width: 560px" class="mj-full-width-mobile">
+                                                <@videothumb_thumb link=url thumb=_thumb />
                                               </td>
                                             </tr>
-                                          </#if>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!--[if mso | IE]></td></tr></table><![endif]-->
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
-        </td>
-      </tr>
-    </tbody>
+                                            <#if videothumb.cta[0]??>
+                                              <tr>
+                                                <td align="center" vertical-align="middle"
+                                                  style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
+                                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:separate;width:226px;line-height:100%;">
+                                                    <tr>
+                                                      <td align="center" bgcolor="#4C0677" role="presentation"
+                                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
+                                                        valign="middle">
+                                                        <@videothumb_cta link=url variant=_variant content=_cta /> 
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </#if>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
     </table>
-    </div>
-    <!--[if mso | IE]></td></tr></table><![endif]-->
-  </#attempt>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  <#elseif _variant == "purple">
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="
+        background: #4c0677;
+        background-color: #4c0677;
+        margin: 0px auto;
+        max-width: 600px;
+      ">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      style="background: #4c0677; background-color: #4c0677; width: 100%">
+      <tbody>
+        <tr>
+          <td style='${"
+                direction: ltr;
+                font-size: 0px;
+                padding: 40px;
+            " + incomingStyles}'>
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin: 0px auto; max-width: 560px">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td style="
+                          direction: ltr;
+                          font-size: 0px;
+                          padding: 0;
+                        ">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+                      <div class="mj-column-per-100 mj-outlook-group-fix" style="
+                            font-size: 0px;
+                            text-align: left;
+                            direction: ltr;
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 100%;
+                          ">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align: top; padding: 0">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="left" style="
+                                            font-size: 0px;
+                                            padding: 0;
+                                            word-break: break-word;
+                                          ">
+                                        <div style="
+                                              font-size: 24px;
+                                              font-weight: 700;
+                                              line-height: 30px;
+                                              color: #FFFFFF;
+                                            ">
+                                          <#list videothumb.title?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left" style="
+                                            font-size: 0px;
+                                            padding: 30px 0;
+                                            word-break: break-word;
+                                          ">
+                                        <div style="
+                                              font-size: 16px;
+                                              line-height: 22px;
+                                              color: #FFFFFF;
+                                            ">
+                                          <#list videothumb.content?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="
+                                            font-size: 0px;
+                                            padding: 0;
+                                            word-break: break-word;
+                                          ">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
+                                              border-collapse: collapse;
+                                              border-spacing: 0px;
+                                            " class="mj-full-width-mobile">
+                                          <tbody>
+                                            <tr>
+                                              <td style="width: 560px" class="mj-full-width-mobile">
+                                                <@videothumb_thumb link=url thumb=_thumb />
+                                              </td>
+                                            </tr>
+                                            <#if videothumb.cta[0]??>
+                                              <tr>
+                                                <td align="center" vertical-align="middle"
+                                                  style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
+                                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    style="border-collapse:separate;width:226px;line-height:100%;">
+                                                    <tr>
+                                                      <td align="center" bgcolor="#FFFFFF" role="presentation"
+                                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#FFFFFF;"
+                                                        valign="middle">
+                                                        <@videothumb_cta link=url variant=_variant content=localCta /> 
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </#if>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><!
+    [endif]-->
+  <#elseif _variant == 'default'>
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="
+    background: #FFFFFF;
+    background-color: #FFFFFF;
+    margin: 0px auto;
+    max-width: 600px;
+  ">
+  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+  style="background: #FFFFFF; background-color: #FFFFFF; width: 100%">
+  <tbody>
+    <tr>
+      <td style='${"
+            direction: ltr;
+            font-size: 0px;
+            padding: 40px;
+        " + incomingStyles}'>
+        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:560px;" width="560" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="margin: 0px auto; max-width: 560px">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+            style="width: 100%">
+            <tbody>
+              <tr>
+                <td style="
+                      direction: ltr;
+                      font-size: 0px;
+                      padding: 0;
+                    ">
+                  <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+                  <div class="mj-column-per-100 mj-outlook-group-fix" style="
+                        font-size: 0px;
+                        text-align: left;
+                        direction: ltr;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                      ">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                      <tbody>
+                        <tr>
+                          <td style="vertical-align: top; padding: 0">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td align="left" style="
+                                        font-size: 0px;
+                                        padding: 0;
+                                        word-break: break-word;
+                                      ">
+                                    <div style="
+                                          font-size: 24px;
+                                          font-weight: 700;
+                                          line-height: 30px;
+                                          color: #4c0677;
+                                        ">
+                                      <#list videothumb.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="left" style="
+                                        font-size: 0px;
+                                        padding: 30px 0;
+                                        word-break: break-word;
+                                      ">
+                                    <div style="
+                                          font-size: 16px;
+                                          line-height: 22px;
+                                          color: #555555;
+                                        ">
+                                      <#list videothumb.content?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" style="
+                                        font-size: 0px;
+                                        padding: 0;
+                                        word-break: break-word;
+                                      ">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
+                                          border-collapse: collapse;
+                                          border-spacing: 0px;
+                                        " class="mj-full-width-mobile">
+                                      <tbody>
+                                        <tr>
+                                          <td style="width: 560px" class="mj-full-width-mobile">
+                                            <@videothumb_thumb link=url thumb=_thumb />
+                                          </td>
+                                        </tr>
+                                        <#if videothumb.cta[0]??>
+                                          <tr>
+                                            <td align="center" vertical-align="middle"
+                                              style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
+                                              <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                style="border-collapse:separate;width:226px;line-height:100%;">
+                                                <tr>
+                                                  <td align="center" bgcolor="#4C0677" role="presentation"
+                                                    style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
+                                                    valign="middle">
+                                                    <@videothumb_cta link=url variant=_variant content=localCta />  
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </#if>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </tbody>
+  </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+  </#if>
 </div>

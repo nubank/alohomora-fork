@@ -199,6 +199,36 @@
         ${content}
       </a>
     </#if>
+  <#elseif link = "cta-blog-planejamento">
+    <#if variant != purple>
+      <a href="https://blog.nubank.com.br/planejamento-curto-e-longo-prazo/" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://blog.nubank.com.br/planejamento-curto-e-longo-prazo/" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
+  <#elseif link = "cta-blog-glossario">
+    <#if variant != purple>
+      <a href="https://blog.nubank.com.br/glossario-financeiro-brasileiro/" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://blog.nubank.com.br/glossario-financeiro-brasileiro/" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
+  <#elseif link = "cta-ebook-nuinvest">
+    <#if variant != purple>
+      <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/E_book_Seu_dinheiro,_seu_jeito_Nu_invest.pdf" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/E_book_Seu_dinheiro,_seu_jeito_Nu_invest.pdf" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
   </#if>
 </#macro>
 
@@ -281,6 +311,18 @@
     </a>
   <#elseif link = "video-nu-invest-mudanca">
     <a href="https://investnews.com.br/espaco-nubank/nubank-para-investidores-fernando-miranda-explica-o-que-muda-com-o-nu-invest/" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link = "cta-blog-glossario">
+    <a href="https://blog.nubank.com.br/glossario-financeiro-brasileiro/" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link = "cta-blog-planejamento">
+    <a href="https://blog.nubank.com.br/planejamento-curto-e-longo-prazo/" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link = "cta-ebook-nuinvest">
+    <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/E_book_Seu_dinheiro,_seu_jeito_Nu_invest.pdf" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src="${thumb}" style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   </#if>

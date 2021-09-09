@@ -1,5 +1,6 @@
 <div>
   <#assign topics = doc.root.body_topics>
+  <#include "cms://contentlibrary/components/helpers/parser.htm">
     
   <#attempt>
     <#if topics.@variant == "gray" || topics.@variant == "grey">
@@ -9,7 +10,7 @@
           style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
           <tbody>
             <tr>
-              <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+              <td style="direction:ltr;font-size:0px;padding:40px;text-align:left;">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
                 <div class="mj-column-per-100 mj-outlook-group-fix"
                   style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -22,29 +23,25 @@
                               <tr>
                                 <td align="center" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
                                   <div
-                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:center;color:#BD0FEA;">
-                                    ${topics.title[0]!"Comece a investir hoje mesmo!"}</div>
+                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#BD0FEA;">
+                                    <#list topics.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
                                 </td>
                               </tr>
                               <#if topics.topic[0]??>
                                 <#list topics.topic as topic>
-                                  <#if topic_has_next>
-                                    <tr>
-                                      <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;">
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:center;color:#322828;">
-                                          ${topic!"Tópico"};</div>
-                                      </td>
-                                    </tr>
-                                  <#else>
-                                    <tr>
-                                      <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;font-weight:700;">
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:center;color:#322828;">
-                                          ${topic!"Tópico"}.</div>
-                                      </td>
-                                    </tr>
-                                  </#if>
+                              <tr>
+                                    <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#514F4F;">
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
                                 </#list>
                               <#else>
                                 <p style="font-weight:bold;color:#000;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
@@ -85,7 +82,7 @@
           style="background:#4C0677;background-color:#4C0677;width:100%;">
           <tbody>
             <tr>
-              <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+              <td style="direction:ltr;font-size:0px;padding:40px;text-align:left;">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
                 <div class="mj-column-per-100 mj-outlook-group-fix"
                   style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -98,29 +95,25 @@
                               <tr>
                                 <td align="center" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
                                   <div
-                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:center;color:#FFFFFF;">
-                                    ${topics.title[0]!"Comece a investir hoje mesmo!"}</div>
+                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#FFFFFF;">
+                                    <#list topics.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
                                 </td>
                               </tr>
                               <#if topics.topic[0]??>
                                 <#list topics.topic as topic>
-                                  <#if topic_has_next>
-                                    <tr>
-                                      <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;">
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:center;color:#FFFFFF;">
-                                          ${topic!"Tópico"};</div>
-                                      </td>
-                                    </tr>
-                                  <#else>
-                                    <tr>
-                                      <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;font-weight:700;">
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:center;color:#FFFFFF;">
-                                          ${topic!"Tópico"}.</div>
-                                      </td>
-                                    </tr>
-                                  </#if>
+                              <tr>
+                                    <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#FFFFFF;">
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
                                 </#list>
                               <#else>
                                 <p style="font-weight:bold;color:#FFFFFF;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
@@ -131,10 +124,10 @@
                                   <table border="0" cellpadding="0" cellspacing="0" role="presentation"
                                     style="border-collapse:separate;line-height:100%;">
                                     <tr>
-                                      <td align="center" bgcolor="#BD0FEA" role="presentation"
-                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#BD0FEA;"
+                                      <td align="center" bgcolor="#FFFFFF" role="presentation"
+                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#FFFFFF;"
                                         valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                          style="display:inline-block;background:#BD0FEA;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
+                                          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
                                           target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
                                     </tr>
                                   </table>
@@ -162,7 +155,7 @@
         style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:40px;text-align:left;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix"
                 style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -175,29 +168,25 @@
                             <tr>
                               <td align="center" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
                                 <div
-                                  style="font-size:24px;font-weight:700;line-height:30px;text-align:center;color:#BD0FEA;">
-                                  ${topics.title[0]!"Comece a investir hoje mesmo!"}</div>
+                                  style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#BD0FEA;">
+                                  <#list topics.title?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </div>
                               </td>
                             </tr>
                             <#if topics.topic[0]??>
                               <#list topics.topic as topic>
-                                <#if topic_has_next>
-                                  <tr>
-                                    <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;">
-                                      <div
-                                        style="font-size:16px;line-height:22px;text-align:center;color:#322828;">
-                                        ${topic!"Tópico"};</div>
-                                    </td>
-                                  </tr>
-                                <#else>
-                                  <tr>
-                                    <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;font-weight:700;">
-                                      <div
-                                        style="font-size:16px;line-height:22px;text-align:center;color:#322828;">
-                                        ${topic!"Tópico"}.</div>
-                                    </td>
-                                  </tr>
-                                </#if>
+                            <tr>
+                                  <td align="center" style="font-size:0px;padding:0px 0px 25px 0px;word-break:break-word;">
+                                    <div
+                                      style="font-size:16px;line-height:22px;text-align:left;color:#514F4F;">
+                                      <#list topic?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </td>
+                                </tr>
                               </#list>
                             <#else>
                               <p style="font-weight:bold;color:#000;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
