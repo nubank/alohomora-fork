@@ -1,7 +1,14 @@
 <div>
   <#assign topics = doc.root.body_topics>
   <#include "cms://contentlibrary/components/helpers/parser.htm">
-    
+  <#include "cms://contentlibrary/components/helpers/topics-macro.htm">
+
+  <#if (topics.cta.@url[0]?isnull) || !(topics.cta.@url[0]??)>
+    <#assign url = "#">
+  <#else>
+    <#assign url = topics.cta.@url[0]>
+  </#if>
+
   <#attempt>
     <#if topics.@variant == "gray" || topics.@variant == "grey">
       <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
@@ -54,9 +61,9 @@
                                     <tr>
                                       <td align="center" bgcolor="#4C0677" role="presentation"
                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
-                                        valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                          style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                          target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                        valign="middle">
+                                        <@topics_gray link=url content=topics.cta[0] />
+                                      </td>
                                     </tr>
                                   </table>
                                 </td>
@@ -126,9 +133,9 @@
                                     <tr>
                                       <td align="center" bgcolor="#FFFFFF" role="presentation"
                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#FFFFFF;"
-                                        valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                          target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                        valign="middle">
+                                        <@topics_purple link=url content=topics.cta[0] />
+                                      </td>
                                     </tr>
                                   </table>
                                 </td>
@@ -199,9 +206,9 @@
                                   <tr>
                                     <td align="center" bgcolor="#4C0677" role="presentation"
                                       style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
-                                      valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                        style="display:inline-block;width:176px;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                        target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                      valign="middle">
+                                      <@topics_gray link=url content=topics.cta[0] />  
+                                    </td>
                                   </tr>
                                 </table>
                               </td>
