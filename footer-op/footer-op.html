@@ -1,0 +1,65 @@
+<#assign footer = doc.root.footer_op>
+
+<#if (footer.@disclaimer[0]?isnull) || !(footer.@disclaimer[0]??)>
+  <#assign disclaimer = "default">
+<#else>
+  <#assign disclaimer = footer.@disclaimer[0]>
+</#if>
+
+<div>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="background:#F5F5F5;background-color:#F5F5F5;margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      style="background:#F5F5F5;background-color:#F5F5F5;width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:560px;" ><![endif]-->
+            <div class="mj-column-per-100 mj-outlook-group-fix"
+              style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                <tbody>
+                  <tr>
+                    <td style="vertical-align:top;padding:0px;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tbody>
+                          <tr>
+                            <td align="center" style="font-size:0px;padding:0px 0px 32px 0px;word-break:break-word;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="border-collapse:collapse;border-spacing:0px;">
+                                <tbody>
+                                  <tr>
+                                    <td style="width:128px;"><a
+                                        href="https://www.anbima.com.br/pt_br/pagina-inicial.htm?_ga=2.190798760.2050080357.1594070256-589002571.1587663723"
+                                        target="_blank"><img height="auto"
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/anbima_autoregulacao.png"
+                                          style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
+                                          width="128"></a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="justify" style="font-size:0px;padding:0px;word-break:break-word;">
+                              <div
+                                style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:16px;text-align:justify;color:#696969;">
+                                <#include "cms://contentlibrary/components/disclaimers/footer-" + disclaimer + ".htm">
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>

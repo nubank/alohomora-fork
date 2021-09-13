@@ -1,0 +1,11 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="13px 0px" background-color="#2F0549">
+      <mj-column padding="0px">
+        <mj-text padding="0px" color="#F5F5F5" font-size="18px" line-height="24px" font-weight="700" align="center">
+          MATERIAL PUBLICITÁRIO
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

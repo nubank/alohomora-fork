@@ -1,5 +1,6 @@
 <div>
   <#assign topics = doc.root.body_bullet_points>
+  <#include "cms://contentlibrary/components/helpers/parser.htm">
 
   <#attempt>
     <#if topics.@variant == "gray" || topics.@variant == "grey">
@@ -9,7 +10,7 @@
           style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
           <tbody>
             <tr>
-              <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+              <td style="direction:ltr;font-size:0px;padding:0px 40px 40px 40px;text-align:center;">
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
                 <div class="mj-column-per-100 mj-outlook-group-fix"
                   style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -23,49 +24,49 @@
                                 <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
                                   <div
                                     style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
-                                    ${topics.title[0]!"Título do componente"}</div>
+                                    <#list topics.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
                                 </td>
                               </tr>
                               <#if topics.topic[0]??>
                                 <#list topics.topic as topic>
-                                  <#if topic_has_next>
-                                    <tr>
-                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                          <img
-                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                            style="margin-right:20px;width:12px;height:12px;object-fit:contain;"> <span>${topic!"Tópico"}</span></div>
-                                      </td>
-                                    </tr>
-                                  <#else>
-                                    <tr>
-                                      <td align="center" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                        <div
-                                          style="font-size:20px;font-weight:700;line-height:24px;text-align:center;color:#555555;">
-                                          ${topic!"Texto"}</div>
-                                      </td>
-                                    </tr>
-                                  </#if>
+                                  <tr>
+                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <img
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                          style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
                                 </#list>
                               <#else>
                                 <p style="font-weight:bold;color:#000;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
                               </#if>
-                              <tr>
-                                <td align="center" vertical-align="middle"
-                                  style="font-size:0px;padding:0px;word-break:break-word;">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                    style="border-collapse:separate;line-height:100%;">
-                                    <tr>
-                                      <td align="center" bgcolor="#4C0677" role="presentation"
-                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
-                                        valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                          style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                          target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
+                              <#if topics.cta[0]??>
+                                <tr>
+                                  <td align="center" vertical-align="middle"
+                                    style="font-size:0px;padding:0px;word-break:break-word;">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                      style="border-collapse:separate;line-height:100%;">
+                                      <tr>
+                                        <td align="center" bgcolor="#4C0677" role="presentation"
+                                          style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
+                                          valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
+                                            style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
+                                            target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </#if>
                             </tbody>
                           </table>
                         </td>
@@ -87,7 +88,7 @@
             style="background:#4C0677;background-color:#4C0677;width:100%;">
             <tbody>
               <tr>
-                <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+                <td style="direction:ltr;font-size:0px;padding:0px 40px 40px 40px;text-align:center;">
                   <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
                   <div class="mj-column-per-100 mj-outlook-group-fix"
                     style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -101,49 +102,48 @@
                                   <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
                                     <div
                                       style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#FFFFFF;">
-                                      ${topics.title[0]!"Título do componente"}</div>
+                                      <#list topics.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
                                   </td>
                                 </tr>
                                 <#if topics.topic[0]??>
                                   <#list topics.topic as topic>
-                                    <#if topic_has_next>
-                                      <tr>
-                                        <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                          <div
-                                            style="font-size:16px;line-height:22px;text-align:left;color:#FFFFFF;">
-                                            <img
-                                              src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                              style="margin-right:20px;width:12px;height:12px;object-fit:contain;"> <span>${topic!"Tópico"}</span></div>
-                                        </td>
-                                      </tr>
-                                    <#else>
-                                      <tr>
-                                        <td align="center" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                          <div
-                                            style="font-size:20px;font-weight:700;line-height:24px;text-align:center;color:#FFFFFF;">
-                                            ${topic!"Texto"}</div>
-                                        </td>
-                                      </tr>
-                                    </#if>
+                                    <tr>
+                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
+                                        <div
+                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                          <img
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                            style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
+                                          <#list topic?children as node> 
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
                                   </#list>
                                 <#else>
                                   <p style="font-weight:bold;color:#FFFFFF;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
                                 </#if>
-                                <tr>
-                                  <td align="center" vertical-align="middle"
-                                    style="font-size:0px;padding:0px;word-break:break-word;">
-                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                      style="border-collapse:separate;line-height:100%;">
-                                      <tr>
-                                        <td align="center" bgcolor="#BD0FEA" role="presentation"
-                                          style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#BD0FEA;"
-                                          valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                            target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
+                                <#if topics.cta[0]??>
+                                  <tr>
+                                    <td align="center" vertical-align="middle"
+                                      style="font-size:0px;padding:0px;word-break:break-word;">
+                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        style="border-collapse:separate;line-height:100%;">
+                                        <tr>
+                                          <td align="center" bgcolor="#BD0FEA" role="presentation"
+                                            style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#BD0FEA;"
+                                            valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
+                                              style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
+                                              target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </#if>
                               </tbody>
                             </table>
                           </td>
@@ -166,7 +166,7 @@
         style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+            <td style="direction:ltr;font-size:0px;padding:0px 40px 40px 40px;text-align:center;">
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix"
                 style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -180,49 +180,48 @@
                               <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
                                 <div
                                   style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
-                                  ${topics.title[0]!"Título do componente"}</div>
+                                  <#list topics.title?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </div>
                               </td>
                             </tr>
                             <#if topics.topic[0]??>
                               <#list topics.topic as topic>
-                                <#if topic_has_next>
-                                  <tr>
-                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                      <div
-                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                        <img
-                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                          style="margin-right:20px;width:12px;height:12px;object-fit:contain;"> <span>${topic!"Tópico"}</span></div>
-                                    </td>
-                                  </tr>
-                                <#else>
-                                  <tr>
-                                    <td align="center" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                      <div
-                                        style="font-size:20px;font-weight:700;line-height:24px;text-align:center;color:#555555;">
-                                        ${topic!"Texto"}</div>
-                                    </td>
-                                  </tr>
-                                </#if>
+                                <tr>
+                                  <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
+                                    <div
+                                      style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                      <img
+                                        src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                        style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
+                                      <#list topic?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </td>
+                                </tr>
                               </#list>
                             <#else>
                               <p style="font-weight:bold;color:#000;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
                             </#if>
-                            <tr>
-                              <td align="center" vertical-align="middle"
-                                style="font-size:0px;padding:0px;word-break:break-word;">
-                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                  style="border-collapse:separate;line-height:100%;">
-                                  <tr>
-                                    <td align="center" bgcolor="#4C0677" role="presentation"
-                                      style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
-                                      valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                        style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                        target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
+                            <#if topics.cta[0]??>
+                              <tr>
+                                <td align="center" vertical-align="middle"
+                                  style="font-size:0px;padding:0px;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="border-collapse:separate;line-height:100%;">
+                                    <tr>
+                                      <td align="center" bgcolor="#4C0677" role="presentation"
+                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
+                                        valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
+                                          style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
+                                          target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </#if>
                           </tbody>
                         </table>
                       </td>
