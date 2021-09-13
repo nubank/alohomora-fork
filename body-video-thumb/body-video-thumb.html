@@ -11,21 +11,21 @@
   </#if>
 
   <#if (videothumb.@variant[0]?isnull) || !(videothumb.@variant[0]??)>
-    <#assign _variant = "default">
+    <#assign localVariant = "default">
   <#else>
-    <#assign _variant = videothumb.@variant[0]>
+    <#assign localVariant = videothumb.@variant[0]>
   </#if>
 
   <#if (videothumb.cta[0]?isnull) || !(videothumb.cta[0]??)>
-    <#assign _cta = "Clique aqui">
+    <#assign localCta = "Clique aqui">
   <#else>
-    <#assign _cta = videothumb.cta[0]>
+    <#assign localCta = videothumb.cta[0]>
   </#if>
 
   <#if (videothumb.thumb[0]?isnull) || !(videothumb.thumb[0]??)>
-    <#assign _thumb = "https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/videoplaceholder_default.png">
+    <#assign localThumb = "https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/videoplaceholder_default.png">
   <#else>
-    <#assign _thumb = videothumb.thumb[0]>
+    <#assign localThumb = videothumb.thumb[0]>
   </#if>
 
 
@@ -35,7 +35,7 @@
     <#assign incomingStyles = videothumb.@style[0]>
   </#if>
 
-  <#if _variant == "gray" || _variant == "grey">
+  <#if localVariant == "gray" || localVariant == "grey">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="
         background: #efefef;
@@ -128,7 +128,7 @@
                                           <tbody>
                                             <tr>
                                               <td style="width: 560px" class="mj-full-width-mobile">
-                                                <@videothumb_thumb link=url thumb=_thumb />
+                                                <@videothumb_thumb link=url thumb=localThumb />
                                               </td>
                                             </tr>
                                             <#if videothumb.cta[0]??>
@@ -141,7 +141,7 @@
                                                       <td align="center" bgcolor="#4C0677" role="presentation"
                                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
                                                         valign="middle">
-                                                        <@videothumb_cta link=url variant=_variant content=_cta /> 
+                                                        <@videothumb_cta link=url variant=localVariant content=localCta /> 
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -172,7 +172,7 @@
     </table>
   </div>
   <!--[if mso | IE]></td></tr></table><![endif]-->
-  <#elseif _variant == "purple">
+  <#elseif localVariant == "purple">
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="
         background: #4c0677;
@@ -263,7 +263,7 @@
                                           <tbody>
                                             <tr>
                                               <td style="width: 560px" class="mj-full-width-mobile">
-                                                <@videothumb_thumb link=url thumb=_thumb />
+                                                <@videothumb_thumb link=url thumb=localThumb />
                                               </td>
                                             </tr>
                                             <#if videothumb.cta[0]??>
@@ -276,7 +276,7 @@
                                                       <td align="center" bgcolor="#FFFFFF" role="presentation"
                                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#FFFFFF;"
                                                         valign="middle">
-                                                        <@videothumb_cta link=url variant=_variant content=localCta /> 
+                                                        <@videothumb_cta link=url variant=localVariant content=localCta /> 
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -308,7 +308,7 @@
   </div>
   <!--[if mso | IE]></td></tr></table><!
     [endif]-->
-  <#elseif _variant == 'default'>
+  <#elseif localVariant == 'default'>
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="
     background: #FFFFFF;
@@ -399,7 +399,7 @@
                                       <tbody>
                                         <tr>
                                           <td style="width: 560px" class="mj-full-width-mobile">
-                                            <@videothumb_thumb link=url thumb=_thumb />
+                                            <@videothumb_thumb link=url thumb=localThumb />
                                           </td>
                                         </tr>
                                         <#if videothumb.cta[0]??>
@@ -412,7 +412,7 @@
                                                   <td align="center" bgcolor="#4C0677" role="presentation"
                                                     style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
                                                     valign="middle">
-                                                    <@videothumb_cta link=url variant=_variant content=localCta />  
+                                                    <@videothumb_cta link=url variant=localVariant content=localCta />  
                                                   </td>
                                                 </tr>
                                               </table>

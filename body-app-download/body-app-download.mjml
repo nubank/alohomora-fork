@@ -1,0 +1,21 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper background-color="#F5F5F5" padding="40px">
+      <mj-section padding="0px 0px 30px 0px">
+        <mj-column padding="0px">
+          <mj-text padding="0px" align="center" color="#514F4F" font-size="20px" line-height="28px">
+            <span style="font-weight:bold;color:#9C63C0">Baixe agora o app</span> e aproveite a melhor experiência do mundo dos investimentos:
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+        <mj-column padding="0px">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/gplay-icon.png" width="140px" height="50px" padding="0px 0px 20px 0px" href="#" />
+        </mj-column>
+        <mj-column padding="0px">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/app-store-icon.png" width="140px" height="50px" padding="0px" href="#" />
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

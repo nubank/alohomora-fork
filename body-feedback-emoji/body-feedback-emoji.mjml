@@ -1,0 +1,34 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="40px 0px">
+    	<mj-section padding="0px 0px 32px 0px">
+      	<mj-column padding="0px">
+        	<mj-text align="center" padding="0px 0px 20px 0px" color="#4C0677" font-weight="bold" font-size="24px" line-height="30px">Avalie sua experiência</mj-text>
+          <mj-text align="center" padding="0px" font-size="16px" line-height="22px" padding="0px" color="#322828">Conta pra gente, o que achou do conteúdo deste e-mail?</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0px">
+      	<mj-group width="100%" >
+        	<mj-column padding="0px">
+          	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/feedback-1.png" padding="0px" align="center" width="29px" />
+            <mj-text align="center" color="#322828" font-size="14px" line-height="18px" font-weight="bold" padding="8px 0px 0px 0px">Péssimo</mj-text>
+          </mj-column>
+          <mj-column padding="0px">
+          	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/feedback-2.png" padding="0px" align="center" width="29px" />
+            <mj-text align="center" color="#322828" font-size="14px" line-height="18px" font-weight="bold" padding="8px 0px 0px 0px">Ruim</mj-text>
+          </mj-column><mj-column padding="0px">
+          	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/feedback-3.png" padding="0px" align="center" width="29px" />
+            <mj-text align="center" color="#322828" font-size="14px" line-height="18px" font-weight="bold" padding="8px 0px 0px 0px">Neutro</mj-text>
+          </mj-column><mj-column padding="0px">
+          	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/feedback-4.png" padding="0px" align="center" width="29px" />
+            <mj-text align="center" color="#322828" font-size="14px" line-height="18px" font-weight="bold" padding="8px 0px 0px 0px">Bom</mj-text>
+          </mj-column>
+          <mj-column padding="0px">
+          	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/feedback-5.png" padding="0px" align="center" width="29px" />
+            <mj-text align="center" color="#322828" font-size="14px" line-height="18px" font-weight="bold" padding="8px 0px 0px 0px">Ótimo</mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

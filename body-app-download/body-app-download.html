@@ -1,0 +1,145 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+
+<#assign download = doc.root.body_app_download>
+
+<#if (download.@style[0]?isnull) || !(download.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = download.@style[0]>
+</#if>
+
+<div style='${"padding:0px 0px 40px 0px;" + incomingStyles}'>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="background:#F5F5F5;background-color:#F5F5F5;margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      style="background:#F5F5F5;background-color:#F5F5F5;width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:520px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:0px 0px 30px 0px;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                      <div class="mj-column-per-100 mj-outlook-group-fix"
+                        style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top;padding:0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" style="font-size:0px;padding:0px;word-break:break-word;">
+                                        <div
+                                          style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:20px;line-height:28px;text-align:center;color:#514F4F;">
+                                          <#if download.content[0]??>
+                                            <#list content?children as node>
+                                              <@parse_content node=node />
+                                            </#list>
+                                          <#else>
+                                            <span style="font-weight:bold;color:#9C63C0">Baixe agora o app</span> e aproveite a melhor experiência do mundo dos investimentos:
+                                          </#if>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:520px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:260px;" ><![endif]-->
+                      <div class="mj-outlook-group-fix app-download-button app-download-button--first"
+                        style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;padding:0px;width:100%">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top;padding:0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center"
+                                        style="font-size:0px;padding:0px 0px 20px 0px;word-break:break-word;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                          style="border-collapse:collapse;border-spacing:0px;">
+                                          <tbody>
+                                            <tr>
+                                              <td style="width:140px;"><a href="https://play.google.com/store/apps/details?id=br.com.easynvest.rendafixa" target="_blank"><img height="50"
+                                                    src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/gplay-icon.png"
+                                                    style="border:0;display:block;outline:none;text-decoration:none;height:50px;width:100%;font-size:13px;"
+                                                    width="140"></a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:260px;" ><![endif]-->
+                      <div class="mj-outlook-group-fix app-download-button"
+                        style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;padding:0px">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top;padding:0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" style="font-size:0px;padding:0px;word-break:break-word;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                          style="border-collapse:collapse;border-spacing:0px;">
+                                          <tbody>
+                                            <tr>
+                                              <td style="width:140px;"><a href="https://itunes.apple.com/br/app/easynvest-renda-fixa/id1065904944" target="_blank"><img height="50"
+                                                    src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/app-store-icon.png"
+                                                    style="border:0;display:block;outline:none;text-decoration:none;height:50px;width:100%;font-size:13px;"
+                                                    width="140"></a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>

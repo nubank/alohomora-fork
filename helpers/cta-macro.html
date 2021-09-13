@@ -1,5 +1,5 @@
 <#macro cta_wrapper link size variant content>
-  <#if link = "cta-blog-nu-invest-tudo-sobre">
+  <#if link == "cta-blog-nu-invest-tudo-sobre">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -43,7 +43,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-precadastro">
+  <#elseif link == "cta-precadastro">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -87,7 +87,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-politica-privacidade">
+  <#elseif link == "cta-politica-privacidade">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -131,7 +131,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "investnews-fundos-news">
+  <#elseif link == "investnews-fundos-news">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -175,7 +175,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-conhecer-mais-fundos">
+  <#elseif link == "cta-conhecer-mais-fundos">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -219,7 +219,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-blog-fundos-o-que-sao">
+  <#elseif link == "cta-blog-fundos-o-que-sao">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -263,25 +263,25 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-fundos">
+  <#elseif link == "cta-fundos">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
-        valign="middle"><a class="button-lg" href="${PET.LINK_COMU?skip}"
+        valign="middle"><a class="button-lg" href="${PET.LINK_COMU}"
           style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
         target="_blank">${content}</a></td>
       <#elseif variant?string == "white">
         <td align="center" bgcolor="#FFFFFF" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
-        valign="middle"><a class="button-lg" href="${PET.LINK_COMU?skip}"
+        valign="middle"><a class="button-lg" href="${PET.LINK_COMU}"
         style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
         target="_blank">${content}</a></td>
       <#elseif variant?string == "dark">
         <td align="center" bgcolor="#BD0FEA" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
         valign="middle">
-          <a class="button-lg" href="${PET.LINK_COMU?skip}"
+          <a class="button-lg" href="${PET.LINK_COMU}"
             style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
           target="_blank">${content}
         </a></td>
@@ -290,24 +290,24 @@
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
-        valign="middle"><a class="button-sm" href="${PET.LINK_COMU?skip}"
+        valign="middle"><a class="button-sm" href="${PET.LINK_COMU}"
           style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
           target="_blank">${content}</a></td>
       <#elseif variant?string == "white">
         <td align="center" bgcolor="#FFFFFF" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
-        valign="middle"><a class="button-sm" href="${PET.LINK_COMU?skip}"
+        valign="middle"><a class="button-sm" href="${PET.LINK_COMU}"
           style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
           target="_blank">${content}</a></td>
       <#elseif variant?string == "dark">
         <td align="center" bgcolor="#BD0FEA" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
-        valign="middle"><a class="button-sm" href="${PET.LINK_COMU?skip}"
+        valign="middle"><a class="button-sm" href="${PET.LINK_COMU}"
           style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-taxas-e-precos">
+  <#elseif link == "cta-taxas-e-precos">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -351,7 +351,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-lp-comecar-investir">
+  <#elseif link == "cta-lp-comecar-investir">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -395,7 +395,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-completar-cadastro">
+  <#elseif link == "cta-completar-cadastro">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -439,7 +439,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "bloco-blog-3-erros">
+  <#elseif link == "bloco-blog-3-erros">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -483,7 +483,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "bloco-blog-como-comecar">
+  <#elseif link == "bloco-blog-como-comecar">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -527,7 +527,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "bloco-blog-clube-investimento">
+  <#elseif link == "bloco-blog-clube-investimento">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -571,7 +571,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "bloco-blog-renda-variavel">
+  <#elseif link == "bloco-blog-renda-variavel">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -615,7 +615,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "bloco-blog-reserva-emergencia">
+  <#elseif link == "bloco-blog-reserva-emergencia">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -659,7 +659,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "responder-agora-stvm">
+  <#elseif link == "responder-agora-stvm">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -703,7 +703,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-investir">
+  <#elseif link == "cta-investir">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -747,7 +747,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-investimento">
+  <#elseif link == "cta-investimento">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -791,7 +791,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-perfil-investidor">
+  <#elseif link == "cta-perfil-investidor">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -835,7 +835,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "video-nu-invest-mudanca">
+  <#elseif link == "video-nu-invest-mudanca">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -879,7 +879,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-blog-rentabilidade">
+  <#elseif link == "cta-blog-rentabilidade">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -923,7 +923,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-blog-planejamento">
+  <#elseif link == "cta-blog-planejamento">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -967,7 +967,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-blog-glossario">
+  <#elseif link == "cta-blog-glossario">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -1011,7 +1011,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-ebook-nuinvest">
+  <#elseif link == "cta-ebook-nuinvest">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -1055,7 +1055,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-onboarding-primeiro">
+  <#elseif link == "cta-onboarding-primeiro">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -1099,7 +1099,7 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
-  <#elseif link = "cta-onboarding-efetivados">
+  <#elseif link == "cta-onboarding-efetivados">
     <#if size?string == "large">
       <#if variant?string == "default">
         <td align="center" bgcolor="#4C0677" role="presentation"
@@ -1139,6 +1139,50 @@
         <td align="center" bgcolor="#BD0FEA" role="presentation"
         style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
         valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/dx5Fk3L1?public_id=0e035c0e08f03211acf31df9a172764195dfddd566de35a295b815aaad13d935"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
+  <#elseif link == "cta-alterar-perfil-invest">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-"
           style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
           target="_blank">${content}</a></td>
       </#if>
