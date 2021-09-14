@@ -161,11 +161,11 @@
     </#if>
   <#elseif link == "cta-fundos">
     <#if variant != purple>
-      <a href="${PET.LINK_COMU?skip}" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+      <a href="${PET.LINK_COMU}" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
         ${content}
       </a>
     <#else>
-      <a href="${PET.LINK_COMU?skip}" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+      <a href="${PET.LINK_COMU}" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
         ${content}
       </a>
     </#if>
@@ -259,6 +259,26 @@
         ${content}
       </a>
     </#if>
+  <#elseif link == "cta-saiba-mais">
+    <#if variant != purple>
+      <a href="http://www.magnetis.com.br/etf/tecb11" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="http://www.magnetis.com.br/etf/tecb11" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
+  <#elseif link == "cta-reserve-agora">
+    <#if variant != purple>
+      <a href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/colecao/45" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/colecao/45" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
   </#if>
 </#macro>
 
@@ -328,7 +348,7 @@
       <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   <#elseif link = "cta-fundos">
-    <a href="${PET.LINK_COMU?skip}" style="text-decoration:none;color:inherit" target="_blank">
+    <a href="${PET.LINK_COMU}" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   <#elseif link == "cta-investimento">
@@ -365,6 +385,14 @@
     </a>
   <#elseif link == "cta-alterar-perfil-invest">
     <a href="https://ajuda.nuinvest.com.br/hc/pt-br/articles/360044993193-Meu-Perfil-de-Investidor-precisa-ser-alterado-e-agora-" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "cta-saiba-mais">
+    <a href="http://www.magnetis.com.br/etf/tecb11" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "cta-reserve-agora">
+    <a href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/colecao/45" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   <#else>

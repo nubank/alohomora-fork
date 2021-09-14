@@ -1,7 +1,7 @@
 <#assign footer = doc.root.footer_op>
 
 <#if (footer.@disclaimer[0]?isnull) || !(footer.@disclaimer[0]??)>
-  <#assign disclaimer = "default">
+  <#assign disclaimer = "op">
 <#else>
   <#assign disclaimer = footer.@disclaimer[0]>
 </#if>

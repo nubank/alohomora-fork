@@ -1,7 +1,25 @@
-<div>
-  <#assign topics = doc.root.body_bullet_points>
-  <#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/topics-macro.htm">
 
+<#if (topics.@containerStyle[0]?isnull) || !(topics.@containerStyle[0]??)>
+  <#assign containerStyle = "">
+<#else>
+  <#assign containerStyle = topics.@containerStyle[0]>
+</#if>
+
+<#if (topics.@style[0]?isnull) || !(topics.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = topics.@style[0]>
+</#if>
+
+<#if (topics.cta.@url[0]?isnull) || !(topics.cta.@url[0]??)>
+  <#assign url = "#">
+<#else>
+  <#assign url = topics.cta.@url[0]>
+</#if>
+
+<div style='${containerStyle}'>
   <#attempt>
     <#if topics.@variant == "gray" || topics.@variant == "grey">
       <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
@@ -10,7 +28,7 @@
           style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
           <tbody>
             <tr>
-              <td style="direction:ltr;font-size:0px;padding:0px 40px 40px 40px;text-align:center;">
+              <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
                 <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
                 <div class="mj-column-per-100 mj-outlook-group-fix"
                   style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -58,9 +76,8 @@
                                       <tr>
                                         <td align="center" bgcolor="#4C0677" role="presentation"
                                           style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
-                                          valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                            style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                            target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                          valign="middle">
+                                          <@topics_gray link=url content=topics.cta[0] />
                                         </td>
                                       </tr>
                                     </table>
@@ -88,7 +105,7 @@
             style="background:#4C0677;background-color:#4C0677;width:100%;">
             <tbody>
               <tr>
-                <td style="direction:ltr;font-size:0px;padding:0px 40px 40px 40px;text-align:center;">
+                <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
                   <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
                   <div class="mj-column-per-100 mj-outlook-group-fix"
                     style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -136,9 +153,9 @@
                                         <tr>
                                           <td align="center" bgcolor="#BD0FEA" role="presentation"
                                             style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#BD0FEA;"
-                                            valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                              style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                              target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                            valign="middle">
+                                            <@topics_purple link=url content=topics.cta[0] />  
+                                          </td>
                                         </tr>
                                       </table>
                                     </td>
@@ -166,7 +183,7 @@
         style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
         <tbody>
           <tr>
-            <td style="direction:ltr;font-size:0px;padding:0px 40px 40px 40px;text-align:center;">
+            <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
               <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
               <div class="mj-column-per-100 mj-outlook-group-fix"
                 style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -214,9 +231,9 @@
                                     <tr>
                                       <td align="center" bgcolor="#4C0677" role="presentation"
                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
-                                        valign="middle"><a class="button-lg" href='${topics.cta.@url[0]!"#"}'
-                                          style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;"
-                                          target="_blank">${topics.cta[0]!"Clique aqui"}</a></td>
+                                        valign="middle">
+                                        <@topics_gray link=url content=topics.cta[0] />
+                                      </td>
                                     </tr>
                                   </table>
                                 </td>

@@ -39,6 +39,13 @@
   <#include "cms://contentlibrary/components/body-title.htm">
 </#macro>
 
+<#macro bullet_points_macro index>
+  <#local bulletpoints = doc.root.body_bullet_points>
+  <#local topics = bulletpoints[index?number]>
+
+  <#include "cms://contentlibrary/components/body-bullet-points.htm">
+</#macro>
+
 <#macro attention_macro index>
   <#local attentionlist = doc.root.body_attention>
   <#local attention = attentionlist[index?number]>
@@ -84,6 +91,8 @@
     <@bloco_marcas_macro index=component["index"] />
   <#elseif component["id"] == "body-title">
     <@title_macro index=component["index"] />
+  <#elseif component["id"] == "body-bullet-points">
+    <@bullet_points_macro index=component["index"] />
   <#elseif component["id"] == "body-text">
     <@text_macro index=component["index"] />
   <#elseif component["id"] == "body-attention">
