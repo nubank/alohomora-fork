@@ -1,0 +1,16 @@
+<mjml>
+  <mj-body background-color="#fff">
+    <mj-wrapper padding="40px 0px">
+      <mj-section padding="40px" background-color="#4C0677">
+        <mj-column padding="0px">
+          <mj-text color="#FFFFFF" font-size="16px" line-height="22px" padding="0px">
+            Para ouvir muita música, podcasts, e muito mais, aqui está o código do seu voucher do Spotify:
+          </mj-text>
+          <mj-text align="center" padding="40px 0px 0px 0px">
+            <span style="background-color:#FFFFFF;color:#322828;font-weight:700;padding:10px 20px;border-radius:10px;">[CÓDIGO VOUCHER]</span>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

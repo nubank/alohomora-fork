@@ -81,6 +81,13 @@
   <#include "cms://contentlibrary/components/body-text.htm">
 </#macro>
 
+<#macro text_block_destaque_macro index>
+  <#local blocklist = doc.root.body_text_block_destaque>
+  <#local block = blocklist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-text-block-destaque.htm">
+</#macro>
+
 <#-- Aqui listamos os componentes que pegamos lá na primeira linha, um a um, e importamos da pasta de components do Rsys. Se for componente que pode ser repetido, ele chama a respectiva macro (ver acima) e lá ela cuida da importação correta -->
 <#list components as component>
   <#if component["id"] == "body-cta">
@@ -101,6 +108,8 @@
     <@stepsmall_macro index=component["index"] />
   <#elseif component["id"] == "body-card-produto">
     <@cardproduto_macro index=component["index"] />
+  <#elseif component["id"] == "body-text-block-destaque">
+    <@text_block_destaque_macro index=component["index"] />
   <#else>
     <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
   </#if>
