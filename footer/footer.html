@@ -12,13 +12,15 @@
   <#assign disclaimer = footer.@disclaimer[0]>
 </#if>
 
-<#if (footer.@optout[0]?isnull) || !(footer.@optout[0]??)>
-  <#assign optout = "${form('central-de-preferencias','CUSTOMER_ID_')}">
-<#else>
-  <#if footer.@optout[0] == "contatos-lps">
-    <#assign optout = "${form('form_unsub_contatos_lps','EMAIL_ADDRESS_')}">
-  <#else>
+<#if type == "default">
+  <#if (footer.@optout[0]?isnull) || !(footer.@optout[0]??)>
     <#assign optout = "${form('central-de-preferencias','CUSTOMER_ID_')}">
+  <#else>
+    <#if footer.@optout[0] == "contatos-lps">
+      <#assign optout = "${form('form_unsub_contatos_lps','EMAIL_ADDRESS_')}">
+    <#else>
+      <#assign optout = "${form('central-de-preferencias','CUSTOMER_ID_')}">
+    </#if>
   </#if>
 </#if>
 
@@ -311,7 +313,7 @@ style="background-color:rgb(255,255,255);margin:0px auto;max-width:600px;backgro
                         <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
                           <div
                             style="font-family:Arial, sans-serif;font-size:14px;font-weight:300;line-height:24px;text-align:center;color:#322828;">
-                            <a href="#" style="color:#322828;text-decoration:none">easynvest@nuinvest.com.br</a>
+                            <a href="#" style="color:#322828;text-decoration:none">nuinvest@nuinvest.com.br</a>
                           </div>
                         </td>
                       </tr>

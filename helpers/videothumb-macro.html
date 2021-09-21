@@ -309,6 +309,16 @@
         ${content}
       </a>
     </#if>
+  <#elseif link == "cta-vencedores-monstro">
+    <#if variant != purple>
+      <a href="https://easynvest.typeform.com/to/B2xwSPPC" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://easynvest.typeform.com/to/B2xwSPPC" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
   </#if>
 </#macro>
 
@@ -435,6 +445,10 @@
     </a>
   <#elseif link == "cta-acompanhe-aqui">
     <a href="https://b3investidor.b2clogin.com/b3Investidor.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1A_SUSI&client_id=711b0677-3672-4464-b183-76734fb21907&response_type=code%20id_token&redirect_uri=https://www.investidor.b3.com.br&response_mode=query&scope=openid%20https://b3Investidor.onmicrosoft.com/802348e6-6f23-4d99-9445-45836861cdf4/Read.All&prompt=login&state=MTkMNsOjVsqPE74ll3UiU0HeY68ZKdtoFLCGtK13&nonce=IXqYhXJbTp9OmRCFpuEnJhvEQxpqZBU9tnmCVNQC&code_challenge=C433E4ZqkrTekTlaBp7d-TuVsgxWWinFyA2LM7" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "cta-vencedores-monstro">
+    <a href="https://easynvest.typeform.com/to/B2xwSPPC" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   <#else>

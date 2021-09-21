@@ -88,6 +88,13 @@
   <#include "cms://contentlibrary/components/body-text-block-destaque.htm">
 </#macro>
 
+<#macro images_macro index>
+  <#local imagelist = doc.root.image>
+  <#local image = imagelist[index?number]>
+
+  <#include "cms://contentlibrary/components/image.htm">
+</#macro>
+
 <#-- Aqui listamos os componentes que pegamos lá na primeira linha, um a um, e importamos da pasta de components do Rsys. Se for componente que pode ser repetido, ele chama a respectiva macro (ver acima) e lá ela cuida da importação correta -->
 <#list components as component>
   <#if component["id"] == "body-cta">
@@ -110,6 +117,8 @@
     <@cardproduto_macro index=component["index"] />
   <#elseif component["id"] == "body-text-block-destaque">
     <@text_block_destaque_macro index=component["index"] />
+  <#elseif component["id"] == "image">
+    <@images_macro index=component["index"] />
   <#else>
     <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
   </#if>

@@ -1,3 +1,5 @@
+<#include "cms://contentlibrary/components/helpers/links-macro.htm">
+
 <#macro parse_content node>
   <#if (node.@style[0]?isnull) || !(node.@style[0]??)>
     <#local styles = "">
@@ -17,7 +19,7 @@
     <#elseif node?node_name == "br">
       <br class="${classes}" />
     <#elseif node?node_name == "a">
-      <a href="${node.@href}" style="${styles}" class="${classes}" target="_blank">${node}</a>
+      <@link_macro link=node.@href style=styles class=classes content=node />
     <#elseif node?node_name == "b">
       <b style="${styles}" class="${classes}">${node}</b>
     <#elseif node?node_name == "i">

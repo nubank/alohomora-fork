@@ -1407,5 +1407,49 @@
           target="_blank">${content}</a></td>
       </#if>
     </#if>
+  <#elseif link == "cta-vencedores-monstro">
+    <#if size?string == "large">
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+        valign="middle"><a class="button-lg" href="https://easynvest.typeform.com/to/B2xwSPPC"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-lg" href="https://easynvest.typeform.com/to/B2xwSPPC"
+        style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+        target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+        valign="middle">
+          <a class="button-lg" href="https://easynvest.typeform.com/to/B2xwSPPC"
+            style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:30px;"
+          target="_blank">${content}
+        </a></td>
+      </#if>
+    <#else>
+      <#if variant?string == "default">
+        <td align="center" bgcolor="#4C0677" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+        valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/B2xwSPPC"
+          style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "white">
+        <td align="center" bgcolor="#FFFFFF" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+        valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/B2xwSPPC"
+          style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      <#elseif variant?string == "dark">
+        <td align="center" bgcolor="#BD0FEA" role="presentation"
+        style="border:none;border-radius:30px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+        valign="middle"><a class="button-sm" href="https://easynvest.typeform.com/to/B2xwSPPC"
+          style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:30px;padding:7px"
+          target="_blank">${content}</a></td>
+      </#if>
+    </#if>
   </#if>
 </#macro>

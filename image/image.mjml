@@ -1,0 +1,14 @@
+<mjml>
+  <mj-body>
+    <mj-section background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" padding="40px 10px">
+      <mj-group width="100%">	
+      	<mj-column padding="0px 0px 10px 0px" vertical-align="middle">
+        	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/nuinvest.png" padding="0px" width="117px" />
+        </mj-column>
+        <mj-column padding="0px" vertical-align="middle">
+        	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/magnetis.png" padding="0px" width="142px"  />
+        </mj-column>
+      </mj-group>
+    </mj-hero>
+  </mj-body>
+</mjml>
