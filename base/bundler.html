@@ -97,29 +97,31 @@
 
 <#-- Aqui listamos os componentes que pegamos lá na primeira linha, um a um, e importamos da pasta de components do Rsys. Se for componente que pode ser repetido, ele chama a respectiva macro (ver acima) e lá ela cuida da importação correta -->
 <#list components as component>
-  <#if component["id"] == "body-cta">
-    <@cta_macro index=component["index"] />
-  <#elseif component["id"] == "body-cta-2">
-    <@cta_macro2 index=component["index"] />
-  <#elseif component["id"] == "body-bloco-marcas">
-    <@bloco_marcas_macro index=component["index"] />
-  <#elseif component["id"] == "body-title">
-    <@title_macro index=component["index"] />
-  <#elseif component["id"] == "body-bullet-points">
-    <@bullet_points_macro index=component["index"] />
-  <#elseif component["id"] == "body-text">
-    <@text_macro index=component["index"] />
-  <#elseif component["id"] == "body-attention">
-    <@attention_macro index=component["index"] />
-  <#elseif component["id"] == "body-step-small">
-    <@stepsmall_macro index=component["index"] />
-  <#elseif component["id"] == "body-card-produto">
-    <@cardproduto_macro index=component["index"] />
-  <#elseif component["id"] == "body-text-block-destaque">
-    <@text_block_destaque_macro index=component["index"] />
-  <#elseif component["id"] == "image">
-    <@images_macro index=component["index"] />
-  <#else>
-    <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
+  <#if component["id"] != "customStyles">
+    <#if component["id"] == "body-cta">
+      <@cta_macro index=component["index"] />
+    <#elseif component["id"] == "body-cta-2">
+      <@cta_macro2 index=component["index"] />
+    <#elseif component["id"] == "body-bloco-marcas">
+      <@bloco_marcas_macro index=component["index"] />
+    <#elseif component["id"] == "body-title">
+      <@title_macro index=component["index"] />
+    <#elseif component["id"] == "body-bullet-points">
+      <@bullet_points_macro index=component["index"] />
+    <#elseif component["id"] == "body-text">
+      <@text_macro index=component["index"] />
+    <#elseif component["id"] == "body-attention">
+      <@attention_macro index=component["index"] />
+    <#elseif component["id"] == "body-step-small">
+      <@stepsmall_macro index=component["index"] />
+    <#elseif component["id"] == "body-card-produto">
+      <@cardproduto_macro index=component["index"] />
+    <#elseif component["id"] == "body-text-block-destaque">
+      <@text_block_destaque_macro index=component["index"] />
+    <#elseif component["id"] == "image">
+      <@images_macro index=component["index"] />
+    <#else>
+      <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
+    </#if>
   </#if>
 </#list>

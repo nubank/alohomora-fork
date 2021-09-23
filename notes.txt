@@ -1,11 +1,14 @@
-<header_snippet>Acompanhe as atualizações dos Fundos de Investimentos.</header_snippet>
-<header>
-  <content><span style="font-weight:400; font-size:16px;">Fundos de Investimentos</span><br />Resgate</content>
-</header>
-<body_title_text>Você pediu um resgate total do <span style="font-weight:600;">Fundo ${PET.NM_FUNDO?skip?capitalize}</span><br/><br/>Será creditado em sua conta Nu invest o valor total do seu investimento em <span style="font-weight:600;">${PET.DT_LIQUIDACAO?skip}.</span><br /><br />Quer continuar fazendo seu dinheiro render mais? Confira todos os nossos investimentos!</body_title_text>
-<body_cta url="cta-investimento" index="0">Invista agora</body_cta>
-<body_signature>
-  <first>Busque o que é seu!</first>
-  <second>Nu invest</second>
-</body_signature>
-<footer disclaimer="assemb-fundos"></footer>
+cta-carteira-recomendada
+https://www.nuinvest.com.br/investir-carteira-recomendada.html
+
+cta-top-10
+https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/5ed5334d0c3dfd00014a0c54
+
+cta-small-caps
+https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/5fce435a61632a0001fb1836
+
+cta-top-fii
+https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/6090adcc2fd58500011caad1
+
+cta-carteira-dividendos
+https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/604a8a35d4157d00019f0d53

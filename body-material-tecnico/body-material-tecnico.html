@@ -1,5 +1,25 @@
-<div style="padding-bottom:40px">
-  <#assign material = doc.root.body_material_tecnico>
+<#assign material = doc.root.body_material_tecnico>
+<#include "cms://contentlibrary/components/helpers/mat-tecnico-macro.htm">
+
+<#if (material.@url[0]?isnull) || !(material.@url[0]??)>
+  <#assign url = "#">
+<#else>
+  <#assign url = material.@url[0]>
+</#if>
+
+<#if (material[0]?isnull) || !(material[0]??)>
+  <#assign content = "para ver o material técnico dos investimentos">
+<#else>
+  <#assign content = material[0]>
+</#if>
+
+<#if (material.@style[0]?isnull) || !(material.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = material.@style[0]>
+</#if>
+
+<div style='${"padding-bottom:40px" + incomingStyles}'>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="margin:0px auto;max-width:600px;">
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
@@ -34,7 +54,7 @@
                                         width="45"></td>
                                     <td style="padding-left:14px;">
                                       <p style="color:#514F4F;font-size:14px;">
-                                        <a href='${material.@url[0]!"#"}' style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${material[0]!"para ver o material técnico dos investimentos"}.
+                                        <@mat_tecnico_macro link=url content=content />
                                       </p>
                                     </td>
                                   </tr>

@@ -1,8 +1,12 @@
-<#attempt>
-  <#assign customStyles = DynamicVariable.customStyles>
-<#recover>
-  <#assign customStyles = "null">
-</#attempt>
+<#assign customStyles = "null">
+
+<#assign components = parsejson(DynamicVariable.components)>
+
+<#list components as component>
+  <#if component["id"] == "customStyles">
+    <#assign customStyles = DynamicVariable.customStyles>
+  </#if>
+</#list>
 
 <style type="text/css">
   #outlook a {
