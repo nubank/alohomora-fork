@@ -369,6 +369,36 @@
         ${content}
       </a>
     </#if>
+  <#elseif link == "video-rf">
+    <#if variant != purple>
+      <a href="https://www.youtube.com/watch?v=raJulT_3Xy4" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://www.youtube.com/watch?v=raJulT_3Xy4" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
+  <#elseif link == "video-fundos">
+    <#if variant != purple>
+      <a href="https://youtu.be/C2cWHgo9SFM" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://youtu.be/C2cWHgo9SFM" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
+  <#elseif link == "video-rv">
+    <#if variant != purple>
+      <a href="https://youtu.be/AhdNQ3Wcu98" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://youtu.be/AhdNQ3Wcu98" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
   </#if>
 </#macro>
 
@@ -519,6 +549,18 @@
     </a>
   <#elseif link == "cta-carteira-dividendos">
     <a href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/604a8a35d4157d00019f0d53" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "video-rf">
+    <a href="https://www.youtube.com/watch?v=raJulT_3Xy4" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "video-fundos">
+    <a href="https://youtu.be/C2cWHgo9SFM" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "video-rv">
+    <a href="https://youtu.be/AhdNQ3Wcu98" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   <#else>

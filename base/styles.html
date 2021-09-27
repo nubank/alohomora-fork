@@ -1,12 +1,14 @@
-<#assign customStyles = "null">
+<#attempt>
+  <#assign components = parsejson(DynamicVariable.components)>
 
-<#assign components = parsejson(DynamicVariable.components)>
-
-<#list components as component>
-  <#if component["id"] == "customStyles">
-    <#assign customStyles = DynamicVariable.customStyles>
-  </#if>
-</#list>
+  <#list components as component>
+    <#if component["id"] == "customStyles">
+      <#assign customStyles = DynamicVariable.customStyles>
+    </#if>
+  </#list>
+<#recover>
+  <#assign customStyles = "null">
+</#attempt>
 
 <style type="text/css">
   #outlook a {
@@ -346,6 +348,14 @@
     }
     .app-download-button--first {
       padding: 0px 32px 0px 0px !important;
+    }
+    .combo-title {
+      padding: 0px 0px 18px 0px !important;
+    }
+    .combo-image {
+      width: 90% !important;
+      max-width: 90%;
+      padding: 0px 0px 0px 30px !important;
     }
   }
 </style>

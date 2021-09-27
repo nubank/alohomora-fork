@@ -95,6 +95,13 @@
   <#include "cms://contentlibrary/components/image.htm">
 </#macro>
 
+<#macro combo_macro index>
+  <#local combolist = doc.root.body_combo>
+  <#local combo = combolist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-combo.htm">
+</#macro>
+
 <#-- Aqui listamos os componentes que pegamos lá na primeira linha, um a um, e importamos da pasta de components do Rsys. Se for componente que pode ser repetido, ele chama a respectiva macro (ver acima) e lá ela cuida da importação correta -->
 <#list components as component>
   <#if component["id"] != "customStyles">
@@ -120,6 +127,8 @@
       <@text_block_destaque_macro index=component["index"] />
     <#elseif component["id"] == "image">
       <@images_macro index=component["index"] />
+    <#elseif component["id"] == "body-combo">
+      <@combo_macro index=component["index"] />
     <#else>
       <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
     </#if>

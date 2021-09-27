@@ -1,0 +1,32 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="40px" background-color="#FFFFFF">
+      <mj-section padding="0px">
+        <mj-column padding="0px">
+          <mj-text padding="0px 0px 30px 0px" font-size="22px" line-height="24px" color="#9C63C0" font-weight="700">Tudo pronto para ter uma nova experiência?</mj-text>
+          <mj-text padding="0px" font-size="16px" line-height="22px" color="#514F4F" font-weight="700">Veja como é fácil habilitar a nova função pelo app:</mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section padding="20px 0px 0px 0px">
+      	<mj-column padding="0px" vertical-align="middle">
+        	<mj-text padding="0px 0px 30px 0px" font-size="14px" line-height="20px" color="#514F4F" font-weight="400">Entre no app, vá em “Investir” e depois em “Ofertas e Recomendações”.</mj-text>
+          <mj-text padding="0px 0px 30px 0px" font-size="14px" line-height="20px" color="#514F4F" font-weight="400">Clique no botão “Quero investir” de uma das 4 carteiras citadas acima ou de todas elas, como preferir.</mj-text>
+          <mj-text padding="0px 0px 30px 0px" font-size="14px" line-height="20px" color="#514F4F" font-weight="400">Em “Informações da carteira” você vai encontrar a opção de “Receber atualizações por e-mail”. É só tocar lá!</mj-text>
+          <mj-text padding="0px 0px 30px 0px" font-size="14px" line-height="20px" color="#514F4F" font-weight="400">Confirme em “Quero receber” e pronto. Te notificaremos sempre que atualizarmos nossas carteiras.</mj-text>
+        </mj-column>
+        <mj-column padding="0px" vertical-align="middle">
+        	<mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/combo-mockup.png" padding="0px" align="center" />
+        </mj-column>
+      </mj-section>
+      
+      <mj-section padding="40px 0px 0px 0px" css-class="button-lg">
+        <mj-column padding="0px">
+          <mj-button color="#FFFFFF" border-radius="30px" padding="0px" font-weight="700" font-size="16px" line-height="24px" background-color="#4C0677" href="#" align="center">
+            Lorem ipsum dolor
+          </mj-button>
+        </mj-column>
+    	</mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

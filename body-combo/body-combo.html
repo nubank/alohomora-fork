@@ -1,0 +1,226 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/topics-macro.htm">
+
+<#if (combo.@containerStyle[0]?isnull) || !(combo.@containerStyle[0]??)>
+  <#assign containerStyle = "">
+<#else>
+  <#assign containerStyle = combo.@containerStyle[0]>
+</#if>
+
+<#if (combo.@style[0]?isnull) || !(combo.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = combo.@style[0]>
+</#if>
+
+<#if (combo.cta.@url[0]?isnull) || !(combo.cta.@url[0]??)>
+  <#assign url = "#">
+<#else>
+  <#assign url = combo.cta.@url[0]>
+</#if>
+
+<div style='${containerStyle}'>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+      style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
+      <tbody>
+        <tr>
+          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:520px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                      <div class="mj-column-per-100 mj-outlook-group-fix"
+                        style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top;padding:0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="left"
+                                        style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" class="combo-title">
+                                        <div
+                                          style="font-size:22px;font-weight:700;line-height:24px;text-align:left;color:#9C63C0;">
+                                          <#list combo.title[0]?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
+                                        <div
+                                          style="font-size:16px;font-weight:700;line-height:22px;text-align:left;color:#514F4F;">
+                                          <#list combo.subtitle[0]?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:520px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:30px 0px 0px 0px;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:260px;" ><![endif]-->
+                      <div class="mj-column-per-50 mj-outlook-group-fix"
+                        style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:middle;padding:0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <#if combo.topic[0]??>
+                                      <#list combo.topic as topic>
+                                        <tr>
+                                          <td align="left" style="font-size:0px;word-break:break-word;padding:0px;vertical-align:top;width:22px;" vertical-align="top">
+                                            <div
+                                              style="font-size:18px;font-weight:700;line-height:22px;text-align:left;color:#BD0FEA;">
+                                              ${topic_index + 1}.
+                                            </div>
+                                          </td>
+                                          <#if topic_has_next>
+                                            <td align="left" style="font-size:0px;padding:0px 0px 30px 4px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                              <div
+                                                style="font-size:14px;font-weight:400;line-height:20px;text-align:left;color:#514F4F;">
+                                                <#list topic?children as node>
+                                                  <@parse_content node=node />
+                                                </#list>
+                                              </div>
+                                            </td>
+                                          <#else>
+                                            <td align="left" style="font-size:0px;padding:0px 0px 0px 4px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                              <div
+                                                style="font-size:14px;font-weight:400;line-height:20px;text-align:left;color:#514F4F;">
+                                                <#list topic?children as node>
+                                                  <@parse_content node=node />
+                                                </#list>
+                                              </div>
+                                            </td>
+                                          </#if>
+                                        </tr>
+                                      </#list>
+                                    <#else>
+                                      <p style="font-weight:bold;color:#000;font-size:24px;">Você precisa incluir os tópicos dentro de <code>&lt;topic&gt;</code>s</p>
+                                    </#if>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td><td class="" style="vertical-align:middle;width:260px;" ><![endif]-->
+                      <div class="mj-column-per-50 mj-outlook-group-fix"
+                        style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:middle;padding:0px;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" style="font-size:0px;padding:0px;word-break:break-word;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                          style="border-collapse:collapse;border-spacing:0px;">
+                                          <tbody>
+                                            <tr>
+                                              <td style="width:260px;" align="center"><img height="auto"
+                                                  src='${combo.image[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/combo-mockup.png"}'
+                                                  style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;padding:30px 0px 0px 20px;"
+                                                  width="260" class="combo-image"></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <#if combo.cta[0]??>
+              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="button-lg-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="button-lg-outlook" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div class="button-lg" style="margin:0px auto;max-width:520px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                  style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:40px 0px 0px 0px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix"
+                          style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="vertical-align:top;padding:0px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="center" vertical-align="middle"
+                                          style="font-size:0px;padding:0px;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                            style="border-collapse:separate;line-height:100%;">
+                                            <tr>
+                                              <td align="center" bgcolor="#4C0677" role="presentation"
+                                                style="border:none;border-radius:30px;cursor:auto;mso-padding-alt:10px 25px;background:#4C0677;"
+                                                valign="middle">
+                                                <@topics_gray link=url content=combo.cta[0] />
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </#if>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>
