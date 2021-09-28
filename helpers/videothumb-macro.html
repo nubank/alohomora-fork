@@ -410,6 +410,16 @@
         ${content}
       </a>
     </#if>
+  <#elseif link == "live-bolsa-29092021">
+    <#if variant != purple>
+      <a href="https://www.youtube.com/watch?v=A0huH04HLkY" style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    <#else>
+      <a href="https://www.youtube.com/watch?v=A0huH04HLkY" style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;" target="_blank">
+        ${content}
+      </a>
+    </#if>
   </#if>
 </#macro>
 
@@ -576,6 +586,10 @@
     </a>
   <#elseif link == "cta-nuinvest-app">
     <a href="https://easynvest.onelink.me/SAMu/bc20187d" style="text-decoration:none;color:inherit" target="_blank">
+      <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+    </a>
+  <#elseif link == "live-bolsa-29092021">
+    <a href="https://www.youtube.com/watch?v=A0huH04HLkY" style="text-decoration:none;color:inherit" target="_blank">
       <img height="auto" src='${thumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
     </a>
   <#else>

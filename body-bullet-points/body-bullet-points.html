@@ -51,19 +51,30 @@
                               <#if topics.topic[0]??>
                                 <#list topics.topic as topic>
                                   <tr>
-                                    <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
-                                      <img
-                                        src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                        style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
-                                    </td>
-                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
-                                      <div
-                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                        <#list topic?children as node>
-                                          <@parse_content node=node />
-                                        </#list>
-                                      </div>
-                                    </td>
+                                    <#if topic.@withoutBullet[0]??>
+                                      <td align="left" colspan="2" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                        <div
+                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                          <#list topic?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    <#else>
+                                      <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
+                                        <img
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                          style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
+                                      </td>
+                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                        <div
+                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                          <#list topic?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </#if>
                                   </tr>
                                 </#list>
                               <#else>
@@ -130,19 +141,30 @@
                                 <#if topics.topic[0]??>
                                   <#list topics.topic as topic>
                                     <tr>
-                                      <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
-                                        <img  
-                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                          style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
-                                      </td>
-                                      <td align="left" style="font-size:0px;word-break:break-word;padding:0px 0px 30px 12px;vertical-align:top" vertical-align="top">
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                          <#list topic?children as node> 
-                                            <@parse_content node=node />
-                                          </#list>
-                                        </div>
-                                      </td>
+                                      <#if topic.@withoutBullet[0]??>
+                                        <td align="left" colspan="2" style="font-size:0px;word-break:break-word;padding:0px 0px 30px 0px;vertical-align:top" vertical-align="top">
+                                          <div
+                                            style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                            <#list topic?children as node> 
+                                              <@parse_content node=node />
+                                            </#list>
+                                          </div>
+                                        </td>
+                                      <#else>
+                                        <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
+                                          <img  
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                            style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
+                                        </td>
+                                        <td align="left" style="font-size:0px;word-break:break-word;padding:0px 0px 30px 12px;vertical-align:top" vertical-align="top">
+                                          <div
+                                            style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                            <#list topic?children as node> 
+                                              <@parse_content node=node />
+                                            </#list>
+                                          </div>
+                                        </td>
+                                      </#if>
                                     </tr>
                                   </#list>
                                 <#else>
@@ -210,19 +232,30 @@
                             <#if topics.topic[0]??>
                               <#list topics.topic as topic>
                                 <tr>
-                                  <td align="left" style="font-size:0px;padding:4px 0px 0px 0px;word-break:break-word;vertical-align:top;width:12px;" vertical-align="top">
-                                    <img
-                                      src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                      style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
-                                  </td>
-                                  <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
-                                    <div
-                                      style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                      <#list topic?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  </td>
+                                  <#if topic.@withoutBullet[0]??>
+                                    <td align="left" colspan="2" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  <#else>
+                                    <td align="left" style="font-size:0px;padding:4px 0px 0px 0px;word-break:break-word;vertical-align:top;width:12px;" vertical-align="top">
+                                      <img
+                                        src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                        style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
+                                    </td>
+                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </#if>
                                 </tr>
                               </#list>
                             <#else>
