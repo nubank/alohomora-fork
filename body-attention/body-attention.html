@@ -34,7 +34,7 @@
       style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
       <tbody>
         <tr>
-          <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
             <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             <div class="mj-column-per-100 mj-outlook-group-fix"
               style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -44,38 +44,40 @@
                     <td style="vertical-align:top;padding:0;">
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tbody>
-                          <tr>
-                            <td align="left" class="body-title-text__title"
-                              style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
-                              <#if url = "cta-suit-fazer-teste">
-                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                    Atualize seu Perfil de Investidor
-                                  </div>
+                          <#if attention.title[0]??>
+                            <tr>
+                              <td align="left" class="body-title-text__title"
+                                style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
+                                <#if url = "cta-suit-fazer-teste">
+                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                      Atualize seu Perfil de Investidor
+                                    </div>
+                                  <#else>
+                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                      Descubra seu Perfil de Investidor
+                                    </div>
+                                  </#if> 
                                 <#else>
-                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                    Descubra seu Perfil de Investidor
-                                  </div>
-                                </#if> 
-                              <#else>
-                                <#if attention.title.@subtitle[0]??>
-                                  <div
-                                    style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                    <#list attention.title?children as node>
-                                      <@parse_content node=node />
-                                    </#list>
-                                  </div>
-                                <#else>
-                                  <div
-                                    style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
-                                    <#list attention.title?children as node>
-                                      <@parse_content node=node />
-                                    </#list>
-                                  </div>
-                                </#if>
-                              </#if>    
-                            </td>
-                          </tr>
+                                  <#if attention.title.@subtitle[0]??>
+                                    <div
+                                      style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                      <#list attention.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  <#else>
+                                    <div
+                                      style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
+                                      <#list attention.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </#if>
+                                </#if>    
+                              </td>
+                            </tr>
+                          </#if>
                           <tr>
                             <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
                               <div
@@ -142,7 +144,7 @@
       style="background:#4C0677;background-color:#4C0677;width:100%;">
       <tbody>
         <tr>
-          <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
             <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             <div class="mj-column-per-100 mj-outlook-group-fix"
               style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -152,9 +154,10 @@
                     <td style="vertical-align:top;padding:0;">
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tbody>
-                          <tr>
-                            <td align="left" class="body-title-text__title"
-                              style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
+                          <#if attention.title[0]??>
+                            <tr>
+                              <td align="left" class="body-title-text__title"
+                                style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
                                 <#if url = "cta-suit-fazer-teste">
                                   <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
                                     <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
@@ -181,9 +184,10 @@
                                       </#list>
                                     </div>
                                   </#if>
-                             </#if>       
-                            </td>
-                          </tr>
+                              </#if>       
+                              </td>
+                            </tr>
+                          </#if>
                           <tr>
                             <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
                               <div
@@ -250,7 +254,7 @@
       style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
       <tbody>
         <tr>
-          <td style="direction:ltr;font-size:0px;padding:40px;text-align:center;">
+          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
             <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
             <div class="mj-column-per-100 mj-outlook-group-fix"
               style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
@@ -260,38 +264,40 @@
                     <td style="vertical-align:top;padding:0;">
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tbody>
-                          <tr>
-                            <td align="left" class="body-title-text__title"
-                              style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
-                              <#if url = "cta-suit-fazer-teste">
-                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                    Atualize seu Perfil de Investidor
-                                  </div>
+                          <#if attention.title[0]??>
+                            <tr>
+                              <td align="left" class="body-title-text__title"
+                                style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
+                                <#if url = "cta-suit-fazer-teste">
+                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                      Atualize seu Perfil de Investidor
+                                    </div>
+                                  <#else>
+                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                      Descubra seu Perfil de Investidor
+                                    </div>
+                                  </#if> 
                                 <#else>
-                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                    Descubra seu Perfil de Investidor
-                                  </div>
-                                </#if> 
-                              <#else>
-                                <#if attention.title.@subtitle[0]??>
-                                  <div
-                                    style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                    <#list attention.title?children as node>
-                                      <@parse_content node=node />
-                                    </#list>
-                                  </div>
-                                <#else>
-                                  <div
-                                    style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
-                                    <#list attention.title?children as node>
-                                      <@parse_content node=node />
-                                    </#list>
-                                  </div>
-                                </#if>
-                             </#if>       
-                            </td>
-                          </tr>
+                                  <#if attention.title.@subtitle[0]??>
+                                    <div
+                                      style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                      <#list attention.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  <#else>
+                                    <div
+                                      style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
+                                      <#list attention.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </#if>
+                              </#if>       
+                              </td>
+                            </tr>
+                          </#if>
                           <tr>
                             <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
                               <div
