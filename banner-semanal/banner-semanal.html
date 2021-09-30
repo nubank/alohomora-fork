@@ -1,0 +1,251 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+
+<#if (banner.@style[0]?isnull) || !(banner.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = banner.@style[0]>
+</#if>
+
+<#if (banner.@url[0]?isnull) || !(banner.@url[0]??)>
+  <#assign url = "#">
+<#else>
+  <#assign url = banner.@url[0]>
+</#if>
+
+<#if (banner.@backgroundColor[0]?isnull) || !(banner.@backgroundColor[0]??)>
+  <#assign backgroundColor = "#252525">
+<#else>
+  <#assign backgroundColor = banner.@backgroundColor[0]>
+</#if>
+
+<#if (banner.@borderColor[0]?isnull) || !(banner.@borderColor[0]??)>
+  <#assign borderColor = "#9c63c0">
+<#else>
+  <#assign borderColor = banner.@borderColor[0]>
+</#if>
+
+<#if (banner.content[0]?isnull) || !(banner.content[0]??)>
+  <#assign content = "Carteiras de Ações em tempo real: Acompanhe as cotações em tempo real e as performances acumuladas.">
+<#else>
+  <#assign content = banner.content[0]>
+</#if>
+
+<div style='${"padding: 0px 40px 40px 40px;" + incomingStyles}'>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><v:rect style="width:600px;" xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"><v:fill origin="0.5, 0" position="0.5, 0" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png" type="tile" /><v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0"><![endif]-->
+  <div
+    style="
+      background: url(https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png)
+        top center / auto repeat;
+      margin: 0px auto;
+      max-width: 600px;
+    "
+  >
+    <div style="line-height: 0; font-size: 0">
+      <table
+        align="center"
+        background="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        role="presentation"
+        style="
+          background: url(https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png)
+            top center / auto repeat;
+          width: 100%;
+        "
+      >
+        <tbody>
+          <tr>
+            <td
+              style="
+                direction: ltr;
+                font-size: 0px;
+                padding: 0px;
+                text-align: center;
+                vertical-align: top;
+              "
+            >
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:300px;" ><![endif]-->
+              <div
+                class="mj-column-per-30 outlook-group-fix"
+                style="
+                  font-size: 13px;
+                  text-align: left;
+                  direction: ltr;
+                  display: inline-block;
+                  vertical-align: top;
+                  width: 100%;
+                "
+              >
+                <table
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  width="100%"
+                >
+                  <tbody>
+                    <tr>
+                      <td
+                        style="
+                          background-color:${backgroundColor};
+                          border-bottom: 3px solid ${borderColor};
+                          vertical-align: top;
+                          display: block;
+                        "
+                        class="banner-semanal-border"
+                      >
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              style="
+                                font-size: 0px;
+                                padding: 0px;
+                                word-break: break-word;
+                              "
+                            >
+                              <a href="${clickthrough(url)}" target="_blank">
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  role="presentation"
+                                  style="
+                                    border-collapse: collapse;
+                                    border-spacing: 0px;
+                                  "
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td class="banner-semanal-image-container" style="padding: 12px 40px;">
+                                        <img
+                                          height="75"
+                                          src='${banner.image[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/banner-semanal-default-logo.png"}'
+                                          style="
+                                            border: 0;
+                                            display: block;
+                                            outline: none;
+                                            text-decoration: none;
+                                            height: 75px;
+                                            margin: 0 auto;
+                                          "
+                                          draggable="false"
+                                          width="125"
+                                          class="banner-semanal-image"
+                                        />
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:300px;" ><![endif]-->
+              <div
+                class="mj-column-per-70 outlook-group-fix"
+                style="
+                  font-size: 13px;
+                  text-align: left;
+                  direction: ltr;
+                  display: inline-block;
+                  vertical-align: top;
+                  width: 100%;
+                "
+              >
+                <a href="${clickthrough(url)}" target="_blank">
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    width="100%"
+                  >
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align: middle; padding: 28px 25px" class="banner-semanal-height">
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                            width="100%"
+                          >
+                            <tr>
+                              <td
+                                align="left"
+                                style="
+                                  font-size: 0px;
+                                  padding: 0px;
+                                  word-break: break-word;
+                                  display: block;
+                                "
+                                vertical-align="middle"
+                                class="banner-semanal-td--first"
+                              >
+                                <div
+                                  style="
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    text-align: left;
+                                    color: #ffffff;
+                                  "
+                                >
+                                  <#list content?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </div>
+                              </td>
+                              <td
+                                align="center"
+                                style="
+                                  font-size: 0px;
+                                  padding: 16px 0px 0px 0px;
+                                  word-break: break-word;
+                                  display: block;
+                                "
+                                vertical-align="middle"
+                                class="banner-semanal-td--second"
+                              >
+                                <img
+                                  height="auto"
+                                  src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/banner-semanal-arrow.png"
+                                  style="
+                                    border: 0;
+                                    display: block;
+                                    outline: none;
+                                    text-decoration: none;
+                                    height: auto;
+                                  "
+                                  width="41"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </a>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--[if mso | IE]></v:textbox></v:rect></td></tr></table><![endif]-->
+</div>

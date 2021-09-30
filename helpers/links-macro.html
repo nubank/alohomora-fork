@@ -1,16 +1,4 @@
-<#import "cms://contentlibrary/components/helpers/links-provider.htm" as linksProvider>
-
 <#macro link_macro link style class content>
-  <#list linksProvider.links as item>
-    <#if link == item.name>
-      <a href='${item.url}' style='${style}' class='${class}' target="_blank">
-        ${content}
-      </a>
-    </#if>
-  </#list>
-</#macro>
-
-<#--  <#macro link_macro link style class content>
   <#if link == "cta-blog-nu-invest-tudo-sobre">
     <a href="https://blog.nubank.com.br/nu-invest-tudo-sobre/" style=${style} class=${class} target="_blank">
       ${content}
@@ -195,4 +183,3 @@
     <span style="font-size:14px;font-weight:400;line-height:18px;color:#FFFFFF">A url → ${link} ← passada não é válida</span>
   </#if>
 </#macro>
-  -->

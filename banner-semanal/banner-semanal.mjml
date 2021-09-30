@@ -1,0 +1,12 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png" background-repeat="repeat">
+      <mj-column padding="12px 40px" background-color="#252525" border-bottom="3px solid #9C63C0">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/banner-semanal-default-logo.png" padding="0px" width="125px" height="75px" />
+      </mj-column>
+      <mj-column padding="20px">
+        <mj-text padding="0px" color="#FFFFFF" font-size="16px" line-height="24px"><b>Carteiras de Ações em tempo real:</b> Acompanhe as cotações em tempo real e as performances acumuladas.</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

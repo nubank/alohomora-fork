@@ -1,0 +1,20 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" background-repeat="repeat" background-size="cover">
+      <mj-group width="100%">
+        <mj-column padding="20px" width="55%" vertical-align="top">
+          <mj-image padding="0px 0px 16px 0px" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/Logo_Purple.png" width="105px" height="20px" align="left" />
+          <mj-text padding="0px" font-size="16px" color="#FFFFFF" line-height="19px" font-weight="700">Lorem ipsum is placeholder text commonly used in the graphic</mj-text>
+        </mj-column>
+        <mj-column padding="0px" width="45%" vertical-align="top">
+          <mj-image padding="0px" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-banner-placeholder.png" align="right" />
+        </mj-column>
+      </mj-group>
+    </mj-section>
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-image padding="0px" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-dark-purple.png" align="center" height="18px" />
+      </mj-column>
+    </mj-section>
+	</mj-body>
+</mjml>
