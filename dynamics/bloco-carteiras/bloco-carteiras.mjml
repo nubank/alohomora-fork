@@ -1,0 +1,71 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="0px 40px 16px 40px">
+      <mj-section background-color="#EFEFEF" padding="40px 20px">
+        <mj-column padding="0px">
+          <mj-text color="#4C0677" font-size="22px" font-weight="bold" line-height="33px" padding="0px 20px">
+            Top 10 Ações<br/>
+            <span style="font-size:18px;font-weight:400;line-height:24px">Para quem busca ganhos em longo prazo</span>
+          </mj-text>
+          <mj-text color="#514F4F" font-size="16px" line-height="22px" padding="30px 20px">
+            Baseada em criteriosas análises técnicas e fundamentalistas, o objetivo é superar o Ibovespa no longo prazo, aumentando o ganho de capital.
+          </mj-text>
+          <mj-button background-color="#4C0677" padding="0px" color="#fff" font-size="16px" font-weight="bold" line-height="22px" href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/5ed5334d0c3dfd00014a0c54" border-radius="40px">
+            Confira a carteira
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+    <mj-wrapper padding="0px 40px 16px 40px">
+      <mj-section background-color="#EFEFEF" padding="40px 20px">
+        <mj-column padding="0px">
+          <mj-text color="#4C0677" font-size="22px" font-weight="bold" line-height="33px" padding="0px 20px">
+            <em>Small Caps</em><br/>
+            <span style="font-size:18px;font-weight:400;line-height:24px">Para quem busca Ações de empresas menores</span>
+          </mj-text>
+          <mj-text color="#514F4F" font-size="16px" line-height="22px" padding="30px 20px">
+            São Ações de empresas que estão fora do radar dos investidores e que têm muito espaço para crescer, por isso, apresentam possibilidades de valorização na Bolsa.
+          </mj-text>
+          <mj-button background-color="#4C0677" padding="0px" color="#fff" font-size="16px" font-weight="bold" line-height="22px" href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/5fce435a61632a0001fb1836" border-radius="40px">
+            Confira a carteira
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+    <mj-wrapper padding="0px 40px 16px 40px">
+      <mj-section background-color="#EFEFEF" padding="40px 20px">
+        <mj-column padding="0px">
+          <mj-text color="#4C0677" font-size="22px" font-weight="bold" line-height="33px" padding="0px 20px">
+            Top FII (Fundos Imobiliários)<br/>
+            <span style="font-size:18px;font-weight:400;line-height:24px">Para quem busca bons rendimentos e valorização de cota</span>
+          </mj-text>
+          <mj-text color="#514F4F" font-size="16px" line-height="22px" padding="30px 20px">
+            É composta por Fundos Imobiliários que possuem boas expectativas no pagamento de rendimentos e preços atrativos que possibilitem a valorização da cota no longo prazo.
+          </mj-text>
+          <mj-button background-color="#4C0677" padding="0px" color="#fff" font-size="16px" font-weight="bold" line-height="22px" href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/6090adcc2fd58500011caad1" border-radius="40px">
+            Confira a carteira
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    
+    <mj-wrapper padding="0px 40px 40px 40px">
+      <mj-section background-color="#EFEFEF" padding="40px 20px">
+        <mj-column padding="0px">
+          <mj-text color="#4C0677" font-size="22px" font-weight="bold" line-height="33px" padding="0px 20px">
+            Carteira de Dividendos<br/>
+            <span style="font-size:18px;font-weight:400;line-height:24px">Para quem busca renda passiva na aposentadoria</span>
+          </mj-text>
+          <mj-text color="#514F4F" font-size="16px" line-height="22px" padding="30px 20px">
+            A estratégia é buscar por empresas geradoras de caixa, com alta distribuição de dividendos, baixo endividamento, elevadas margens e com modelo de negócio estável e previsível.
+          </mj-text>
+          <mj-button background-color="#4C0677" padding="0px" color="#fff" font-size="16px" font-weight="bold" line-height="22px" href="https://www.nuinvest.com.br/autenticacao?redirect_url=https://www.nuinvest.com.br/investir/renda-variavel/carteira/analista/604a8a35d4157d00019f0d53" border-radius="40px">
+            Confira a carteira
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
