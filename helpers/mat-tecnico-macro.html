@@ -1,8 +1,19 @@
 <#macro mat_tecnico_macro link content>
   <#if link == "default">
-    <a href="#" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+    <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/Material_Tecnico_Acoes_BDR.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+  <#elseif link == "acoes">
+    <a href="https://s3-sa-east-1.amazonaws.com/br.com.easynvest.mkt/campanhas/Material_Tecnico_Acoes.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+  <#elseif link == "fii">
+    <a href="https://s3-sa-east-1.amazonaws.com/br.com.easynvest.mkt/campanhas/Material_Tecnico_FIIs.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+  <#elseif link == "multicarteiras">
+    <a href="https://s3-sa-east-1.amazonaws.com/br.com.easynvest.mkt/campanhas/Material_Tecnico_Acoes_FIIs.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+  <#elseif link == "bdb-fii">
+    <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/Material_Tecnico_Acoes_BDB_FII.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+  <#elseif link == "bdr">
+    <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/Material_Tecnico_Acoes_BDR.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
+  <#elseif link == "bdr-fii">
+    <a href="https://s3.amazonaws.com/br.com.easynvest.uploads.site/uploads/Material_Tecnico_BDR_FII.pdf" style="color:#4C0677;font-weight:bold;text-decoration: underline;" target="_blank">Clique aqui</a> ${content}.
   <#else>
     <span style="font-size:14px;font-weight:400;line-height:18px;color:#4C0677">A url → ${link} ← passada não é válida</span>
   </#if>
 </#macro>
-

@@ -1,5 +1,5 @@
 <div>
-  <#if (2 > 1) || ("alo" == "alo")>
+  <#if (PET_Teste_Carteiras.TOP_10)?number == 1>
     <#-- BLOCO TOP 10 AÇÕES (CONDICIONAL DEVE VIR NA LINHA ACIMA) -->
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="margin: 0px auto; max-width: 600px">
@@ -205,7 +205,7 @@
       </table>
     </div>
   </#if>
-  <#if 1 == 1>
+  <#if (PET_Teste_Carteiras.SMLL)?number == 1>
     <#-- BLOCO SMALL CAPS (CONDICIONAL DEVE VIR NA LINHA ACIMA) -->
     <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="margin: 0px auto; max-width: 600px">
@@ -412,7 +412,7 @@
       </table>
     </div>
   </#if>
-  <#if (20 > 10)>
+  <#if (PET_Teste_Carteiras.FIIS)?number == 1>
     <#-- BLOCO TOP FII (FUNDOS IMOBILIÁRIOS) (CONDICIONAL DEVE VIR NA LINHA ACIMA) -->
     <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="margin: 0px auto; max-width: 600px">
@@ -619,7 +619,7 @@
       </table>
     </div>
   </#if>
-  <#if true>
+  <#if (PET_Teste_Carteiras.DIVIDENDOS)?number == 1>
     <#-- BLOCO CARTEIRA DE DIVIDENDOS (CONDICIONAL DEVE VIR NA LINHA ACIMA) -->
     <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="margin: 0px auto; max-width: 600px">
@@ -828,25 +828,3 @@
   </#if>
   <!--[if mso | IE]></td></tr></table><![endif]-->
 </div>
-
-<#-- NOTES
-  Como cada bloco é independente, ou seja, renderizar um não impede de renderizar outros, cada bloco tem seu próprio <#if>, sua própria condição.
-
-  Comparadores:
-
-  == igualdade (dois iguais)
-  > maior que
-  >= maior ou igual
-  < menor que
-  <= menor ou igual
-
-  Auxiliares:
-
-  && and (ligar duas condições, ambas devem ser verdadeiras pra entrar no bloco)
-  || or (se uma das condições for verdadeira, entra no bloco)
-  ! negação (nega a condição que precede, por exemplo !(2 > 1) vai resultar em false, uma vez que a comparação dentro dos parenteses dá true, mas a gente inverte o valor com !)
-
-  Notas:
-  - Na condição dos <#if>, textos sempre devem vir entre aspas, preferencialmente duplas, e números não precisam de aspas.
-  - Dentro da linha do <#if> não há a necessidade de usar o ${} para por uma variável, por exemplo, não faça <#if ${PET.SUITABLE}>, e sim <#if PET.SUITABLE>
--->

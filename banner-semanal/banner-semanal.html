@@ -1,4 +1,5 @@
 <#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/banner-macro.htm">
 
 <#if (banner.@style[0]?isnull) || !(banner.@style[0]??)>
   <#assign incomingStyles = "">
@@ -7,7 +8,7 @@
 </#if>
 
 <#if (banner.@url[0]?isnull) || !(banner.@url[0]??)>
-  <#assign url = "#">
+  <#assign url = "default">
 <#else>
   <#assign url = banner.@url[0]>
 </#if>
@@ -24,18 +25,12 @@
   <#assign borderColor = banner.@borderColor[0]>
 </#if>
 
-<#if (banner.content[0]?isnull) || !(banner.content[0]??)>
-  <#assign content = "Carteiras de Ações em tempo real: Acompanhe as cotações em tempo real e as performances acumuladas.">
-<#else>
-  <#assign content = banner.content[0]>
-</#if>
-
 <div style='${"padding: 0px 40px 40px 40px;" + incomingStyles}'>
-  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><v:rect style="width:600px;" xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"><v:fill origin="0.5, 0" position="0.5, 0" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png" type="tile" /><v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0"><![endif]-->
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div
     style="
-      background: url(https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png)
-        top center / auto repeat;
+      background: #2f0549;
+      background-color: #2f0549;
       margin: 0px auto;
       max-width: 600px;
     "
@@ -43,16 +38,11 @@
     <div style="line-height: 0; font-size: 0">
       <table
         align="center"
-        background="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png"
         border="0"
         cellpadding="0"
         cellspacing="0"
         role="presentation"
-        style="
-          background: url(https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/dark-purple-line.png)
-            top center / auto repeat;
-          width: 100%;
-        "
+        style="background: #2f0549; background-color: #2f0549; width: 100%"
       >
         <tbody>
           <tr>
@@ -111,40 +101,7 @@
                                 word-break: break-word;
                               "
                             >
-                              <a href="${clickthrough(url)}" target="_blank">
-                                <table
-                                  border="0"
-                                  cellpadding="0"
-                                  cellspacing="0"
-                                  role="presentation"
-                                  style="
-                                    border-collapse: collapse;
-                                    border-spacing: 0px;
-                                  "
-                                >
-                                  <tbody>
-                                    <tr>
-                                      <td class="banner-semanal-image-container" style="padding: 12px 40px;">
-                                        <img
-                                          height="75"
-                                          src='${banner.image[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/banner-semanal-default-logo.png"}'
-                                          style="
-                                            border: 0;
-                                            display: block;
-                                            outline: none;
-                                            text-decoration: none;
-                                            height: 75px;
-                                            margin: 0 auto;
-                                          "
-                                          draggable="false"
-                                          width="125"
-                                          class="banner-semanal-image"
-                                        />
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </a>
+                              <@banner_image_macro link=url image=banner.image[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/investnews-logo.png" />
                             </td>
                           </tr>
                         </table>
@@ -165,80 +122,7 @@
                   width: 100%;
                 "
               >
-                <a href="${clickthrough(url)}" target="_blank">
-                  <table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                    width="100%"
-                  >
-                    <tbody>
-                      <tr>
-                        <td style="vertical-align: middle; padding: 28px 25px" class="banner-semanal-height">
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                            width="100%"
-                          >
-                            <tr>
-                              <td
-                                align="left"
-                                style="
-                                  font-size: 0px;
-                                  padding: 0px;
-                                  word-break: break-word;
-                                  display: block;
-                                "
-                                vertical-align="middle"
-                                class="banner-semanal-td--first"
-                              >
-                                <div
-                                  style="
-                                    font-size: 16px;
-                                    line-height: 24px;
-                                    text-align: left;
-                                    color: #ffffff;
-                                  "
-                                >
-                                  <#list content?children as node>
-                                    <@parse_content node=node />
-                                  </#list>
-                                </div>
-                              </td>
-                              <td
-                                align="center"
-                                style="
-                                  font-size: 0px;
-                                  padding: 16px 0px 0px 0px;
-                                  word-break: break-word;
-                                  display: block;
-                                "
-                                vertical-align="middle"
-                                class="banner-semanal-td--second"
-                              >
-                                <img
-                                  height="auto"
-                                  src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/banner-semanal-arrow.png"
-                                  style="
-                                    border: 0;
-                                    display: block;
-                                    outline: none;
-                                    text-decoration: none;
-                                    height: auto;
-                                  "
-                                  width="41"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </a>
+                <@banner_content_macro link=url content=banner.content[0] />
               </div>
               <!--[if mso | IE]></td></tr></table><![endif]-->
             </td>

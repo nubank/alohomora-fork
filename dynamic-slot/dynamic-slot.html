@@ -1,1 +1,9 @@
-<#include "cms://contentlibrary/components/dynamic/" + block + ".htm">
+<#if (block.@style[0]?isnull) || !(block.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = block.@style[0]>
+</#if>
+
+<div style='${incomingStyles}'>
+  <#include "cms://contentlibrary/components/dynamic/" + block + ".htm">
+</div>

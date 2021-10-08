@@ -1,12 +1,6 @@
 <#assign material = doc.root.body_material_tecnico>
 <#include "cms://contentlibrary/components/helpers/mat-tecnico-macro.htm">
 
-<#if (material.@url[0]?isnull) || !(material.@url[0]??)>
-  <#assign url = "#">
-<#else>
-  <#assign url = material.@url[0]>
-</#if>
-
 <#if (material[0]?isnull) || !(material[0]??)>
   <#assign content = "para ver o material técnico dos investimentos">
 <#else>
@@ -18,6 +12,22 @@
 <#else>
   <#assign incomingStyles = material.@style[0]>
 </#if>
+
+<#attempt>
+  <#if ((PET_Teste_Carteiras.FIIS)?number == 1) && ((PET_Teste_Carteiras.TOP_10)?number == 1 || (PET_Teste_Carteiras.DIVIDENDOS)?number == 1 || (PET_Teste_Carteiras.SMLL)?number == 1)>
+    <#assign url = "bdb-fii">
+  <#elseif ((PET_Teste_Carteiras.FIIS)?number == 1) && !((PET_Teste_Carteiras.TOP_10)?number == 1 || (PET_Teste_Carteiras.DIVIDENDOS)?number == 1 || (PET_Teste_Carteiras.SMLL)?number == 1)>
+    <#assign url = "fii">
+  <#else>
+    <#assign url = "default">
+  </#if>
+<#recover>
+  <#if (material.@url[0]?isnull) || !(material.@url[0]??)>
+    <#assign url = "default">
+  <#else>
+    <#assign url = material.@url[0]>
+  </#if>
+</#attempt>
 
 <div style='${"padding-bottom:40px" + incomingStyles}'>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
