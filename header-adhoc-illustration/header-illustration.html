@@ -1,7 +1,13 @@
-<div>
-  <#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#assign header = doc.root.header_illustration>
 
-  <#assign header = doc.root.header_illustration>
+<#if (header.@textStyle[0]?isnull) || !(header.@textStyle[0]??)>
+  <#assign textStyles = "">
+<#else>
+  <#assign textStyles = header.@textStyle[0]>
+</#if>
+
+<div>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><v:rect style="width:600px;" xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"><v:fill origin="0.5, 0" position="0.5, 0" src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png" type="tile" size="1,1" aspect="atleast" /><v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0"><![endif]-->
   <div
     style="background:url(https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/header-purple-line.png) center top / cover repeat;background-position:center top;background-repeat:repeat;background-size:cover;margin:0px auto;max-width:600px;">
@@ -70,7 +76,7 @@
                           <tr>
                             <td align="left" style="font-size:0px;padding:26px 0;word-break:break-word;">
                               <div
-                                style="font-size:32px;font-weight:bold;line-height:38px;text-align:center;color:#555555;">
+                                style='${"font-size:32px;font-weight:bold;text-align:center;color:#555555;" + textStyles}'>
                                 <#list header.content?children as node>
                                   <@parse_content node=node />
                                 </#list>

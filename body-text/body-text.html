@@ -6,6 +6,18 @@
   <#else>
     <#assign incomingStyles = text.@style[0]>
   </#if>
+
+  <#if (text.@textStyle[0]?isnull) || !(text.@textStyle[0]??)>
+    <#assign textStyles = "">
+  <#else>
+    <#assign textStyles = text.@textStyle[0]>
+  </#if>
+  
+  <#if (text.@align[0]?isnull) || !(text.@align[0]??)>
+    <#assign align = "left">
+  <#else>
+    <#assign align = text.@align[0]>
+  </#if>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;">
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
@@ -23,11 +35,11 @@
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                         <tbody>
                           <tr>
-                            <td align="left" style='${"font-size:0px;padding:0px 40px 40px 40px;word-break:break-word;" + incomingStyles}'>
+                            <td align='${align}' style='${"font-size:0px;padding:0px 40px 40px 40px;word-break:break-word;" + incomingStyles}'>
                               <div
-                                style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                style='${"font-size:16px;line-height:22px;color:#555555;" + textStyles}'>
                                 <#list text?children as node>
-                                  <@parse_content node=node />
+                                  <@parse_content node=node/>
                                 </#list>
                               </div>
                             </td>

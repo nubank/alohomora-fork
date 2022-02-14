@@ -1,4 +1,4 @@
-<#include "cms://contentlibrary/components/helpers/links-macro.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
 
 <#macro parse_content node>
   <#if (node.@style[0]?isnull) || !(node.@style[0]??)>
@@ -15,41 +15,43 @@
 
   <#if node?node_type == "element">
     <#if node?node_name == "span">
-      <span style="${styles}" class="${classes}">${node}</span>
+      <span style="${styles}" class="${classes}">${node?string}</span><#t>
     <#elseif node?node_name == "br">
       <br class="${classes}" />
     <#elseif node?node_name == "a">
-      <@link_macro link=node.@href style=styles class=classes content=node />
+      <@link_wrapper_macro link=node.@href[0] style=styles class=classes>${node?string}</@link_wrapper_macro>
     <#elseif node?node_name == "b">
-      <b style="${styles}" class="${classes}">${node}</b>
+      <b style="${styles}" class="${classes}">${node?string}</b>
     <#elseif node?node_name == "i">
-      <i style="${styles}" class="${classes}">${node}</i>
+      <i style="${styles}" class="${classes}">${node?string}</i>
     <#elseif node?node_name == "em">
-      <em style="${styles}" class="${classes}">${node}</em>
+      <em style="${styles}" class="${classes}">${node?string}</em>
     <#elseif node?node_name == "li">
-      <li style="${styles}" class="${classes}">${node}</li>
+      <li style="${styles}" class="${classes}">${node?string}</li>
     <#elseif node?node_name == "strong">
-      <strong class="${classes}">${node}</strong>
+      <strong class="${classes}">${node?string}</strong>
     <#elseif node?node_name == "div">
-      <div style="${styles}" class="${classes}">${node}</div>
+      <div style="${styles}" class="${classes}">${node?string}</div>
     <#elseif node?node_name == "p">
-      <p style="${styles}" class="${classes}">${node}</p>
+      <p style="${styles}" class="${classes}">${node?string}</p>
     <#elseif node?node_name == "h1">
-      <h1 style="${styles}" class="${classes}">${node}</h1>
+      <h1 style="${styles}" class="${classes}">${node?string}</h1>
     <#elseif node?node_name == "h2">
-      <h2 style="${styles}" class="${classes}">${node}</h2>
+      <h2 style="${styles}" class="${classes}">${node?string}</h2>
     <#elseif node?node_name == "h3">
-      <h3 style="${styles}" class="${classes}">${node}</h3>
+      <h3 style="${styles}" class="${classes}">${node?string}</h3>
     <#elseif node?node_name == "h4">
-      <h4 style="${styles}" class="${classes}">${node}</h4>
+      <h4 style="${styles}" class="${classes}">${node?string}</h4>
     <#elseif node?node_name == "h5">
-      <h5 style="${styles}" class="${classes}">${node}</h5>
+      <h5 style="${styles}" class="${classes}">${node?string}</h5>
     <#elseif node?node_name == "h6">
-      <h6 style="${styles}" class="${classes}">${node}</h6>
+      <h6 style="${styles}" class="${classes}">${node?string}</h6>
     <#elseif node?node_name == "img">
       <img src="${node.@src}" style="${styles}" class="${classes}" />
+    <#elseif node?node_name == "font">
+      <font style="${styles}" class="${classes}">${node?string}</font>
     </#if>
   <#else>
-    ${node}
+    ${node?string}
   </#if>
 </#macro>

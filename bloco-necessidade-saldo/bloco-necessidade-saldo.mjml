@@ -1,0 +1,21 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="40px 30px" background-color="#4C0677">
+      <mj-section text-align="left" padding="0px">
+        <mj-column padding="0px">
+          <mj-text padding="0px" color="#FFFFFF" font-size="12px" font-weight="700"><span style="background-color:#BD0FEA;padding:4px 8px;border-radius:3px;">LEMBRETE</span></mj-text>
+          <mj-text padding="24px 0px 0px 0px" color="#FFFFFF" font-size="18px" line-height="24px" font-weight="700">Você precisa ter saldo na conta NuInvest!</mj-text>
+          <mj-text padding="16px 0px 0px 0px" color="#FFFFFF" font-size="16px" line-height="24px">Para fazer a <b>reserva de BDRs do Nu</b>, você precisa ter na sua conta o saldo total que pretende investir.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="16px 0px 0px 0px">
+      	<mj-column padding="0px" width="60%" vertical-align="middle">
+          <mj-text padding="0px" color="#FFFFFF" font-size="16px" line-height="24px">Por isso, não se esqueça de fazer a transferência a partir <b>de R$ 30</b> antes de efetuar sua reserva!</mj-text>
+        </mj-column>
+        <mj-column padding="0px" width="40%"  vertical-align="middle">
+        	<mj-button border-radius="60px" padding="24px 0px 0px 0px" inner-padding="11px 15px" font-size="16px" line-height="24px" color="#4C0677" font-weight="700" background-color="#FFFFFF" href="#">Fazer transferencia</mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

@@ -25,11 +25,11 @@
   <#include "cms://contentlibrary/components/body-cta.htm">
 </#macro>
 
-<#macro cta_macro2 index>
-  <#local ctalist = doc.root.body_cta>
-  <#local cta = ctalist[index?number]>
+<#macro feedback_search_macro index>
+  <#local feedbacklist = doc.root.body_feedback_search>
+  <#local feedback = feedbacklist[index?number]>
 
-  <#include "cms://contentlibrary/components/body-cta-2.htm">
+  <#include "cms://contentlibrary/components/body-feedback-search.htm">
 </#macro>
 
 <#macro title_macro index>
@@ -44,6 +44,13 @@
   <#local topics = bulletpoints[index?number]>
 
   <#include "cms://contentlibrary/components/body-bullet-points.htm">
+</#macro>
+
+<#macro bullet_ii_macro index>
+  <#local list = doc.root.bloco_bullet_II>
+  <#local bloco = list[index?number]>
+
+  <#include "cms://contentlibrary/components/bloco-bullet-II.htm">
 </#macro>
 
 <#macro attention_macro index>
@@ -116,19 +123,79 @@
   <#include "cms://contentlibrary/components/dynamic-slot.htm">
 </#macro>
 
+<#macro bloco_video_macro index>
+  <#local blocolist = doc.root.bloco_video_descricao>
+  <#local bloco = blocolist[index?number]>
+
+  <#include "cms://contentlibrary/components/bloco-video-descricao.htm">
+</#macro>
+
+<#macro bloco_concierge_macro index>
+  <#local blocolist = doc.root.bloco_concierge>
+  <#local bloco = blocolist[index?number]>
+
+  <#include "cms://contentlibrary/components/bloco-concierge.htm">
+</#macro>
+
+<#macro bloco_necessidade index>
+  <#local blocolist = doc.root.bloco_necessidade_saldo>
+  <#local bloco = blocolist[index?number]>
+
+  <#include "cms://contentlibrary/components/bloco-necessidade-saldo.htm">
+</#macro>
+
+<#macro bloco_produto index>
+  <#local blocolist = doc.root.bloco_produto>
+  <#local bloco = blocolist[index?number]>
+
+  <#include "cms://contentlibrary/components/bloco-produto.htm">
+</#macro>
+
+<#macro ticket_crono index>
+  <#local blocolist = doc.root.ticket_cronogram>
+  <#local bloco = blocolist[index?number]>
+
+  <#include "cms://contentlibrary/components/ticket-cronogram.htm">
+</#macro>
+
+<#macro topic_number index>
+  <#local blocolist = doc.root.topic_number>
+  <#local bloco = blocolist[index?number]>
+
+  <#include "cms://contentlibrary/components/topic-number.htm">
+</#macro>
+
+<#macro text_destaque index>
+  <#local blocklist = doc.root.body_text_destaque>
+  <#local block = blocklist[index?number]>
+
+  <#include "cms://contentlibrary/components/body-text-destaque.htm">
+</#macro>
+
+<#macro destaque_grey_macro index>
+  <#local blocklist = doc.root.destaque_grey>
+  <#local block = blocklist[index?number]>
+
+  <#include "cms://contentlibrary/components/destaque-grey.htm">
+</#macro>
+
 <#-- Aqui listamos os componentes que pegamos lá na primeira linha, um a um, e importamos da pasta de components do Rsys. Se for componente que pode ser repetido, ele chama a respectiva macro (ver acima) e lá ela cuida da importação correta -->
 <#list components as component>
   <#if component["id"] != "customStyles">
     <#if component["id"] == "body-cta">
       <@cta_macro index=component["index"] />
-    <#elseif component["id"] == "body-cta-2">
-      <@cta_macro2 index=component["index"] />
     <#elseif component["id"] == "body-bloco-marcas">
       <@bloco_marcas_macro index=component["index"] />
+    <#elseif component["id"] == "bloco-necessidade-saldo">
+      <@bloco_necessidade index=component["index"] />
+    <#elseif component["id"] == "bloco-concierge">
+      <@bloco_concierge_macro index=component["index"] />
     <#elseif component["id"] == "body-title">
       <@title_macro index=component["index"] />
     <#elseif component["id"] == "body-bullet-points">
       <@bullet_points_macro index=component["index"] />
+    <#elseif component["id"] == "bloco-bullet-II">
+      <@bullet_ii_macro index=component["index"] />
     <#elseif component["id"] == "body-text">
       <@text_macro index=component["index"] />
     <#elseif component["id"] == "body-attention">
@@ -145,8 +212,22 @@
       <@combo_macro index=component["index"] />
     <#elseif component["id"] == "banner-semanal">
       <@banner_macro index=component["index"] />
+    <#elseif component["id"] == "ticket-cronogram">
+      <@ticket_crono index=component["index"] />
     <#elseif component["id"] == "dynamic-slot">
       <@dynamic_slot_macro index=component["index"] />
+    <#elseif component["id"] == "bloco-video-descricao">
+      <@bloco_video_macro index=component["index"] />
+    <#elseif component["id"] == "topic-number">
+      <@topic_number index=component["index"] />
+    <#elseif component["id"] == "bloco-produto">
+      <@bloco_produto index=component["index"] />
+    <#elseif component["id"] == "body-feedback-search">
+      <@feedback_search_macro index=component["index"] />
+    <#elseif component["id"] == "body-text-destaque">
+      <@text_destaque index=component["index"] />
+    <#elseif component["id"] == "destaque-grey">
+      <@destaque_grey_macro index=component["index"] />
     <#else>
       <#include "cms://contentlibrary/components/" + component["id"]?string + ".htm">
     </#if>

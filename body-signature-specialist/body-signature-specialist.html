@@ -1,14 +1,27 @@
-<div>
-  <#assign signature = doc.root.body_signature_specialist>
-  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-  <div style="background:#EFEFEF;background-color:#EFEFEF;margin:0px auto;border-radius:6px;max-width:600px;">
+<#assign signature = doc.root.body_signature_specialist>
+
+<#if (signature.@containerStyle[0]?isnull) || !(signature.@containerStyle[0]??)>
+  <#assign containerStyles = "">
+<#else>
+  <#assign containerStyles = signature.@containerStyle[0]>
+</#if>
+
+<#if (signature.@style[0]?isnull) || !(signature.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = signature.@style[0]>
+</#if>
+
+<div style='${"padding:0px 40px;" + containerStyles}'>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style='${"background:#EFEFEF;background-color:#EFEFEF;margin:0px auto;border-radius:6px;max-width:520px;" + incomingStyles}'>
     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
       style="background:#EFEFEF;background-color:#EFEFEF;width:100%;border-radius:6px;">
       <tbody>
         <tr>
           <td style="direction:ltr;font-size:0px;padding:32px 24px;text-align:center;">
-            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin:0px auto;max-width:600px;">
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="520" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:520px;">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
                 style="width:100%;">
                 <tbody>
@@ -26,7 +39,7 @@
                                     <tr>
                                       <td align="center" style="font-size:0px;padding:0px;word-break:break-word;">
                                         <div
-                                          style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:20px;font-weight:bold;line-height:24px;text-align:center;color:#4C0677;">
+                                          style="font-size:20px;font-weight:bold;line-height:24px;text-align:center;color:#4C0677;">
                                           Responsável pela recomendação</div>
                                       </td>
                                     </tr>
@@ -34,7 +47,7 @@
                                       <td align="center" class="specialist-signature__text"
                                         style="font-size:0px;padding:18px 0px 26px 0px;word-break:break-word;">
                                         <div
-                                          style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:center;color:#322828;">
+                                          style="font-size:16px;line-height:24px;text-align:center;color:#322828;">
                                           Conheça quem é o analista certificado:</div>
                                       </td>
                                     </tr>
@@ -51,14 +64,14 @@
                 </tbody>
               </table>
             </div>
-            <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:552px;" width="552" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-            <div style="margin:0px auto;max-width:600px;">
+            <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="520px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:520px;">
               <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
                 style="width:100%;">
                 <tbody>
                   <tr>
                     <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
-                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:552px;" ><![endif]-->
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:520px;" ><![endif]-->
                       <div class="mj-column-per-100 mj-outlook-group-fix"
                         style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;">
                         <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:middle;width:198px;" ><![endif]-->
@@ -78,7 +91,7 @@
                                               <tr>
                                                 <td style="width:71px;"><img height="71"
                                                     src='${signature.image[0]!"https://uifaces.co/our-content/donated/xZ4wg2Xj.jpg"}'
-                                                    style="border:2px solid #4E0250;border-radius:6px;display:block;outline:none;text-decoration:none;height:71px;width:100%;font-size:13px;"
+                                                    style="border:2px solid #4E0250;border-radius:6px;display:block;outline:none;text-decoration:none;height:71px;width:100%;font-size:13px;object-fit:cover;"
                                                     width="71"></td>
                                               </tr>
                                             </tbody>
@@ -104,14 +117,14 @@
                                       <tr>
                                         <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
                                           <div
-                                            style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:18px;font-weight:bold;line-height:24px;text-align:left;color:#4E0250;">
+                                            style="font-size:18px;font-weight:bold;line-height:24px;text-align:left;color:#4E0250;">
                                             ${signature.name[0]!"Albus Severus Potter"}</div>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
                                           <div
-                                            style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:24px;text-align:left;color:#322828;">
+                                            style="font-size:14px;line-height:24px;text-align:left;color:#322828;">
                                             ${signature.about[0]!"CFP® CNPI - P"}</div>
                                         </td>
                                       </tr>

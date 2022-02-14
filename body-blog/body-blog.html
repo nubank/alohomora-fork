@@ -1,5 +1,5 @@
 <div>
-  <#include "cms://contentlibrary/components/helpers/blog-macro.htm">
+  <#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
 
   <#assign blog = doc.root.body_blog>
 
@@ -44,7 +44,9 @@
                                           <tbody>
                                             <tr>
                                               <td style="width:600px;">
-                                                <@blog_image link=url img=blog.image[0] />
+                                                <@link_wrapper_macro link=url>
+                                                  <img height="auto" src='${blog.image[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/blog-thumb.png"}' style="border:0;border-radius:30px 30px 0px 0px;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600" />
+                                                </@link_wrapper_macro>
                                               </td>
                                             </tr>
                                           </tbody>
@@ -79,7 +81,21 @@
                             <tr>
                               <td
                                 style="background-color:#4C0677;border-radius:0px 0px 30px 30px;vertical-align:top;padding:0px;">
-                                  <@blog_text link=url headline=blog.headline[0] content=blog.content[0] />
+                                <@link_wrapper_macro link=url>
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="left" class="blog-text-desktop"
+                                          style="font-size:0px;padding:20px 24px 24px 24px;word-break:break-word;">
+                                          <div
+                                            style="font-size:16px;font-weight:700;line-height:22px;text-align:left;color:#FFFFFF;">
+                                            <span style="font-size:14px;font-weight:400;line-height:18px;">${blog.headline[0]!"NU INVEST"}<br/></span>${blog.content[0]!"Cadastro Nubank: como fazer pelo aplicativo"}
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </@link_wrapper_macro>
                               </td>
                             </tr>
                           </tbody>

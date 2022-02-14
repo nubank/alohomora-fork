@@ -1,360 +1,426 @@
-<div>
-  <#include "cms://contentlibrary/components/helpers/parser.htm">
-  <#include "cms://contentlibrary/components/helpers/attention-macro.htm">
-  
-  <#if (attention.@url[0]?isnull) || !(attention.@url[0]??)>
-    <#assign url = "cta-blog-nu-invest-tudo-sobre">
-  <#else>
-    <#assign url = attention.@url[0]>
-  </#if>
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
 
-  <#if (attention.@variant[0]?isnull) || !(attention.@variant[0]??)>
-    <#assign localVariant = "default">
-  <#else>
-    <#assign localVariant = attention.@variant[0]>
-  </#if>
+<#if (attention.@url[0]?isnull) || !(attention.@url[0]??)>
+  <#assign url = "cta-blog-nu-invest-tudo-sobre">
+<#else>
+  <#assign url = attention.@url[0]>
+</#if>
 
-  <#if (attention.@style[0]?isnull) || !(attention.@style[0]??)>
-    <#assign incomingStyles = "">
-  <#else>
-    <#assign incomingStyles = attention.@style[0]>
-  </#if>
+<#if (attention.@variant[0]?isnull) || !(attention.@variant[0]??)>
+  <#assign localVariant = "default">
+<#else>
+  <#assign localVariant = attention.@variant[0]>
+</#if>
 
-  <#if (attention.cta[0]?isnull) || !(attention.cta[0]??)>
-    <#assign cta = "Clique aqui">
-  <#else>
-    <#assign cta = attention.cta[0]>
-  </#if>
+<#if (attention.@containerStyle[0]?isnull) || !(attention.@containerStyle[0]??)>
+  <#assign containerStyles = "">
+<#else>
+  <#assign containerStyles = attention.@containerStyle[0]>
+</#if>
 
-  <#if localVariant == "white">
-  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-  <div
-    style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-      style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
-      <tbody>
-        <tr>
-          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
-            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
-            <div class="mj-column-per-100 mj-outlook-group-fix"
-              style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                <tbody>
-                  <tr>
-                    <td style="vertical-align:top;padding:0;">
-                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tbody>
-                          <#if attention.title[0]??>
-                            <tr>
-                              <td align="left" class="body-title-text__title"
-                                style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
-                                <#if url = "cta-suit-fazer-teste">
-                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                      Atualize seu Perfil de Investidor
-                                    </div>
-                                  <#else>
-                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                      Descubra seu Perfil de Investidor
-                                    </div>
-                                  </#if> 
-                                <#else>
-                                  <#if attention.title.@subtitle[0]??>
-                                    <div
-                                      style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                      <#list attention.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  <#else>
-                                    <div
-                                      style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
-                                      <#list attention.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  </#if>
-                                </#if>    
-                              </td>
-                            </tr>
-                          </#if>
+<#if (attention.@style[0]?isnull) || !(attention.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = attention.@style[0]>
+</#if>
+
+<#if (attention.@titleStyle[0]?isnull) || !(attention.@titleStyle[0]??)>
+  <#assign titleStyles = "">
+<#else>
+  <#assign titleStyles = attention.@titleStyle[0]>
+</#if>
+
+<#if (attention.cta[0]?isnull) || !(attention.cta[0]??)>
+  <#assign cta = "Clique aqui">
+<#else>
+  <#assign cta = attention.cta[0]>
+</#if>
+
+<#if (attention.@displayMode[0]?isnull) || !(attention.@displayMode[0]??)>
+  <#assign displayMode = "fullwidth">
+<#else>
+  <#assign displayMode = attention.@displayMode[0]>
+</#if>
+
+<#if displayMode == "bordered">
+  <#assign containerStyles = containerStyles + "padding-right:40px;padding-left:40px;">
+</#if>
+
+<#if localVariant == "white">
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div
+  style='${"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;" + containerStyles}'>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
+    <tbody>
+      <tr>
+        <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
+          <div class="mj-column-per-100 mj-outlook-group-fix"
+            style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top;padding:0;">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                      <tbody>
+                        <#if attention.title[0]??>
                           <tr>
-                            <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                              <div
-                                style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                <#if url = "cta-suit-fazer-teste">
-                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                    <span>Clique abaixo para atualizar seu Perfil de Investidor. Precisamos entender seu momento para oferecer os melhores investimentos de acordo com os seus objetivos!</span>
-                                  <#else>
-                                    <span>Se voc&ecirc; ainda n&atilde;o conhece seu Perfil de Investidor, descubra aqui. Precisamos entender seu Perfil para oferecer os melhores investimentos de acordo com seus objetivos!</span>
-                                  </#if>
-                                 <#else>
-                                 <#if attention.content[0]??>
-                                    <#list attention.content?children as node>
+                            <td align="left" class="body-title-text__title"
+                              style='${"font-size:0px;padding:0 0 18px 0;word-break:break-word;" + titleStyles}'>
+                              <#if url = "cta-suit-fazer-teste">
+                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                    Atualize seu Perfil de Investidor
+                                  </div>
+                                <#else>
+                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                    Descubra seu Perfil de Investidor
+                                  </div>
+                                </#if> 
+                              <#else>
+                                <#if attention.title.@subtitle[0]??>
+                                  <div
+                                    style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                    <#list attention.title?children as node>
                                       <@parse_content node=node />
                                     </#list>
-                                  </#if>  
-                                </#if>   
-                                <#if attention.topic[0]??>
-                                  <#list attention.topic as topic>
-                                    <tr>
-                                      <#if topic_has_next>
-                                        <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                      <#else>
-                                        <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
-                                      </#if>
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                          <img
-                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                            style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
-                                          <#list topic?children as node>
-                                            <@parse_content node=node />
-                                          </#list>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </#list>
-                                </#if>
-                              </div>
-                            </td>
-                          </tr>
-                          <#if attention.cta[0]??>
-                            <@attention_wrapper link=url variant=localVariant content=cta />
-                          </#if>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!--[if mso | IE]></td></tr></table><![endif]-->
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <!--[if mso | IE]></td></tr></table><![endif]-->
-  <#elseif localVariant == "purple">
-  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div
-    style="background:#4C0677;background-color:#4C0677;margin:0px auto;max-width:600px;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-      style="background:#4C0677;background-color:#4C0677;width:100%;">
-      <tbody>
-        <tr>
-          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
-            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
-            <div class="mj-column-per-100 mj-outlook-group-fix"
-              style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                <tbody>
-                  <tr>
-                    <td style="vertical-align:top;padding:0;">
-                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tbody>
-                          <#if attention.title[0]??>
-                            <tr>
-                              <td align="left" class="body-title-text__title"
-                                style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
-                                <#if url = "cta-suit-fazer-teste">
-                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
-                                      Atualize seu Perfil de Investidor
-                                    </div>
-                                  <#else>
-                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
-                                      Descubra seu Perfil de Investidor
-                                    </div>
-                                  </#if> 
+                                  </div>
                                 <#else>
-                                  <#if attention.title.@subtitle[0]??>
-                                    <div
-                                      style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
-                                      <#list attention.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  <#else>
-                                    <div
-                                      style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#FFFFFF;">
-                                      <#list attention.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  </#if>
-                              </#if>       
-                              </td>
-                            </tr>
-                          </#if>
-                          <tr>
-                            <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                              <div
-                                style="font-size:16px;line-height:22px;text-align:left;color:#FFFFFF;">
-                                <#if url = "cta-suit-fazer-teste">
-                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                    <span> Clique abaixo para atualizar seu Perfil de Investidor. Precisamos entender seu momento para oferecer os melhores investimentos de acordo com os seus objetivos!</span>
-                                  <#else>
-                                    <span> Se voc&ecirc; ainda n&atilde;o conhece seu Perfil de Investidor, descubra aqui. Precisamos entender seu Perfil para oferecer os melhores investimentos de acordo com seus objetivos!</span>
-                                  </#if>
-                                <#else>
-                                  <#if attention.content[0]??>
-                                    <#list attention.content?children as node>
+                                  <div
+                                    style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
+                                    <#list attention.title?children as node>
                                       <@parse_content node=node />
                                     </#list>
-                                  </#if>
-                                </#if>   
-                                <#if attention.topic[0]??>
-                                  <#list attention.topic as topic>
-                                    <tr>
-                                      <#if topic_has_next>
-                                        <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                      <#else>
-                                        <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
-                                      </#if>
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                          <img
-                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                            style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
-                                          <#list topic?children as node>
-                                            <@parse_content node=node />
-                                          </#list>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </#list>
+                                  </div>
                                 </#if>
-                              </div>
+                              </#if>    
                             </td>
                           </tr>
-                          <#if attention.cta[0]??>
-                            <@attention_wrapper link=url variant=localVariant content=cta />
-                          </#if>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!--[if mso | IE]></td></tr></table><![endif]-->
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <!--[if mso | IE]></td></tr></table><![endif]-->
-  <#else>
-  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div
-    style="background:#EFEFEF;background-color:#EFEFEF;margin:0px auto;max-width:600px;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
-      style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
-      <tbody>
-        <tr>
-          <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
-            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
-            <div class="mj-column-per-100 mj-outlook-group-fix"
-              style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                <tbody>
-                  <tr>
-                    <td style="vertical-align:top;padding:0;">
-                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tbody>
-                          <#if attention.title[0]??>
-                            <tr>
-                              <td align="left" class="body-title-text__title"
-                                style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
-                                <#if url = "cta-suit-fazer-teste">
-                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                      Atualize seu Perfil de Investidor
-                                    </div>
-                                  <#else>
-                                    <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                      Descubra seu Perfil de Investidor
-                                    </div>
-                                  </#if> 
+                        </#if>
+                        <tr>
+                          <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                            <div
+                              style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                              <#if url = "cta-suit-fazer-teste">
+                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                  <span>Clique abaixo para atualizar seu Perfil de Investidor. Precisamos entender seu momento para oferecer os melhores investimentos de acordo com os seus objetivos!</span>
                                 <#else>
-                                  <#if attention.title.@subtitle[0]??>
-                                    <div
-                                      style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
-                                      <#list attention.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  <#else>
-                                    <div
-                                      style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
-                                      <#list attention.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  </#if>
-                              </#if>       
-                              </td>
-                            </tr>
-                          </#if>
+                                  <span>Se voc&ecirc; ainda n&atilde;o conhece seu Perfil de Investidor, descubra aqui. Precisamos entender seu Perfil para oferecer os melhores investimentos de acordo com seus objetivos!</span>
+                                </#if>
+                                <#else>
+                                <#if attention.content[0]??>
+                                  <#list attention.content?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </#if>  
+                              </#if>   
+                              <#if attention.topic[0]??>
+                                <#list attention.topic as topic>
+                                  <tr>
+                                    <#if topic_has_next>
+                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
+                                    <#else>
+                                      <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
+                                    </#if>
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <img
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                          style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </#list>
+                              </#if>
+                            </div>
+                          </td>
+                        </tr>
+                        <#if attention.cta[0]??>
                           <tr>
-                            <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                              <div
-                                style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                <#if url = "cta-suit-fazer-teste">
-                                  <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
-                                    <span> Clique abaixo para atualizar seu Perfil de Investidor. Precisamos entender seu momento para oferecer os melhores investimentos de acordo com os seus objetivos!</span>
-                                  <#else>
-                                    <span> Se voc&ecirc; ainda n&atilde;o conhece seu Perfil de Investidor, descubra aqui. Precisamos entender seu Perfil para oferecer os melhores investimentos de acordo com seus objetivos!</span>
-                                  </#if>
-                                <#else>
-                                  <#if attention.content[0]??>
-                                    <#list attention.content?children as node>
-                                      <@parse_content node=node />
-                                    </#list>
-                                  </#if>  
-                                </#if>
-                                <#if attention.topic[0]??>
-                                  <#list attention.topic as topic>
-                                    <tr>
-                                      <#if topic_has_next>
-                                        <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
-                                      <#else>
-                                        <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
-                                      </#if>
-                                        <div
-                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                          <img
-                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
-                                            style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
-                                          <#list topic?children as node>
-                                            <@parse_content node=node />
-                                          </#list>
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  </#list>
-                                </#if>
-                              </div>
+                            <td align="center" vertical-align="middle"
+                              style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="border-collapse:separate;line-height:100%;">
+                                <tr>
+                                  <td align="center" bgcolor="#4C0677" role="presentation"
+                                    style="border:none;border-radius:60px;cursor:auto;height:46px;background:#4C0677;"
+                                    valign="middle">
+                                    <@link_wrapper_macro link=url style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:60px;" class="button-lg">
+                                      ${cta}
+                                    </@link_wrapper_macro>
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                           </tr>
-                          <#if attention.cta[0]??>
-                            <@attention_wrapper link=url variant=localVariant content=cta />
-                          </#if>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!--[if mso | IE]></td></tr></table><![endif]-->
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <!--[if mso | IE]></td></tr></table><![endif]-->
-  </#if>
+                        </#if>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+<#elseif localVariant == "purple">
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div
+  style='${"background:#4C0677;background-color:#4C0677;margin:0px auto;max-width:600px;" + containerStyles}'>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="background:#4C0677;background-color:#4C0677;width:100%;">
+    <tbody>
+      <tr>
+        <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
+          <div class="mj-column-per-100 mj-outlook-group-fix"
+            style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top;padding:0;">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                      <tbody>
+                        <#if attention.title[0]??>
+                          <tr>
+                            <td align="left" class="body-title-text__title"
+                              style='${"font-size:0px;padding:0 0 18px 0;word-break:break-word;" + titleStyles}'>
+                              <#if url = "cta-suit-fazer-teste">
+                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
+                                    Atualize seu Perfil de Investidor
+                                  </div>
+                                <#else>
+                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
+                                    Descubra seu Perfil de Investidor
+                                  </div>
+                                </#if> 
+                              <#else>
+                                <#if attention.title.@subtitle[0]??>
+                                  <div
+                                    style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#FFFFFF;">
+                                    <#list attention.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                <#else>
+                                  <div
+                                    style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#FFFFFF;">
+                                    <#list attention.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </#if>
+                            </#if>       
+                            </td>
+                          </tr>
+                        </#if>
+                        <tr>
+                          <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                            <div
+                              style="font-size:16px;line-height:22px;text-align:left;color:#FFFFFF;">
+                              <#if url = "cta-suit-fazer-teste">
+                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                  <span> Clique abaixo para atualizar seu Perfil de Investidor. Precisamos entender seu momento para oferecer os melhores investimentos de acordo com os seus objetivos!</span>
+                                <#else>
+                                  <span> Se voc&ecirc; ainda n&atilde;o conhece seu Perfil de Investidor, descubra aqui. Precisamos entender seu Perfil para oferecer os melhores investimentos de acordo com seus objetivos!</span>
+                                </#if>
+                              <#else>
+                                <#if attention.content[0]??>
+                                  <#list attention.content?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </#if>
+                              </#if>   
+                              <#if attention.topic[0]??>
+                                <#list attention.topic as topic>
+                                  <tr>
+                                    <#if topic_has_next>
+                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
+                                    <#else>
+                                      <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
+                                    </#if>
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <img
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                          style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </#list>
+                              </#if>
+                            </div>
+                          </td>
+                        </tr>
+                        <#if attention.cta[0]??>
+                          <tr>
+                            <td align="center" vertical-align="middle"
+                              style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="border-collapse:separate;line-height:100%;">
+                                <tr>
+                                  <td align="center" bgcolor="#FFFFFF" role="presentation" style="border:none;border-radius:60px;cursor:auto;height:46px;background:#FFFFFF;" valign="middle">
+                                    <@link_wrapper_macro link=url style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:60px;" class="button-lg">
+                                      ${cta}
+                                    </@link_wrapper_macro>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </#if>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+<#else>
+<!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+<div
+  style='${"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;" + containerStyles}'>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
+    <tbody>
+      <tr>
+        <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
+          <div class="mj-column-per-100 mj-outlook-group-fix"
+            style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+              <tbody>
+                <tr>
+                  <td style="vertical-align:top;padding:0;">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                      <tbody>
+                        <#if attention.title[0]??>
+                          <tr>
+                            <td align="left" class="body-title-text__title"
+                              style='${"font-size:0px;padding:0 0 18px 0;word-break:break-word;" + titleStyles}'>
+                              <#if url = "cta-suit-fazer-teste">
+                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                    Atualize seu Perfil de Investidor
+                                  </div>
+                                <#else>
+                                  <div style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                    Descubra seu Perfil de Investidor
+                                  </div>
+                                </#if> 
+                              <#else>
+                                <#if attention.title.@subtitle[0]??>
+                                  <div
+                                    style="font-size:20px;font-weight:bold;line-height:24px;text-align:left;color:#4C0677;">
+                                    <#list attention.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                <#else>
+                                  <div
+                                    style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
+                                    <#list attention.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </#if>
+                            </#if>       
+                            </td>
+                          </tr>
+                        </#if>
+                        <tr>
+                          <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                            <div
+                              style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                              <#if url = "cta-suit-fazer-teste">
+                                <#if CONTATOS.PERFILSUITABILITY = "EXPERIENTE" || CONTATOS.PERFILSUITABILITY = "MODERADO" || CONTATOS.PERFILSUITABILITY = "CONSERVADOR">
+                                  <span> Clique abaixo para atualizar seu Perfil de Investidor. Precisamos entender seu momento para oferecer os melhores investimentos de acordo com os seus objetivos!</span>
+                                <#else>
+                                  <span> Se voc&ecirc; ainda n&atilde;o conhece seu Perfil de Investidor, descubra aqui. Precisamos entender seu Perfil para oferecer os melhores investimentos de acordo com seus objetivos!</span>
+                                </#if>
+                              <#else>
+                                <#if attention.content[0]??>
+                                  <#list attention.content?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </#if>  
+                              </#if>
+                              <#if attention.topic[0]??>
+                                <#list attention.topic as topic>
+                                  <tr>
+                                    <#if topic_has_next>
+                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;">
+                                    <#else>
+                                      <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
+                                    </#if>
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <img
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                          style="margin-right:20px;width:12px;height:12px;object-fit:contain;"/>
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </#list>
+                              </#if>
+                            </div>
+                          </td>
+                        </tr>
+                        <#if attention.cta[0]??>
+                          <tr>
+                            <td align="center" vertical-align="middle"
+                              style="font-size:0px;padding:0;padding-top:30px;word-break:break-word;">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                style="border-collapse:separate;line-height:100%;">
+                                <tr>
+                                  <td align="center" bgcolor="#4C0677" role="presentation"
+                                    style="border:none;border-radius:60px;cursor:auto;height:46px;background:#4C0677;"
+                                    valign="middle">
+                                    <@link_wrapper_macro link=url style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:60px;" class="button-lg">
+                                      ${cta}
+                                    </@link_wrapper_macro>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </#if>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</#if>

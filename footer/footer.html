@@ -1,5 +1,11 @@
 <#assign footer = doc.root.footer>
 
+<#attempt>
+  <#assign connectionType = DynamicVariable.connectionType>
+<#recover>
+  <#assign connectionType = "common">
+</#attempt>
+
 <#if (footer.@type[0]?isnull) || !(footer.@type[0]??)>
   <#assign type = "default">
 <#else>
@@ -22,6 +28,10 @@
       <#assign optout = "${form('central-de-preferencias','CUSTOMER_ID_')}">
     </#if>
   </#if>
+</#if>
+
+<#if connectionType == "api">
+  <#assign type = "transacional">
 </#if>
 
 <!--[if mso | IE]>

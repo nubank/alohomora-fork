@@ -1,0 +1,25 @@
+<mjml>
+  <mj-head>
+  	<mj-style>
+    	td, p, div, span, a {
+      	font-family: Arial, sans-serif !important;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper padding="0px 40px" background-color="red">
+      <mj-section padding="0px" background-url="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bloco-concierge-bg.png">
+        <mj-column padding="0px" width="12%">
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bloco-concierge-wpp.png" padding="0px" align="left" />
+          <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bloco-concierge-mail.png" padding="0px" align="left" />
+        </mj-column>
+        <mj-column padding="30px" background-color="#EFEFEF" width="88%">
+          <mj-text font-size="18px" font-weight="700" color="#4C0677" line-height="24px" padding="0px">Conte com a parceria de um especialista</mj-text>
+          <mj-text font-size="16px" font-weight="700" line-height="24px" padding="16px 0px" color="#514F4F">Ainda tem dúvidas sobre o NuSócios?</mj-text>
+          <mj-text font-size="16px" padding="0px" line-height="22px" color="#514F4F">Temos especialistas Nu Invest prontos para te atender! [NOME DO ESPECIALISTA] está te esperando no WhatsApp ou e-mail xxxx@nubank.com.br.</mj-text>
+          <mj-button align="center" background-color="#4C0677" border-radius="50px" padding="30px 0px 10px 0px" font-size="14px" font-weight="700" inner-padding="15px 40px">Fale agora</mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

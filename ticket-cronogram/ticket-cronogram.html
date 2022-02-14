@@ -1,0 +1,165 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+
+<#if (bloco.@style[0]?isnull) || !(bloco.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = bloco.@style[0]>
+</#if>
+
+<div>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="margin: 0px auto; max-width: 600px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%">
+      <tbody>
+        <tr>
+          <td style='${"direction: ltr;font-size: 0px;padding: 0px 40px;text-align: center;vertical-align: top;" + incomingStyles}'>
+            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:520px;" width="520" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="
+                background: #efefef;
+                background-color: #efefef;
+                margin: 0px auto;
+                max-width: 520px;
+              ">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="
+                  background: #efefef;
+                  background-color: #efefef;
+                  width: 100%;
+                ">
+                <tbody>
+                  <tr>
+                    <td style="
+                        direction: ltr;
+                        font-size: 0px;
+                        padding: 16px 0px;
+                        text-align: center;
+                        vertical-align: top;
+                      ">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:520px;" ><![endif]-->
+                      <div class="mj-column-per-100 outlook-group-fix" style="
+                          font-size: 0;
+                          line-height: 0;
+                          text-align: left;
+                          display: inline-block;
+                          width: 100%;
+                          direction: ltr;
+                        ">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:middle;width:208px;" ><![endif]-->
+                        <div class="ticket--left-column outlook-group-fix" style="
+                            font-size: 13px;
+                            text-align: left;
+                            direction: ltr;
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 33%;
+                          ">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="
+                                    border-right: 1px solid #2f0549;
+                                    vertical-align: middle;
+                                    padding: 0px;
+                                  ">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tr>
+                                      <td align="center" style="
+                                          font-size: 0px;
+                                          padding: 54px 0px;
+                                          word-break: break-word;
+                                        " class="ticket--left-column__inner">
+                                        <div style="
+                                            font-size: 24px;
+                                            font-weight: 700;
+                                            line-height: 1;
+                                            text-align: center;
+                                            color: #9c63c0;
+                                          ">
+                                          <#list bloco.date?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td><td style="vertical-align:middle;width:312px;" ><![endif]-->
+                        <div class="ticket--right-column outlook-group-fix" style="
+                            font-size: 13px;
+                            text-align: left;
+                            direction: ltr;
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 65%;
+                          ">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="
+                                    vertical-align: middle;
+                                    padding: 0px 20px;
+                                  ">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tr>
+                                      <td align="left" style="
+                                          font-size: 0px;
+                                          padding: 0px;
+                                          word-break: break-word;
+                                        ">
+                                        <div style="
+                                            
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            line-height: 22px;
+                                            text-align: left;
+                                            color: #4c0677;
+                                          ">
+                                          <#list bloco.headline?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left" style="
+                                          font-size: 0px;
+                                          padding: 4px 0px 0px 0px;
+                                          word-break: break-word;
+                                        ">
+                                        <div style="
+                                            font-size: 16px;
+                                            line-height: 22px;
+                                            text-align: left;
+                                            color: #4a4c4e;
+                                          ">
+                                          <#list bloco.content?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>

@@ -10,6 +10,14 @@
   <#assign customStyles = "null">
 </#attempt>
 
+<style>
+  .& .y-grid {
+    display: grid
+  }
+  .& .y-grid a{
+    margin:auto;
+  }
+</style>
 <style type="text/css">
   #outlook a {
     padding: 0;
@@ -136,6 +144,10 @@
       width: 35% !important;
       max-width: 35%;
     }
+    .mj-column-per-40 {
+      width: 40% !important;
+      max-width: 40%;
+    }
     .mj-column-per-56 {
       width: 56% !important;
       max-width: 56%;
@@ -161,8 +173,8 @@
       max-width: 55%;
     }
     .mj-column-per-60 {
-      width: 55% !important;
-      max-width: 55%;
+      width: 60% !important;
+      max-width: 60%;
     }
     .mj-column-per-65 {
       width: 65% !important;
@@ -195,6 +207,14 @@
     .mj-column-per-85 {
       width: 85% !important;
       max-width: 85%;
+    }
+    .mj-column-per-12 {
+      width: 13% !important;
+      min-width: 13%;
+    }
+    .mj-column-per-88 {
+      width: 87% !important;
+      max-width: 87%;
     }
     .mj-column-per-45 {
       width: 45% !important;
@@ -377,6 +397,7 @@
     .banner-semanal-td--first {
       display: inline-block !important;
       width: 80% !important;
+      height: 133px !important;
     }
     .banner-semanal-td--second {
       display: inline-block !important;
@@ -387,19 +408,102 @@
       border-bottom: none !important;
       border-right: 3px solid #9c63c0 !important;
     }
+    .banner-semanal-image {
+      width: 100% !important;
+    }
     .banner-semanal-image-container {
       height: 133px !important;
       padding: 0px !important;
+      width: 153px !important;
     }
-    .banner-semanal-image {
-      width: 70% !important; 
-      height: auto !important;
-      object-fit: contain !important;
-      vertical-align: middle !important;
+    .banner-semanal-image--inner {
+      height:100%!important;
     }
     .banner-semanal-height {
       height: 133px !important;
       padding: 0px 20px !important;
+    }
+    .banner-semanal-padding {
+      padding: 5% 0px !important;
+    }
+    .banner-semanal-padding br {
+      display:none!important;
+    }
+    .bloco-video {
+      border-radius: 0px 15px 15px 0px !important;
+    }
+    .bloco-video-td {
+      height: 156px !important;
+    }
+    .bloco-video-td > table {
+      height: 100% !important;
+    }
+    .bloco-video-imagem {
+      width: 100% !important;
+    }
+    .bloco-video-imagem > img {
+      width: 100% !important;
+      height: 156px !important;
+    }
+    .bloco-video-arrow {
+      vertical-align: bottom;
+    }
+    .bloco-video-arrow > img {
+      padding: 0px 16px 16px 16px !important;
+    }
+    .bloco-video-inner-td--first {
+      padding: 16px 22px 4px 22px !important;
+      height: 24px;
+    }
+    .bloco-video-inner-td--second {
+      padding: 0px 22px !important;
+      height: 24px;
+    }
+    .bloco-concierge__content-container {
+      padding: 30px !important;
+    }
+    .bloco-concierge__container {
+      display: block !important;
+      width: 100% !important;
+    }
+    .bloco-concierge__img {
+      width: 100% !important;
+    }
+    .bloco-concierge__bg-container {
+      background-repeat: repeat-y !important;
+    }
+    .bloco-necessidade--button {
+      padding: 0px !important;
+    }
+    .bloco-necessidade--text {
+      padding-right: 30px !important;
+    }
+    .ticket--left-column {
+      width: 25% !important;
+    }
+    .ticket--left-column__inner {
+      padding: 22px 0px !important;
+    }
+    .ticket--right-column {
+      width: 75% !important;
+    }
+    .block-padding {
+      padding: 40px !important;
+    }
+    .bloco-produto__cta {
+      padding-left: 15px !important;
+      padding-top: 0px !important;
+    }
+    .bloco-produto__align {
+      text-align: right !important;
+      text-align: -webkit-right !important;
+    }
+    .destaque-grey {
+      padding: 20px 40px !important;
+    }
+    .topic-number__bordered {
+      padding-right: 40px !important;
+      padding-left: 40px !important;
     }
   }
 </style>

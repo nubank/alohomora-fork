@@ -1,0 +1,179 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
+
+<#if (bloco.@style[0]?isnull) || !(bloco.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = bloco.@style[0]>
+</#if>
+
+<#if (bloco.@url[0]?isnull) || !(bloco.@url[0]??)>
+  <#assign url = "default">
+<#else>
+  <#assign url = bloco.@url[0]>
+</#if>
+
+<#if (bloco.@variant[0]?isnull) || !(bloco.@variant[0]??)>
+  <#assign variant = "dark">
+<#else>
+  <#assign variant = bloco.@variant[0]>
+</#if>
+
+<#function bgColor>
+  <#if variant == "dark">
+    <#return "#4c0677">
+  <#elseif variant == "pink">
+    <#return "#9C63C0">
+  </#if>
+</#function>
+
+<div style='${"padding:8px 40px;" + incomingStyles}'>
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="
+    background: ${bgColor()};
+    background-color: ${bgColor()};
+    margin: 0px auto;
+    border-radius: 0px 0px 15px 15px;
+    max-width: 600px;
+  " class="bloco-video">
+  <@link_wrapper_macro link=url>
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="
+        background: ${bgColor()};
+        background-color: ${bgColor()};
+        width: 100%;
+        border-radius: 0px 0px 15px 15px;
+      " class="bloco-video">
+        <tbody>
+          <tr>
+            <td style="
+              direction: ltr;
+              font-size: 0px;
+              padding: 5px;
+              text-align: center;
+              vertical-align: top;
+            ">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:296px;" ><![endif]-->
+              <div class="mj-column-per-50 outlook-group-fix" style="
+                font-size: 13px;
+                text-align: left;
+                direction: ltr;
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+              ">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: top; padding: 0px">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tr>
+                            <td align="center" style="
+                                font-size: 0px;
+                                padding: 0px;
+                                word-break: break-word;
+                              ">
+                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="
+                                border-collapse: collapse;
+                                border-spacing: 0px;
+                                width: 100%;
+                              ">
+                                <tbody>
+                                  <tr>
+                                    <td style="width: 296px" class="bloco-video-imagem">
+                                      <img height="160"
+                                        src='${bloco.image[0]!"https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bloco-video-image.png"}'
+                                        style="
+                                          border: 0;
+                                          display: block;
+                                          outline: none;
+                                          text-decoration: none;
+                                          height: 160px;
+                                          width: 100%;
+                                          object-fit: cover;
+                                        " width="296" />
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:296px;" ><![endif]-->
+              <div class="mj-column-per-50 outlook-group-fix" style="
+                      font-size: 13px;
+                      text-align: left;
+                      direction: ltr;
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 100%;
+                    ">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td class="bloco-video-td">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tr>
+                            <td align="left" style="
+                                    font-size: 0px;
+                                    padding: 0px 0px 4px 0px;
+                                    word-break: break-word;
+                                    padding: 16px 22px 4px 22px;
+                                  " class="bloco-video-inner-td--first">
+                              <div style="
+                                      font-size: 20px;
+                                      font-weight: 700;
+                                      text-align: left;
+                                      color: #ffffff;
+                                    ">
+                                    <#attempt>
+                                      <#list bloco.content[0]?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    <#recover>
+                                      KondZilla & Jottapê<br/><span style="font-weight:normal;font-size:16px">Donos do Pedaço</span>
+                                    </#attempt>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td vertical-align="bottom" align="right" style="
+                                    font-size: 0px;
+                                    padding: 0px;
+                                    word-break: break-word;
+                                    width:100%;
+                                  " class="bloco-video-arrow">
+                              <img height="23"
+                                src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bloco-video-arrow.png"
+                                style="
+                                      border: 0;
+                                      display: block;
+                                      outline: none;
+                                      text-align:right;
+                                      text-decoration: none;
+                                      height: 23px;
+                                      width: 41px;
+                                      object-fit: contain;
+                                      padding: 0px 18px 22px 0px;
+                                    " width="41" />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </@link_wrapper_macro>
+  </div>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>

@@ -1,0 +1,12 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="40px">
+      <mj-column padding="20px 10px" background-color="#EFEFEF">
+        <mj-text font-size="16px" line-height="22px" color="#514F4F" align="center" font-weight="700" padding="0px">
+          Aqui está seu Informe de Rendimentos referente 
+ao ano de 2021, em formato PDF. 
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

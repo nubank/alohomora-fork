@@ -1,0 +1,282 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
+
+<#if (bloco.@containerStyle[0]?isnull) || !(bloco.@containerStyle[0]??)>
+  <#assign containerStyles = "">
+<#else>
+  <#assign containerStyles = bloco.@containerStyle[0]>
+</#if>
+
+<#if (bloco.@style[0]?isnull) || !(bloco.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = bloco.@style[0]>
+</#if>
+
+<#if (bloco.@url[0]?isnull) || !(bloco.@url[0]??)>
+  <#assign url = "#">
+<#else>
+  <#assign url = bloco.@url[0]>
+</#if>
+
+<#attempt>
+  <#if bloco.@variant == "white">
+    <div style='${"padding:0px 40px;" + containerStyles}'>
+      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+      <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;border-radius:3px;max-width:600px;border:1px solid #D8D8D8">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+          style="background:#FFFFFF;background-color:#FFFFFF;width:100%;border-radius:3px;">
+          <tbody>
+            <tr>
+              <td style='${"direction:ltr;font-size:0px;padding:40px 30px;text-align:left;" + incomingStyles}' class="block-padding">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:414px;" ><![endif]-->
+                <div class="mj-column-per-60 mj-outlook-group-fix"
+                  style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0px;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center"
+                                  style="font-size:0px;padding:0px;word-break:break-word;">
+                                  <div
+                                    style="font-size:20px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;">
+                                    <#list bloco.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding:0px;word-break:break-word;text-align:left;">
+                                  <#if bloco.content[0]??> <div style="padding-top:20px;color:#514F4F;font-size:16px;line-height:22px;text-align:left"> <#else> <div> </#if>
+                                    <#list bloco.content?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td><td style="vertical-align:middle;" ><![endif]-->
+                <div class="mj-column-per-35 mj-outlook-group-fix bloco-produto__cta"
+                  style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;padding-top:30px;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" vertical-align="middle"
+                                  style="font-size:0px;padding:0px;word-break:break-word;" class="bloco-produto__align">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="border-collapse:separate;line-height:100%;">
+                                    <tr>
+                                      <td align="center" bgcolor="#9C63C0" role="presentation"
+                                        style="border:none;border-radius:60px;cursor:auto;background:#9C63C0;"
+                                        valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#9C63C0;color:#ffffff;font-size:14px;font-weight:700;line-height:18px;margin:0;text-decoration:none;text-transform:none;padding:15px 30px;mso-padding-alt:15px 30px;border-radius:60px;">
+                                          ${bloco.cta[0]}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+    </div>
+  <#elseif bloco.@variant == "purple">
+    <div style='${"padding:0px 40px;" + containerStyles}'>
+      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+      <div style="background:#4C0677;background-color:#4C0677;margin:0px auto;border-radius:3px;max-width:600px;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+          style="background:#4C0677;background-color:#4C0677;width:100%;border-radius:3px;">
+          <tbody>
+            <tr>
+              <td style='${"direction:ltr;font-size:0px;padding:40px 30px;text-align:left;" + incomingStyles}' class="block-padding">
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:414px;" ><![endif]-->
+                <div class="mj-column-per-60 mj-outlook-group-fix"
+                  style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;padding:0px;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center"
+                                  style="font-size:0px;padding:0px;word-break:break-word;">
+                                  <div
+                                    style="font-size:20px;font-weight:700;line-height:24px;text-align:left;color:#FFFFFF;">
+                                    <#list bloco.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="padding:0px;word-break:break-word;text-align:left;">
+                                  <#if bloco.content[0]??> <div style="padding-top:20px;color:#FFFFFF;font-size:16px;line-height:22px;text-align:left;"> <#else> <div> </#if>
+                                    <#list bloco.content?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td><td style="vertical-align:middle;" ><![endif]-->
+                <div class="mj-column-per-35 mj-outlook-group-fix bloco-produto__cta"
+                  style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;padding-top:30px;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:middle;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" vertical-align="middle"
+                                  style="font-size:0px;padding:0px;word-break:break-word;" class="bloco-produto__align">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="border-collapse:separate;line-height:100%;">
+                                    <tr>
+                                      <td align="center" bgcolor="#9C63C0" role="presentation"
+                                        style="border:none;border-radius:60px;cursor:auto;background:#9C63C0;"
+                                        valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#9C63C0;color:#ffffff;font-size:14px;font-weight:700;line-height:18px;margin:0;text-decoration:none;text-transform:none;padding:15px 30px;mso-padding-alt:15px 30px;border-radius:60px;">
+                                          ${bloco.cta[0]}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+    </div>
+  </#if>
+<#recover>
+  <div style='${"padding:0px 40px;" + containerStyles}'>
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#EFEFEF;background-color:#EFEFEF;margin:0px auto;border-radius:3px;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="background:#EFEFEF;background-color:#EFEFEF;width:100%;border-radius:3px;">
+        <tbody>
+          <tr>
+            <td style='${"direction:ltr;font-size:0px;padding:40px 30px;text-align:left;" + incomingStyles}' class="block-padding">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:middle;width:414px;" ><![endif]-->
+              <div class="mj-column-per-60 mj-outlook-group-fix"
+                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:middle;padding:0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center"
+                                style="font-size:0px;padding:0px;word-break:break-word;">
+                                <div
+                                  style="font-size:20px;font-weight:700;line-height:24px;text-align:left;color:#4C0677;">
+                                  <#list bloco.title?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="padding:0px;word-break:break-word;text-align:left;">
+                                <#if bloco.content[0]??> <div style="padding-top:20px;color:#514F4F;font-size:16px;line-height:22px;text-align:left;"> <#else> <div> </#if>
+                                  <#list bloco.content?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td><td style="vertical-align:middle;" ><![endif]-->
+              <div class="mj-column-per-35 mj-outlook-group-fix bloco-produto__cta"
+                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;padding-top:30px;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:middle;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" vertical-align="middle"
+                                style="font-size:0px;padding:0px;word-break:break-word;" class="bloco-produto__align">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                  style="border-collapse:separate;line-height:100%;">
+                                  <tr>
+                                    <td align="center" bgcolor="#9C63C0" role="presentation"
+                                      style="border:none;border-radius:60px;cursor:auto;background:#9C63C0;"
+                                      valign="middle">
+                                      <@link_wrapper_macro link=url style="display:inline-block;background:#9C63C0;color:#ffffff;font-size:14px;font-weight:700;line-height:18px;margin:0;text-decoration:none;text-transform:none;padding:15px 30px;mso-padding-alt:15px 30px;border-radius:60px;">
+                                        ${bloco.cta[0]}
+                                      </@link_wrapper_macro>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </div>
+</#attempt>

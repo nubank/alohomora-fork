@@ -1,0 +1,13 @@
+<mjml>
+  <mj-body>
+    <mj-section padding="4px" background-color="#4C0677" border-radius="0px 0px 15px 15px">
+      <mj-column padding="0px" width="50%">
+        <mj-image src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/banner-semanal-default-logo.png" padding="0px" height="160px" />
+      </mj-column>
+      <mj-column padding="16px 22px" width="50%">
+        <mj-text padding="0px 0px 4px 0px" color="#FFFFFF" font-size="20px" line-height="24px" font-weight="700">KondZilla & Jottapê</mj-text>
+        <mj-text padding="0px" color="#FFFFFF" font-size="16px" line-height="24px">Donos do Pedaço</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

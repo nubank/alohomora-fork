@@ -1,5 +1,5 @@
 <#include "cms://contentlibrary/components/helpers/parser.htm">
-<#include "cms://contentlibrary/components/helpers/topics-macro.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
 
 <#if (topics.@containerStyle[0]?isnull) || !(topics.@containerStyle[0]??)>
   <#assign containerStyle = "">
@@ -13,10 +13,10 @@
   <#assign incomingStyles = topics.@style[0]>
 </#if>
 
-<#if (topics.cta.@url[0]?isnull) || !(topics.cta.@url[0]??)>
+<#if (topics.@url[0]?isnull) || !(topics.@url[0]??)>
   <#assign url = "#">
 <#else>
-  <#assign url = topics.cta.@url[0]>
+  <#assign url = topics.@url[0]>
 </#if>
 
 <div style='${containerStyle}'>
@@ -38,16 +38,18 @@
                         <td style="vertical-align:top;padding:0px;">
                           <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                             <tbody>
-                              <tr>
-                                <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
-                                  <div
-                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
-                                    <#list topics.title?children as node>
-                                      <@parse_content node=node />
-                                    </#list>
-                                  </div>
-                                </td>
-                              </tr>
+                              <#if topics.title[0]??>
+                                <tr>
+                                  <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
+                                    <div
+                                      style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
+                                      <#list topics.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </#if>
                               <#if topics.topic[0]??>
                                 <#list topics.topic as topic>
                                   <tr>
@@ -63,7 +65,7 @@
                                     <#else>
                                       <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
                                         <img
-                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/ellipsis_purple.png"
                                           style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
                                       </td>
                                       <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
@@ -83,14 +85,16 @@
                               <#if topics.cta[0]??>
                                 <tr>
                                   <td align="center" vertical-align="middle"
-                                    style="font-size:0px;padding:0px;word-break:break-word;" colspan="2">
+                                    style="font-size:0px;padding:10px 0px 0px 0px;word-break:break-word;" colspan="2">
                                     <table border="0" cellpadding="0" cellspacing="0" role="presentation"
                                       style="border-collapse:separate;line-height:100%;">
                                       <tr>
                                         <td align="center" bgcolor="#4C0677" role="presentation"
-                                          style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
+                                          style="border:none;border-radius:100px;cursor:auto;mso-padding-alt:0px;background:#4C0677;"
                                           valign="middle">
-                                          <@topics_gray link=url content=topics.cta[0] />
+                                          <@link_wrapper_macro link=url class="button-lg" style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:100px;">
+                                            ${topics.cta[0]!"Clique aqui"}
+                                          </@link_wrapper_macro>
                                         </td>
                                       </tr>
                                     </table>
@@ -128,16 +132,18 @@
                           <td style="vertical-align:top;padding:0px;">
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                               <tbody>
-                                <tr>
-                                  <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
-                                    <div
-                                      style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#FFFFFF;">
-                                      <#list topics.title?children as node>
-                                        <@parse_content node=node />
-                                      </#list>
-                                    </div>
-                                  </td>
-                                </tr>
+                                <#if topics.title[0]??>
+                                  <tr>
+                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
+                                      <div
+                                        style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#FFFFFF;">
+                                        <#list topics.title?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </#if>
                                 <#if topics.topic[0]??>
                                   <#list topics.topic as topic>
                                     <tr>
@@ -153,7 +159,7 @@
                                       <#else>
                                         <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
                                           <img  
-                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/ellipsis_purple.png"
                                             style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
                                         </td>
                                         <td align="left" style="font-size:0px;word-break:break-word;padding:0px 0px 30px 12px;vertical-align:top" vertical-align="top">
@@ -173,14 +179,16 @@
                                 <#if topics.cta[0]??>
                                   <tr>
                                     <td align="center" vertical-align="middle"
-                                      style="font-size:0px;padding:0px;word-break:break-word;" colspan="2">
+                                      style="font-size:0px;padding:10px 0px 0px 0px;word-break:break-word;" colspan="2">
                                       <table border="0" cellpadding="0" cellspacing="0" role="presentation"
                                         style="border-collapse:separate;line-height:100%;">
                                         <tr>
                                           <td align="center" bgcolor="#BD0FEA" role="presentation"
-                                            style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#BD0FEA;"
+                                            style="border:none;border-radius:100px;cursor:auto;mso-padding-alt:0px;background:#BD0FEA;"
                                             valign="middle">
-                                            <@topics_purple link=url content=topics.cta[0] />  
+                                            <@link_wrapper_macro link=url class="button-lg" style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:100px;">
+                                            ${topics.cta[0]!"Clique aqui"}
+                                          </@link_wrapper_macro>
                                           </td>
                                         </tr>
                                       </table>
@@ -219,16 +227,18 @@
                       <td style="vertical-align:top;padding:0px;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                           <tbody>
-                            <tr>
-                              <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
-                                <div
-                                  style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
-                                  <#list topics.title?children as node>
-                                    <@parse_content node=node />
-                                  </#list>
-                                </div>
-                              </td>
-                            </tr>
+                            <#if topics.title[0]??>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
+                                  <div
+                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
+                                    <#list topics.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </td>
+                              </tr>
+                            </#if>
                             <#if topics.topic[0]??>
                               <#list topics.topic as topic>
                                 <tr>
@@ -244,7 +254,7 @@
                                   <#else>
                                     <td align="left" style="font-size:0px;padding:4px 0px 0px 0px;word-break:break-word;vertical-align:top;width:12px;" vertical-align="top">
                                       <img
-                                        src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/bullet_rosa_2021.png"
+                                        src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/ellipsis_purple.png"
                                         style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
                                     </td>
                                     <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
@@ -264,14 +274,16 @@
                             <#if topics.cta[0]??>
                               <tr>
                                 <td align="center" vertical-align="middle"
-                                  style="font-size:0px;padding:0px;word-break:break-word;" colspan="2">
+                                  style="font-size:0px;padding:10px 0px 0px 0px;word-break:break-word;" colspan="2">
                                   <table border="0" cellpadding="0" cellspacing="0" role="presentation"
                                     style="border-collapse:separate;line-height:100%;">
                                     <tr>
                                       <td align="center" bgcolor="#4C0677" role="presentation"
-                                        style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
+                                        style="border:none;border-radius:100px;cursor:auto;mso-padding-alt:0px;background:#4C0677;"
                                         valign="middle">
-                                        <@topics_gray link=url content=topics.cta[0] />
+                                        <@link_wrapper_macro link=url class="button-lg" style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:100px;">
+                                          ${topics.cta[0]!"Clique aqui"}
+                                        </@link_wrapper_macro>
                                       </td>
                                     </tr>
                                   </table>

@@ -1,12 +1,18 @@
+<#attempt>
+  <#assign connectionType = DynamicVariable.connectionType>
+<#recover>
+  <#assign connectionType = "common">
+</#attempt>
+
 <div>
   <#include "cms://contentlibrary/components/helpers/parser.htm">
   
-  <#assign content = doc.root.body_title_text>
+  <#assign block = doc.root.body_title_text>
 
-  <#if (content.@style[0]?isnull) || !(content.@style[0]??)>
+  <#if (block.@style[0]?isnull) || !(block.@style[0]??)>
     <#assign incomingStyles = "">
   <#else>
-    <#assign incomingStyles = content.@style[0]>
+    <#assign incomingStyles = block.@style[0]>
   </#if>
   <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-title-text-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="background:transparent;background-color:transparent;margin:0px auto;max-width:600px;">
@@ -29,24 +35,37 @@
                               style="font-size:0px;padding:0 0 18px 0;word-break:break-word;">
                               <div
                                 style="font-size:24px;font-weight:bold;line-height:30px;text-align:left;color:#4C0677;">
-                                Oi<#if (NOME??) || !(NOME?isnull)>, ${NOME?lower_case?capitalize}</#if>!</div>
+                                <#attempt>
+                                  <#list block.heading[0]?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
+                                <#recover>
+                                  <#if connectionType == "common">
+                                    Oi<#if (NOME??) || !(NOME?isnull)>, ${NOME?lower_case?capitalize}</#if>!
+                                  <#elseif connectionType == "api">
+                                    Oi, ${DynamicVariable.NOME}!
+                                  </#if>
+                                </#attempt>  
+                                </div>
                             </td>
                           </tr>
                           <tr>
                             <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
-                              <#attempt>
+                              <#if block.content[0]??>
                                 <div
                                   style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                  <#list content?children as node>
+                                  <#list block.content[0]?children as node>
                                     <@parse_content node=node />
                                   </#list>
                                 </div>
-                              <#recover>
+                              <#else>
                                 <div
                                   style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                  <#list block?children as node>
+                                    <@parse_content node=node />
+                                  </#list>
                                 </div>
-                              </#attempt>
+                              </#if>
                             </td>
                           </tr>
                         </tbody>

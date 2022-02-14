@@ -1,12 +1,12 @@
 <div>
   <#assign topics = doc.root.body_topics>
   <#include "cms://contentlibrary/components/helpers/parser.htm">
-  <#include "cms://contentlibrary/components/helpers/topics-macro.htm">
+  <#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
 
-  <#if (topics.cta.@url[0]?isnull) || !(topics.cta.@url[0]??)>
+  <#if (topics.@url[0]?isnull) || !(topics.@url[0]??)>
     <#assign url = "#">
   <#else>
-    <#assign url = topics.cta.@url[0]>
+    <#assign url = topics.@url[0]>
   </#if>
 
   <#attempt>
@@ -62,7 +62,9 @@
                                       <td align="center" bgcolor="#4C0677" role="presentation"
                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
                                         valign="middle">
-                                        <@topics_gray link=url content=topics.cta[0] />
+                                        <@link_wrapper_macro link=url class="button-lg" style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;">
+                                          ${topics.cta[0]!"Clique aqui"}
+                                        </@link_wrapper_macro>
                                       </td>
                                     </tr>
                                   </table>
@@ -134,7 +136,9 @@
                                       <td align="center" bgcolor="#FFFFFF" role="presentation"
                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#FFFFFF;"
                                         valign="middle">
-                                        <@topics_purple link=url content=topics.cta[0] />
+                                        <@link_wrapper_macro link=url class="button-lg" style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;">
+                                          ${topics.cta[0]!"Clique aqui"}
+                                        </@link_wrapper_macro>
                                       </td>
                                     </tr>
                                   </table>
@@ -207,7 +211,9 @@
                                     <td align="center" bgcolor="#4C0677" role="presentation"
                                       style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:0px;background:#4C0677;"
                                       valign="middle">
-                                      <@topics_gray link=url content=topics.cta[0] />  
+                                      <@link_wrapper_macro link=url class="button-lg" style="display:inline-block;background:#4C0677;color:#ffffff;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:11px;mso-padding-alt:11px;border-radius:30px;">
+                                        ${topics.cta[0]!"Clique aqui"}
+                                      </@link_wrapper_macro>
                                     </td>
                                   </tr>
                                 </table>

@@ -1,0 +1,17 @@
+<mjml>
+  <mj-body>
+    <mj-wrapper padding="40px">
+      <mj-section padding="16px 0px" background-color="#EFEFEF">
+        <mj-group width="100%">
+          <mj-column width="40%" vertical-align="middle" border-right="1px solid #2F0549" padding="0px">
+            <mj-text font-size="24px" color="#9C63C0" font-weight="700" padding="54px 0px" align="center">09/12</mj-text>
+          </mj-column>
+          <mj-column width="60%" vertical-align="middle" padding="0px 20px">
+            <mj-text color="#4C0677" font-size="16px" line-height="22px" font-weight="700" padding="0px">Abertura de capital em NY</mj-text>
+            <mj-text color="#4A4C4E" font-size="16px" line-height="22px" padding="0px">Horário broadcast: 11 hrs BRT</mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

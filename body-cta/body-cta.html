@@ -1,3 +1,6 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
+
 <div>
   <#if (cta.@url[0]?isnull) || !(cta.@url[0]??)>
     <#assign url = "#">
@@ -22,8 +25,6 @@
   <#else>
     <#assign incomingStyles = cta.@style[0]>
   </#if>
-
-  <#include "cms://contentlibrary/components/helpers/cta-macro.htm">
   
   <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="button-sm-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
   <div style="margin:0px auto;max-width:600px;">
@@ -46,7 +47,59 @@
                               <table border="0" cellpadding="0" cellspacing="0" role="presentation"
                                 style="border-collapse:separate;line-height:100%;">
                                 <tr>
-                                  <@cta_wrapper link=url size=size variant=variant content=cta[0] />
+                                  <#if size?string == "large">
+                                    <#if variant?string == "default">
+                                      <td align="center" bgcolor="#4C0677" role="presentation"
+                                        style="border:none;border-radius:60px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#4C0677;"
+                                        valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:60px;" class="button-lg">
+                                          ${cta}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    <#elseif variant?string == "white">
+                                      <td align="center" bgcolor="#FFFFFF" role="presentation"
+                                      style="border:none;border-radius:60px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#FFFFFF;"
+                                      valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:60px;" class="button-lg">
+                                          ${cta}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    <#elseif variant?string == "dark">
+                                      <td align="center" bgcolor="#BD0FEA" role="presentation"
+                                      style="border:none;border-radius:60px;cursor:auto;height:46px;mso-padding-alt:0px;padding:0px;background:#BD0FEA;"
+                                      valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:11px;padding:11px;border-radius:60px;" class="button-lg">
+                                          ${cta}
+                                        </@link_wrapper_macro> 
+                                      </td>
+                                    </#if>
+                                  <#else>
+                                    <#if variant?string == "default">
+                                      <td align="center" bgcolor="#4C0677" role="presentation"
+                                      style="border:none;border-radius:60px;cursor:auto;height:36px;mso-padding-alt:0px;background:#4C0677;"
+                                      valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#4C0677;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:60px;padding:7px" class="button-sm">
+                                          ${cta}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    <#elseif variant?string == "white">
+                                      <td align="center" bgcolor="#FFFFFF" role="presentation"
+                                      style="border:none;border-radius:60px;cursor:auto;height:36px;mso-padding-alt:0px;background:#FFFFFF;"
+                                      valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#FFFFFF;color:#4C0677;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:60px;padding:7px" class="button-sm">
+                                          ${cta}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    <#elseif variant?string == "dark">
+                                      <td align="center" bgcolor="#BD0FEA" role="presentation"
+                                      style="border:none;border-radius:60px;cursor:auto;height:36px;mso-padding-alt:0px;background:#BD0FEA;"
+                                      valign="middle">
+                                        <@link_wrapper_macro link=url style="display:inline-block;background:#BD0FEA;color:#FFFFFF;font-size:14px;line-height:21px;font-weight:700;margin:0;text-decoration:none;text-transform:none;mso-padding-alt:7px;border-radius:60px;padding:7px" class="button-sm">
+                                          ${cta}
+                                        </@link_wrapper_macro>
+                                      </td>
+                                    </#if>
+                                  </#if>
                                 </tr>
                               </table>
                             </td>

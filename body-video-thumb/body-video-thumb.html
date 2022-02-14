@@ -1,6 +1,6 @@
 <div>
   <#include "cms://contentlibrary/components/helpers/parser.htm">
-  <#include "cms://contentlibrary/components/helpers/videothumb-macro.htm">
+  <#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
 
   <#assign videothumb = doc.root.body_video_thumb>
 
@@ -27,7 +27,6 @@
   <#else>
     <#assign localThumb = videothumb.thumb[0]>
   </#if>
-
 
   <#if (videothumb.@style[0]?isnull) || !(videothumb.@style[0]??)>
     <#assign incomingStyles = "">
@@ -81,7 +80,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                                   <tbody>
                                     <tr>
-                                      <td align="center" style="
+                                      <td align="${videothumb.@textAlign[0]!'center'}" style="
                                             font-size: 0px;
                                             padding: 0;
                                             word-break: break-word;
@@ -99,7 +98,7 @@
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td align="center" style="
+                                      <td align="${videothumb.@textAlign[0]!'center'}" style="
                                             font-size: 0px;
                                             padding: 30px 0;
                                             word-break: break-word;
@@ -128,7 +127,9 @@
                                           <tbody>
                                             <tr>
                                               <td style="width: 560px" class="mj-full-width-mobile">
-                                                <@videothumb_thumb link=url thumb=localThumb />
+                                                <@link_wrapper_macro link=url>
+                                                  <img height="auto" src='${localThumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+                                                </@link_wrapper_macro>
                                               </td>
                                             </tr>
                                             <#if videothumb.cta[0]??>
@@ -141,7 +142,9 @@
                                                       <td align="center" bgcolor="#4C0677" role="presentation"
                                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
                                                         valign="middle">
-                                                        <@videothumb_cta link=url variant=localVariant content=localCta /> 
+                                                        <@link_wrapper_macro link=url style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;">
+                                                          ${localCta}
+                                                        </@link_wrapper_macro>
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -216,7 +219,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                                   <tbody>
                                     <tr>
-                                      <td align="left" style="
+                                      <td align="${videothumb.@textAlign[0]!'center'}" style="
                                             font-size: 0px;
                                             padding: 0;
                                             word-break: break-word;
@@ -234,7 +237,7 @@
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td align="left" style="
+                                      <td align="${videothumb.@textAlign[0]!'center'}" style="
                                             font-size: 0px;
                                             padding: 30px 0;
                                             word-break: break-word;
@@ -263,7 +266,9 @@
                                           <tbody>
                                             <tr>
                                               <td style="width: 560px" class="mj-full-width-mobile">
-                                                <@videothumb_thumb link=url thumb=localThumb />
+                                                <@link_wrapper_macro link=url>
+                                                  <img height="auto" src='${localThumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+                                                </@link_wrapper_macro>
                                               </td>
                                             </tr>
                                             <#if videothumb.cta[0]??>
@@ -276,7 +281,9 @@
                                                       <td align="center" bgcolor="#FFFFFF" role="presentation"
                                                         style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#FFFFFF;"
                                                         valign="middle">
-                                                        <@videothumb_cta link=url variant=localVariant content=localCta /> 
+                                                        <@link_wrapper_macro link=url style="display:inline-block;width:176px;background:#FFFFFF;color:#4C0677;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;">
+                                                          ${localCta}
+                                                        </@link_wrapper_macro>
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -352,7 +359,7 @@
                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                               <tbody>
                                 <tr>
-                                  <td align="left" style="
+                                  <td align="${videothumb.@textAlign[0]!'center'}" style="
                                         font-size: 0px;
                                         padding: 0;
                                         word-break: break-word;
@@ -370,7 +377,7 @@
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td align="left" style="
+                                  <td align="${videothumb.@textAlign[0]!'center'}" style="
                                         font-size: 0px;
                                         padding: 30px 0;
                                         word-break: break-word;
@@ -399,7 +406,9 @@
                                       <tbody>
                                         <tr>
                                           <td style="width: 560px" class="mj-full-width-mobile">
-                                            <@videothumb_thumb link=url thumb=localThumb />
+                                            <@link_wrapper_macro link=url>
+                                              <img height="auto" src='${localThumb}' style="border: 0;border-radius: 20px;display: block;outline: none;text-decoration: none;height: auto;width: 100%;font-size: 13px;" width="560" />
+                                            </@link_wrapper_macro>
                                           </td>
                                         </tr>
                                         <#if videothumb.cta[0]??>
@@ -412,7 +421,9 @@
                                                   <td align="center" bgcolor="#4C0677" role="presentation"
                                                     style="border:none;border-radius:30px;cursor:auto;height:46px;mso-padding-alt:10px 25px;background:#4C0677;"
                                                     valign="middle">
-                                                    <@videothumb_cta link=url variant=localVariant content=localCta />  
+                                                    <@link_wrapper_macro link=url style="display:inline-block;width:176px;background:#4C0677;color:#FFFFFF;font-size:16px;font-weight:700;line-height:24px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:30px;">
+                                                      ${localCta}
+                                                    </@link_wrapper_macro>
                                                   </td>
                                                 </tr>
                                               </table>

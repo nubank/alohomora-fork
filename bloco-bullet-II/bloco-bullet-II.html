@@ -1,0 +1,386 @@
+<#include "cms://contentlibrary/components/helpers/parser.htm">
+<#include "cms://contentlibrary/components/helpers/link-wrapper.htm">
+
+<#if (bloco.@containerStyle[0]?isnull) || !(bloco.@containerStyle[0]??)>
+  <#assign containerStyle = "">
+<#else>
+  <#assign containerStyle = bloco.@containerStyle[0]>
+</#if>
+
+<#if (bloco.@style[0]?isnull) || !(bloco.@style[0]??)>
+  <#assign incomingStyles = "">
+<#else>
+  <#assign incomingStyles = bloco.@style[0]>
+</#if>
+
+<#if (bloco.@url[0]?isnull) || !(bloco.@url[0]??)>
+  <#assign url = "#">
+<#else>
+  <#assign url = bloco.@url[0]>
+</#if>
+
+<div style='${containerStyle}'>
+  <#attempt>
+    <#if bloco.@variant == "gray" || bloco.@variant == "grey">
+      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+      <div style="background:#EFEFEF;background-color:#EFEFEF;margin:0px auto;max-width:600px;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+          style="background:#EFEFEF;background-color:#EFEFEF;width:100%;">
+          <tbody>
+            <tr>
+              <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                <div class="mj-column-per-100 mj-outlook-group-fix"
+                  style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="vertical-align:top;padding:0px;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <#if bloco.title[0]??>
+                                <tr>
+                                  <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
+                                    <div
+                                      style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
+                                      <#list bloco.title?children as node>
+                                        <@parse_content node=node />
+                                      </#list>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </#if>
+                              <#if bloco.topic[0]??>
+                                <#list bloco.topic as topic>
+                                  <tr>
+                                    <#if topic.@withoutBullet[0]??>
+                                      <td align="left" colspan="2" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                        <div
+                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                          <#list topic?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    <#else>
+                                      <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
+                                        <img
+                                          src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/ellipsis_purple.png"
+                                          style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
+                                      </td>
+                                      <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                        <div
+                                          style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                          <#list topic?children as node>
+                                            <@parse_content node=node />
+                                          </#list>
+                                        </div>
+                                      </td>
+                                    </#if>
+                                  </tr>
+                                </#list>
+                              </#if>
+                              <tr>
+                                <td align="left" colspan="2">
+                                  <div style="margin:0px auto;max-width:520px;margin:0 auto;">
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                      style="width:100%;">
+                                      <tbody>
+                                        <tr>
+                                          <td style="direction:ltr;font-size:0px;padding:16px 0px 0px 0px;text-align:center;">
+                                            <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                                            <div class="mj-column-per-100 mj-outlook-group-fix"
+                                              style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;background-color:#FFFFFF;border-radius:6px;max-width:400px;">
+                                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="vertical-align:top;padding:15px 0px;max-width:400px;">
+                                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td align="center"
+                                                              style="font-size:16px;word-break:break-word;background:#FFFFFF;max-width:400px;">
+                                                              <div
+                                                                style="font-size:16px;font-weight:700;line-height:22px;text-align:center;color:#4A4C4E;max-width:400px;">
+                                                                <#attempt>
+                                                                  <#list bloco.toast?children as node>
+                                                                    <@parse_content node=node />
+                                                                  </#list>
+                                                                <#recover>
+                                                                  Investimento mínimo:<br/><span style="color:#4C0677;font-size:18px;">a partir de R$ 30,00</span>
+                                                                </#attempt>
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                            <!--[if mso | IE]></td></tr></table><![endif]-->
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+    <#elseif bloco.@variant == "purple">
+      <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+        <div style="background:#4C0677;background-color:#4C0677;margin:0px auto;max-width:600px;">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+            style="background:#4C0677;background-color:#4C0677;width:100%;">
+            <tbody>
+              <tr>
+                <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+                  <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                  <div class="mj-column-per-100 mj-outlook-group-fix"
+                    style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                      <tbody>
+                        <tr>
+                          <td style="vertical-align:top;padding:0px;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tbody>
+                                <#if bloco.title[0]??>
+                                  <tr>
+                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
+                                      <div
+                                        style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#FFFFFF;">
+                                        <#list bloco.title?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </#if>
+                                <#if bloco.topic[0]??>
+                                  <#list bloco.topic as topic>
+                                    <tr>
+                                      <#if topic.@withoutBullet[0]??>
+                                        <td align="left" colspan="2" style="font-size:0px;word-break:break-word;padding:0px 0px 30px 0px;vertical-align:top" vertical-align="top">
+                                          <div
+                                            style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                            <#list topic?children as node> 
+                                              <@parse_content node=node />
+                                            </#list>
+                                          </div>
+                                        </td>
+                                      <#else>
+                                        <td align="left" style="font-size:0px;word-break:break-word;padding:4px 0px 0px 0px;vertical-align:top;width:12px;" vertical-align="top">
+                                          <img  
+                                            src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/ellipsis_purple.png"
+                                            style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
+                                        </td>
+                                        <td align="left" style="font-size:0px;word-break:break-word;padding:0px 0px 30px 12px;vertical-align:top" vertical-align="top">
+                                          <div
+                                            style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                            <#list topic?children as node> 
+                                              <@parse_content node=node />
+                                            </#list>
+                                          </div>
+                                        </td>
+                                      </#if>
+                                    </tr>
+                                  </#list>
+                                </#if>
+                                <tr>
+                                  <td align="left" colspan="2">
+                                    <div style="margin:0px auto;max-width:520px;margin:0 auto;">
+                                      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        style="width:100%;">
+                                        <tbody>
+                                          <tr>
+                                            <td style="direction:ltr;font-size:0px;padding:16px 0px 0px 0px;text-align:center;">
+                                              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                                              <div class="mj-column-per-100 mj-outlook-group-fix"
+                                                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;background-color:#FFFFFF;border-radius:6px;max-width:400px;">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td style="vertical-align:top;padding:15px 0px;max-width:400px;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                          <tbody>
+                                                            <tr>
+                                                              <td align="center"
+                                                                style="font-size:16px;word-break:break-word;background:#FFFFFF;max-width:400px;">
+                                                                <div
+                                                                  style="font-size:16px;font-weight:700;line-height:22px;text-align:center;color:#4A4C4E;max-width:400px;">
+                                                                  <#attempt>
+                                                                    <#list bloco.toast?children as node>
+                                                                      <@parse_content node=node />
+                                                                    </#list>
+                                                                  <#recover>
+                                                                    Investimento mínimo:<br/><span style="color:#4C0677;font-size:18px;">a partir de R$ 30,00</span>
+                                                                  </#attempt>
+                                                                </div>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                              <!--[if mso | IE]></td></tr></table><![endif]-->
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--[if mso | IE]></td></tr></table><![endif]-->
+    </#if>
+  <#recover>
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
+        <tbody>
+          <tr>
+            <td style='${"direction:ltr;font-size:0px;padding:40px;text-align:center;" + incomingStyles}'>
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix"
+                style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                          <tbody>
+                            <#if bloco.title[0]??>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;" colspan="2">
+                                  <div
+                                    style="font-size:24px;font-weight:700;line-height:30px;text-align:left;color:#4C0677;">
+                                    <#list bloco.title?children as node>
+                                      <@parse_content node=node />
+                                    </#list>
+                                  </div>
+                                </td>
+                              </tr>
+                            </#if>
+                            <#if bloco.topic[0]??>
+                              <#list bloco.topic as topic>
+                                <tr>
+                                  <#if topic.@withoutBullet[0]??>
+                                    <td align="left" colspan="2" style="font-size:0px;padding:0px 0px 30px 0px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  <#else>
+                                    <td align="left" style="font-size:0px;padding:4px 0px 0px 0px;word-break:break-word;vertical-align:top;width:12px;" vertical-align="top">
+                                      <img
+                                        src="https://static.cdn.responsys.net/i9/responsysimages/easynvest/contentlibrary/imagensupload/ellipsis_purple.png"
+                                        style="width:12px;height:12px;object-fit:contain;vertical-align:top"/>
+                                    </td>
+                                    <td align="left" style="font-size:0px;padding:0px 0px 30px 12px;word-break:break-word;vertical-align:top" vertical-align="top">
+                                      <div
+                                        style="font-size:16px;line-height:22px;text-align:left;color:#555555;">
+                                        <#list topic?children as node>
+                                          <@parse_content node=node />
+                                        </#list>
+                                      </div>
+                                    </td>
+                                  </#if>
+                                </tr>
+                              </#list>
+                            </#if>
+                            <tr>
+                              <td align="left" colspan="2">
+                                <div style="margin:0px auto;max-width:520px;margin:0 auto;">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                    style="width:100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="direction:ltr;font-size:0px;padding:16px 0px 0px 0px;text-align:center;">
+                                          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:520px;" ><![endif]-->
+                                          <div class="mj-column-per-100 mj-outlook-group-fix"
+                                            style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;background-color:#EFEFEF;border-radius:6px;max-width:400px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                              <tbody>
+                                                <tr>
+                                                  <td style="vertical-align:top;padding:15px 0px;max-width:400px;">
+                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td align="center"
+                                                            style="font-size:16px;word-break:break-word;background:#EFEFEF;max-width:400px;">
+                                                            <div
+                                                              style="font-size:16px;font-weight:700;line-height:22px;text-align:center;color:#4A4C4E;max-width:400px;">
+                                                              <#attempt>
+                                                                <#list bloco.toast?children as node>
+                                                                  <@parse_content node=node />
+                                                                </#list>
+                                                              <#recover>
+                                                                Investimento mínimo:<br/><span style="color:#555555;font-size:18px;">a partir de R$ 30,00</span>
+                                                              </#attempt>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          <!--[if mso | IE]></td></tr></table><![endif]-->
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </#attempt>
+</div>
