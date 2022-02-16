@@ -165,7 +165,7 @@
   <#include "cms://contentlibrary/components/topic-number.htm">
 </#macro>
 
-<#macro text_destaque index>
+<#macro text_destaque index use=false>
   <#local blocklist = doc.root.body_text_destaque>
   <#local block = blocklist[index?number]>
 
