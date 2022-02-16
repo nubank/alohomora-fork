@@ -173,6 +173,73 @@ A utilização foi da seguinte forma:
 ```
 Como podem ver, podemos utilizar funções e interpolação em vários locais para criar ainda mais dinamicidade.
 
+## Error handling
+
+**attempt/recover**
+
+Assim como no JS temos try/catch para tratamento de erros, o RPL possui as diretivas ``<#attempt>`` e ``<#recover>``. Ele começa a ler o que vem dentro do attempt. Se ocorrer algum erro que impeça o processamento do template, como por exemplo, chamar uma variável que não existe ou não foi passada, ele roda o código que se encontra dentro do recover. A estrutura é bem simples.
+
+```html
+<#attempt>
+	<!-- Plan A -->
+<#recover>
+	<!-- Plan B -->
+</#attempt>
+```
+Diferente do ``if``, a diretiva ``<#recover>`` não pode ser omitida.
+
+**Valores vazios ou default de variáveis**
+
+Imagine que você chame uma variável de outro lugar, sem definir no template com assign, e o valor dela é vazio, ou então ela nem existe. Podemos definir um valor default pra ela usando um ``!``, da seguinte forma ``${variable!"default value"}``.
+
+Você também pode checar se a variável tem um valor vazio (string), com ``?isnull``, e se existe com ``??``.
+
+```html
+<#if variable?isnull>
+---------------------
+<#if variable??>
+```
+
+## XML
+
+Os dados que copiamos do Alohomora para o Rsys, das var (var0, var1, etc.) são parseados como XML, usando a função parsexml(). Para acessar propriedades de um XML é bem fácil. Tome como exemplo o seguinte XML.
+
+```xml
+<parent attr="some value">
+	<content>content</content>
+</parent>
+```
+Para pegarmos os dados de *content*, chamamos ``parent.content``. Para pegarmos atributos, como o ``attr`` do parent, usamos o símbolo de ``.@``, da seguinte forma ``parent.@attr``. Algumas particularidades da leitura de XML do RPL existem, e muitas vezes, em comparações você pode usar ``[0]`` na frente de um valor ou atributo. Na teoria ele pega o primeiro elemento de uma sequence. Não existem uma regra clara quanto à esse caso específico, mas ao se deparar com isso no código, saiba que é por esse motivo.
+
+Se falando de sequence, peguemos um exemplo dos topics, com essa estrutura.
+
+```xml
+<body_bullet_points>
+	<title>Title</title>
+	<topic>Topic 1</topic>
+	<topic>Topic 2</topic>
+	<topic withoutBullet="true">Topic 3</topic>
+</body_bullet_points>
+```
+Para acessar, em teoria, os topics, podemos chamar ``body_bullet_points.topic``. Entretanto, como temos mais de uma tag de nome ``topic``, ele vai retornar uma sequence. Aí faremos um loop para pegar cada um deles.
+
+```html
+<#list topic as t>
+	${t}
+</#list>
+
+<!-- Topic 1, Topic 2, Topic 3 -->
+```
+
+Similarmente ao atributo do pai, podemos pegar o atributo do filho usando ``.@``. Aqui podemos usar a definição de um valor default para impedir erros de processamento.
+
+```html
+<#list topic as t>
+	${t.@withoutBullet!"false"}
+</#list>
+
+<!-- false, false, true -->
+```
 ## Componentes base
 
 Vamos falar dos dois arquivos base resumidamente, que são o ``bundler.html`` e o ``styles.html`` (nota de rodapé, .htm e .html são a mesma coisa, porém quando subimos um .html no Rsys ele omite a letra l.
@@ -180,3 +247,7 @@ Vamos falar dos dois arquivos base resumidamente, que são o ``bundler.html`` e 
 O ``styles`` é um arquivo que contém todos os estilos CSS de todos os componentes e os estilos base da styleguide. Todos os componentes foram feitos mobile-first, assim evitando erros de layout em clientes como o app do Yahoo, que não lê CSS no ``<head>`` ou até ``<body>`` muitas vezes. Assim, no mobile todos funcionam perfeitamente, e existem estilos específicos para desktop dentro de um media query no ``styles``.
 
 O ``bundler`` é o arquivo em que toda (ou quase toda) a mágica acontece. Ele que é responsável por ler os dados que colamos do Alohomora no Responsys nas Dynamic Variables, interpretar qual componente é qual, fazer os includes corretamente e distribuir os dados de cada componente para tal. Para saber mais, abra o arquivo que está tudo comentado lá. Ele é o arquivo mais complexo de todos, se tratando de RPL.
+
+<hr>
+
+O RPL, apesar de ser uma linguagem extremamente engessada e fechada da Oracle, e que tem pouquíssimos artigos e tutoriais, tem um poder enorme. Existem várias funções embutidas para strings, numbers, sequences, hash, vários conteúdos relacionados à XML, XSL, e tabelas, entre várias coisas. Para saber mais, acesse o manual completo de RPL e afins [aqui.](https://docs.oracle.com/cloud/latest/related-docs/OMCEZ/ja/Resources/RPL_Reference_Guide.pdf)
