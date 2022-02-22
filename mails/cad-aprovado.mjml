@@ -91,7 +91,7 @@
           line-height="22px"
           padding="0"
         >
-          <b>Temos uma notícia pra você:</b> seu cadastro Nu invest foi aprovado com sucesso.<br/><br/>
+          <b>Temos uma notícia pra você:</b> seu cadastro NuInvest foi aprovado com sucesso.<br/><br/>
           Estaremos aqui para te ajudar em todo o caminho, tudo de forma fácil e sem burocracia, que é a cara do Nubank. E para começar, que tal conhecer um pouco mais sobre o mundo dos investimentos pelo <b>nosso blog</b>?<br/><br/>
 Assim você já fica por dentro sobre como diversificar investimentos, tudo que é preciso saber sobre Ações, além de um guia completo sobre como investir na Bolsa.
         </mj-text>
@@ -130,7 +130,7 @@ Assim você já fica por dentro sobre como diversificar investimentos, tudo que 
         <mj-column padding="0px">
           <mj-text color="#000000" padding="0px 0px 24px 0px" font-size="20px" line-height="28px" font-weight="700">
             Abraços,<br/>
-            Equipe Nu invest
+            Equipe NuInvest
           </mj-text>
           <mj-text color="#000000" padding="0px 0px 30px 0px" font-size="14px" line-height="20px">
             Tem alguma dúvida? Entre em contato conosco pelo nuinvest@nuinvest.com.br ou telefone  11 3841-4515 em dias úteis das 9h às 18h
@@ -161,7 +161,7 @@ Assim você já fica por dentro sobre como diversificar investimentos, tudo que 
       <mj-section padding="32px 0px">
         <mj-column padding="0px">
           <mj-text color="#000000" padding="0px" font-size="11px" line-height="16px" align="justify">
-            A Easynvest - Título Corretora de Valores SA, inscrita no CNPJ/ME sob nº 62.169.875/0001-79 (“Nu invest”), instituição financeira autorizada a funcionar pelo Banco Central do Brasil, informa que os recursos de clientes são mantidos em suas contas de registro que são utilizadas exclusivamente pelo Nu invest para registro das operações de cada cliente, como previsto no artigo 14-A do Regulamento Anexo à Resolução CMN nº 1.655. As contas de registro não se confundem com as contas de pagamento, que estão definidas pelos artigos 6º, inciso IV, e 12 da Lei nº 12.865/2013, e os recursos mantidos nas contas de registro não possuem regime jurídico equivalente ao dos recursos mantidos em contas de pagamento, nos termos previstos no artigo 12 da Lei nº 12.865/2013. Toda transmissão de ordem por meio digital está sujeita a interrupções ou atrasos, podendo impedir ou prejudicar o envio de ordens ou a recepção de informações atualizadas. Confira demais informações no site da Comissão de Valores Mobiliários (CVM) clicando aqui.
+            A Easynvest - Título Corretora de Valores SA, inscrita no CNPJ/ME sob nº 62.169.875/0001-79 (“NuInvest”), instituição financeira autorizada a funcionar pelo Banco Central do Brasil, informa que os recursos de clientes são mantidos em suas contas de registro que são utilizadas exclusivamente pelo NuInvest para registro das operações de cada cliente, como previsto no artigo 14-A do Regulamento Anexo à Resolução CMN nº 1.655. As contas de registro não se confundem com as contas de pagamento, que estão definidas pelos artigos 6º, inciso IV, e 12 da Lei nº 12.865/2013, e os recursos mantidos nas contas de registro não possuem regime jurídico equivalente ao dos recursos mantidos em contas de pagamento, nos termos previstos no artigo 12 da Lei nº 12.865/2013. Toda transmissão de ordem por meio digital está sujeita a interrupções ou atrasos, podendo impedir ou prejudicar o envio de ordens ou a recepção de informações atualizadas. Confira demais informações no site da Comissão de Valores Mobiliários (CVM) clicando aqui.
           </mj-text>
         </mj-column>
       </mj-section>
