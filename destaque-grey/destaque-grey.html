@@ -73,14 +73,7 @@
                               word-break: break-word;
                             "
                           >
-                            <div
-                              style='${"
-                                font-size: 16px;
-                                font-weight: 700;
-                                line-height: 22px;
-                                color: #514f4f;
-                              " + block.@textAlign[0]!"center"}'
-                            >
+                            <div style='${"font-size: 16px;font-weight: 700;line-height: 22px;color: #514f4f;text-align:" + block.@textAlign[0]!"center"}'>
                               <#list block?children as node>
                                 <@parse_content node=node />
                               </#list>
